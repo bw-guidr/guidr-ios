@@ -12,6 +12,12 @@
 		66F4211C22EF3D7600B78375 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F4211A22EF3D7600B78375 /* Main.storyboard */; };
 		66F4211E22EF3D7700B78375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F4211D22EF3D7700B78375 /* Assets.xcassets */; };
 		66F4212122EF3D7700B78375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F4211F22EF3D7700B78375 /* LaunchScreen.storyboard */; };
+		66F4212A22EF582E00B78375 /* Guidr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66F4212822EF582E00B78375 /* Guidr.xcdatamodeld */; };
+		66F4212D22EF592D00B78375 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4212C22EF592D00B78375 /* CoreDataStack.swift */; };
+		66F4212F22EF596800B78375 /* UserRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4212E22EF596800B78375 /* UserRepresentation.swift */; };
+		66F4213122EF597200B78375 /* TourRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4213022EF597200B78375 /* TourRepresentation.swift */; };
+		66F4213322EF597C00B78375 /* Tour+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4213222EF597C00B78375 /* Tour+Convenience.swift */; };
+		66F4213522EF598800B78375 /* User+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4213422EF598800B78375 /* User+Convenience.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		66F4211D22EF3D7700B78375 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66F4212022EF3D7700B78375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66F4212222EF3D7700B78375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66F4212922EF582E00B78375 /* Guidr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Guidr.xcdatamodel; sourceTree = "<group>"; };
+		66F4212C22EF592D00B78375 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		66F4212E22EF596800B78375 /* UserRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepresentation.swift; sourceTree = "<group>"; };
+		66F4213022EF597200B78375 /* TourRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourRepresentation.swift; sourceTree = "<group>"; };
+		66F4213222EF597C00B78375 /* Tour+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tour+Convenience.swift"; sourceTree = "<group>"; };
+		66F4213422EF598800B78375 /* User+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Convenience.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 		66F4211522EF3D7600B78375 /* Guidr */ = {
 			isa = PBXGroup;
 			children = (
+				66F4212B22EF584500B78375 /* Models */,
 				66F4211622EF3D7600B78375 /* AppDelegate.swift */,
 				66F4211822EF3D7600B78375 /* ViewController.swift */,
 				66F4211A22EF3D7600B78375 /* Main.storyboard */,
@@ -62,6 +75,19 @@
 				66F4212222EF3D7700B78375 /* Info.plist */,
 			);
 			path = Guidr;
+			sourceTree = "<group>";
+		};
+		66F4212B22EF584500B78375 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				66F4212822EF582E00B78375 /* Guidr.xcdatamodeld */,
+				66F4212C22EF592D00B78375 /* CoreDataStack.swift */,
+				66F4212E22EF596800B78375 /* UserRepresentation.swift */,
+				66F4213022EF597200B78375 /* TourRepresentation.swift */,
+				66F4213422EF598800B78375 /* User+Convenience.swift */,
+				66F4213222EF597C00B78375 /* Tour+Convenience.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +161,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F4213522EF598800B78375 /* User+Convenience.swift in Sources */,
 				66F4211922EF3D7600B78375 /* ViewController.swift in Sources */,
+				66F4213322EF597C00B78375 /* Tour+Convenience.swift in Sources */,
+				66F4212A22EF582E00B78375 /* Guidr.xcdatamodeld in Sources */,
+				66F4212F22EF596800B78375 /* UserRepresentation.swift in Sources */,
 				66F4211722EF3D7600B78375 /* AppDelegate.swift in Sources */,
+				66F4213122EF597200B78375 /* TourRepresentation.swift in Sources */,
+				66F4212D22EF592D00B78375 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +368,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		66F4212822EF582E00B78375 /* Guidr.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				66F4212922EF582E00B78375 /* Guidr.xcdatamodel */,
+			);
+			currentVersion = 66F4212922EF582E00B78375 /* Guidr.xcdatamodel */;
+			path = Guidr.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 66F4210B22EF3D7600B78375 /* Project object */;
 }
