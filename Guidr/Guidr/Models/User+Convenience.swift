@@ -14,7 +14,7 @@ extension User {
         // Set up NSManagedObject part of the class
         self.init(context: context)
         
-        // Set up the unique parts of the Task class
+        // Set up the unique parts of the User class
         self.email = email
         self.password = password
         self.name = name

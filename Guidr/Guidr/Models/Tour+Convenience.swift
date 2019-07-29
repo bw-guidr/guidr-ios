@@ -14,7 +14,7 @@ extension Tour {
         // Set up NSManagedObject part of the class
         self.init(context: context)
         
-        // Set up the unique parts of the Task class
+        // Set up the unique parts of the Tour class
         self.title = title
         self.summary = description
         self.date = date
