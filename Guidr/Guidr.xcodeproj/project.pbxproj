@@ -131,7 +131,6 @@
 			children = (
 				3737ED8022EF62390038001E /* Views */,
 				3737ED7F22EF62280038001E /* Resources */,
-				66F4213D22EF625100B78375 /* Storyboards */,
 				66F4212B22EF584500B78375 /* Models */,
 				66F4213C22EF623F00B78375 /* Model Controllers */,
 				66F4214222EF748500B78375 /* Libraries */,
@@ -159,13 +158,6 @@
 				66F4213A22EF623A00B78375 /* TourController.swift */,
 			);
 			path = "Model Controllers";
-			sourceTree = "<group>";
-		};
-		66F4213D22EF625100B78375 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		66F4214222EF748500B78375 /* Libraries */ = {
