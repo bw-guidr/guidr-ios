@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Tour Gallery Collection View Controller-->
         <scene sceneID="3AT-eZ-hw3">
             <objects>
-                <collectionViewController id="RgT-Iw-tMd" sceneMemberID="viewController">
+                <collectionViewController id="RgT-Iw-tMd" customClass="TourGalleryCollectionViewController" customModule="Guidr" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xMJ-vc-ngI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,13 +24,53 @@
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="q4H-ci-LeY" customClass="TourCollectionViewCell" customModule="Guidr" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TourCell" id="q4H-ci-LeY" customClass="TourCollectionViewCell" customModule="Guidr" customModuleProvider="target">
                                 <rect key="frame" x="22" y="10" width="370" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="370" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N3q-OG-yA2">
+                                            <rect key="frame" x="0.0" y="0.0" width="370" height="200"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountainRedVector" translatesAutoresizingMaskIntoConstraints="NO" id="LDV-Jw-ALT">
+                                                    <rect key="frame" x="0.0" y="0.0" width="370" height="200.00000000000091"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vk1-8T-hl6">
+                                                    <rect key="frame" x="8" y="156" width="354" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Label">
+                                                            <attributes>
+                                                                <font key="NSFont" size="24" name="BebasNeue-Book"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="LDV-Jw-ALT" secondAttribute="bottom" id="Ush-Vm-9i4"/>
+                                                <constraint firstAttribute="trailing" secondItem="LDV-Jw-ALT" secondAttribute="trailing" id="dVY-iX-SKP"/>
+                                                <constraint firstItem="LDV-Jw-ALT" firstAttribute="leading" secondItem="N3q-OG-yA2" secondAttribute="leading" id="j6w-IA-2l0"/>
+                                                <constraint firstItem="LDV-Jw-ALT" firstAttribute="top" secondItem="N3q-OG-yA2" secondAttribute="top" id="zGW-dF-8uK"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="N3q-OG-yA2" firstAttribute="top" secondItem="q4H-ci-LeY" secondAttribute="top" id="2EH-e5-EvZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="N3q-OG-yA2" secondAttribute="trailing" id="6oy-9n-BRN"/>
+                                    <constraint firstAttribute="bottom" secondItem="N3q-OG-yA2" secondAttribute="bottom" id="c5T-nJ-xRJ"/>
+                                    <constraint firstItem="N3q-OG-yA2" firstAttribute="leading" secondItem="q4H-ci-LeY" secondAttribute="leading" id="wvb-j2-4m6"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="tourNameLabel" destination="vk1-8T-hl6" id="Dvx-Oz-hPN"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -41,7 +81,10 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPq-Ge-iPs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="151" y="234"/>
+            <point key="canvasLocation" x="150.72463768115944" y="233.70535714285714"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MountainRedVector" width="5000" height="3542"/>
+    </resources>
 </document>
