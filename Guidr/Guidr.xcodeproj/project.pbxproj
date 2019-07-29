@@ -15,12 +15,12 @@
 		3737ED8822EF63DD0038001E /* TourGallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8722EF63DD0038001E /* TourGallery.storyboard */; };
 		3737ED8A22EF63EB0038001E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8922EF63EB0038001E /* Settings.storyboard */; };
 		3737ED8C22EF65E50038001E /* ProjectColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3737ED8B22EF65E50038001E /* ProjectColors.swift */; };
-		3737ED9422EF693E0038001E /* BebasNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8F22EF69390038001E /* BebasNeue-Bold.ttf */; };
-		3737ED9522EF69420038001E /* BebasNeue-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED9022EF69390038001E /* BebasNeue-Book.ttf */; };
 		3737ED9622EF69460038001E /* BebasNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED9322EF69390038001E /* BebasNeue-Light.ttf */; };
 		3737ED9822EF694D0038001E /* BebasNeue-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED9222EF69390038001E /* BebasNeue-Thin.ttf */; };
 		3737ED9922EF69510038001E /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8E22EF69240038001E /* BebasNeue-Regular.ttf */; };
 		37C851CC22EF872600406985 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C851CB22EF872600406985 /* ProfileViewController.swift */; };
+		66BDE11A22EFA0240029199F /* BebasNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66BDE11922EFA0240029199F /* BebasNeue-Bold.ttf */; };
+		66BDE11C22EFA0300029199F /* BebasNeue-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66BDE11B22EFA0300029199F /* BebasNeue-Book.ttf */; };
 		66F4211722EF3D7600B78375 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4211622EF3D7600B78375 /* AppDelegate.swift */; };
 		66F4211C22EF3D7600B78375 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F4211A22EF3D7600B78375 /* Profile.storyboard */; };
 		66F4211E22EF3D7700B78375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F4211D22EF3D7700B78375 /* Assets.xcassets */; };
@@ -34,6 +34,10 @@
 		66F4213B22EF623A00B78375 /* TourController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4213A22EF623A00B78375 /* TourController.swift */; };
 		66F4214022EF747F00B78375 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4213E22EF747F00B78375 /* KeychainItemAccessibility.swift */; };
 		66F4214122EF747F00B78375 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4213F22EF747F00B78375 /* KeychainWrapper.swift */; };
+		66F4214422EF8C8600B78375 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4214322EF8C8600B78375 /* LoginViewController.swift */; };
+		66F4214622EF92B900B78375 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66F4214522EF92B900B78375 /* Montserrat-Medium.ttf */; };
+		66F4214822EF970900B78375 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66F4214722EF970900B78375 /* Montserrat-Bold.ttf */; };
+		66F4214A22EF982000B78375 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F4214922EF981F00B78375 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,11 +50,11 @@
 		3737ED8922EF63EB0038001E /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		3737ED8B22EF65E50038001E /* ProjectColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectColors.swift; sourceTree = "<group>"; };
 		3737ED8E22EF69240038001E /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
-		3737ED8F22EF69390038001E /* BebasNeue-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Bold.ttf"; sourceTree = "<group>"; };
-		3737ED9022EF69390038001E /* BebasNeue-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Book.ttf"; sourceTree = "<group>"; };
 		3737ED9222EF69390038001E /* BebasNeue-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Thin.ttf"; sourceTree = "<group>"; };
 		3737ED9322EF69390038001E /* BebasNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Light.ttf"; sourceTree = "<group>"; };
 		37C851CB22EF872600406985 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		66BDE11922EFA0240029199F /* BebasNeue-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Bold.ttf"; sourceTree = "<group>"; };
+		66BDE11B22EFA0300029199F /* BebasNeue-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Book.ttf"; sourceTree = "<group>"; };
 		66F4211322EF3D7600B78375 /* Guidr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F4211622EF3D7600B78375 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66F4211B22EF3D7600B78375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
@@ -66,6 +70,10 @@
 		66F4213A22EF623A00B78375 /* TourController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourController.swift; sourceTree = "<group>"; };
 		66F4213E22EF747F00B78375 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		66F4213F22EF747F00B78375 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		66F4214322EF8C8600B78375 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		66F4214522EF92B900B78375 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		66F4214722EF970900B78375 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		66F4214922EF981F00B78375 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,7 @@
 		3737ED8022EF62390038001E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				66F4214922EF981F00B78375 /* Launch Screen.storyboard */,
 				3737ED8122EF62BA0038001E /* Login.storyboard */,
 				3737ED8322EF62F60038001E /* WalkThrough.storyboard */,
 				3737ED8522EF63170038001E /* CreateTour.storyboard */,
@@ -108,11 +117,13 @@
 		3737ED8D22EF69120038001E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				3737ED8F22EF69390038001E /* BebasNeue-Bold.ttf */,
-				3737ED9022EF69390038001E /* BebasNeue-Book.ttf */,
 				3737ED9322EF69390038001E /* BebasNeue-Light.ttf */,
 				3737ED9222EF69390038001E /* BebasNeue-Thin.ttf */,
+				66BDE11922EFA0240029199F /* BebasNeue-Bold.ttf */,
+				66BDE11B22EFA0300029199F /* BebasNeue-Book.ttf */,
 				3737ED8E22EF69240038001E /* BebasNeue-Regular.ttf */,
+				66F4214522EF92B900B78375 /* Montserrat-Medium.ttf */,
+				66F4214722EF970900B78375 /* Montserrat-Bold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -120,6 +131,7 @@
 		37C851CD22EF872B00406985 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				66F4214322EF8C8600B78375 /* LoginViewController.swift */,
 				37C851CB22EF872600406985 /* ProfileViewController.swift */,
 				3259880F22EF90E600D1A8BE /* TourGalleryCollectionViewController.swift */,
 			);
@@ -245,15 +257,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3737ED8822EF63DD0038001E /* TourGallery.storyboard in Resources */,
-				3737ED9422EF693E0038001E /* BebasNeue-Bold.ttf in Resources */,
 				3737ED9922EF69510038001E /* BebasNeue-Regular.ttf in Resources */,
-				3737ED9522EF69420038001E /* BebasNeue-Book.ttf in Resources */,
+				66F4214A22EF982000B78375 /* Launch Screen.storyboard in Resources */,
 				3737ED9822EF694D0038001E /* BebasNeue-Thin.ttf in Resources */,
 				3737ED8622EF63170038001E /* CreateTour.storyboard in Resources */,
+				66F4214822EF970900B78375 /* Montserrat-Bold.ttf in Resources */,
+				66BDE11A22EFA0240029199F /* BebasNeue-Bold.ttf in Resources */,
 				3737ED9622EF69460038001E /* BebasNeue-Light.ttf in Resources */,
 				3737ED8222EF62BA0038001E /* Login.storyboard in Resources */,
 				3737ED8A22EF63EB0038001E /* Settings.storyboard in Resources */,
 				66F4211E22EF3D7700B78375 /* Assets.xcassets in Resources */,
+				66F4214622EF92B900B78375 /* Montserrat-Medium.ttf in Resources */,
+				66BDE11C22EFA0300029199F /* BebasNeue-Book.ttf in Resources */,
 				66F4211C22EF3D7600B78375 /* Profile.storyboard in Resources */,
 				3737ED8422EF62F60038001E /* WalkThrough.storyboard in Resources */,
 			);
@@ -266,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F4214422EF8C8600B78375 /* LoginViewController.swift in Sources */,
 				66F4213922EF622F00B78375 /* UserController.swift in Sources */,
 				66F4213522EF598800B78375 /* User+Convenience.swift in Sources */,
 				66F4213322EF597C00B78375 /* Tour+Convenience.swift in Sources */,
