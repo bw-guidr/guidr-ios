@@ -10,10 +10,13 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    override func viewDidLoad() {
+	@IBOutlet weak var tableView: UITableView!
+
+	override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        tabBarController?.tabBar.tintColor = .mainPeach
+		tableView.separatorStyle = .none
     }
     
 

@@ -13,11 +13,12 @@
 		3737ED8822EF63DD0038001E /* TourGallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8722EF63DD0038001E /* TourGallery.storyboard */; };
 		3737ED8A22EF63EB0038001E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8922EF63EB0038001E /* Settings.storyboard */; };
 		3737ED8C22EF65E50038001E /* ProjectColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3737ED8B22EF65E50038001E /* ProjectColors.swift */; };
-		3737ED9422EF693E0038001E /* BebasNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8F22EF69390038001E /* BebasNeue-Bold.ttf */; };
-		3737ED9522EF69420038001E /* BebasNeue-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED9022EF69390038001E /* BebasNeue-Book.ttf */; };
-		3737ED9622EF69460038001E /* BebasNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED9322EF69390038001E /* BebasNeue-Light.ttf */; };
-		3737ED9822EF694D0038001E /* BebasNeue-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED9222EF69390038001E /* BebasNeue-Thin.ttf */; };
-		3737ED9922EF69510038001E /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8E22EF69240038001E /* BebasNeue-Regular.ttf */; };
+		376654A022EFA58C00448ECB /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3766549F22EFA58C00448ECB /* BebasNeue-Regular.ttf */; };
+		376654A622EFA5A400448ECB /* BebasNeue-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 376654A122EFA5A400448ECB /* BebasNeue-Book.ttf */; };
+		376654A722EFA5A400448ECB /* BebasNeue-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 376654A222EFA5A400448ECB /* BebasNeue-Thin.ttf */; };
+		376654A822EFA5A400448ECB /* BebasNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 376654A322EFA5A400448ECB /* BebasNeue-Bold.ttf */; };
+		376654A922EFA5A400448ECB /* BebasNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 376654A422EFA5A400448ECB /* BebasNeue-Light.ttf */; };
+		376654AA22EFA5A400448ECB /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 376654A522EFA5A400448ECB /* BebasNeue-Regular.ttf */; };
 		37C851CC22EF872600406985 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C851CB22EF872600406985 /* ProfileViewController.swift */; };
 		66F4211722EF3D7600B78375 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4211622EF3D7600B78375 /* AppDelegate.swift */; };
 		66F4211C22EF3D7600B78375 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F4211A22EF3D7600B78375 /* Profile.storyboard */; };
@@ -41,11 +42,12 @@
 		3737ED8722EF63DD0038001E /* TourGallery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TourGallery.storyboard; sourceTree = "<group>"; };
 		3737ED8922EF63EB0038001E /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		3737ED8B22EF65E50038001E /* ProjectColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectColors.swift; sourceTree = "<group>"; };
-		3737ED8E22EF69240038001E /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
-		3737ED8F22EF69390038001E /* BebasNeue-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Bold.ttf"; sourceTree = "<group>"; };
-		3737ED9022EF69390038001E /* BebasNeue-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Book.ttf"; sourceTree = "<group>"; };
-		3737ED9222EF69390038001E /* BebasNeue-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Thin.ttf"; sourceTree = "<group>"; };
-		3737ED9322EF69390038001E /* BebasNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Light.ttf"; sourceTree = "<group>"; };
+		3766549F22EFA58C00448ECB /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
+		376654A122EFA5A400448ECB /* BebasNeue-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Book.ttf"; sourceTree = "<group>"; };
+		376654A222EFA5A400448ECB /* BebasNeue-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Thin.ttf"; sourceTree = "<group>"; };
+		376654A322EFA5A400448ECB /* BebasNeue-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Bold.ttf"; sourceTree = "<group>"; };
+		376654A422EFA5A400448ECB /* BebasNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Light.ttf"; sourceTree = "<group>"; };
+		376654A522EFA5A400448ECB /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BebasNeue-Regular.ttf"; path = "../../../../../../../Bebas-Neue-master-2/fonts/BebasNeue(2014)ByFontFabric/BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
 		37C851CB22EF872600406985 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		66F4211322EF3D7600B78375 /* Guidr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F4211622EF3D7600B78375 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,11 +105,12 @@
 		3737ED8D22EF69120038001E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				3737ED8F22EF69390038001E /* BebasNeue-Bold.ttf */,
-				3737ED9022EF69390038001E /* BebasNeue-Book.ttf */,
-				3737ED9322EF69390038001E /* BebasNeue-Light.ttf */,
-				3737ED9222EF69390038001E /* BebasNeue-Thin.ttf */,
-				3737ED8E22EF69240038001E /* BebasNeue-Regular.ttf */,
+				376654A322EFA5A400448ECB /* BebasNeue-Bold.ttf */,
+				376654A122EFA5A400448ECB /* BebasNeue-Book.ttf */,
+				376654A422EFA5A400448ECB /* BebasNeue-Light.ttf */,
+				376654A522EFA5A400448ECB /* BebasNeue-Regular.ttf */,
+				376654A222EFA5A400448ECB /* BebasNeue-Thin.ttf */,
+				3766549F22EFA58C00448ECB /* BebasNeue-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -239,15 +242,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3737ED8822EF63DD0038001E /* TourGallery.storyboard in Resources */,
-				3737ED9422EF693E0038001E /* BebasNeue-Bold.ttf in Resources */,
-				3737ED9922EF69510038001E /* BebasNeue-Regular.ttf in Resources */,
-				3737ED9522EF69420038001E /* BebasNeue-Book.ttf in Resources */,
-				3737ED9822EF694D0038001E /* BebasNeue-Thin.ttf in Resources */,
 				3737ED8622EF63170038001E /* CreateTour.storyboard in Resources */,
-				3737ED9622EF69460038001E /* BebasNeue-Light.ttf in Resources */,
+				376654AA22EFA5A400448ECB /* BebasNeue-Regular.ttf in Resources */,
+				376654A022EFA58C00448ECB /* BebasNeue-Regular.ttf in Resources */,
 				3737ED8222EF62BA0038001E /* Login.storyboard in Resources */,
+				376654A722EFA5A400448ECB /* BebasNeue-Thin.ttf in Resources */,
 				3737ED8A22EF63EB0038001E /* Settings.storyboard in Resources */,
+				376654A922EFA5A400448ECB /* BebasNeue-Light.ttf in Resources */,
+				376654A822EFA5A400448ECB /* BebasNeue-Bold.ttf in Resources */,
 				66F4211E22EF3D7700B78375 /* Assets.xcassets in Resources */,
+				376654A622EFA5A400448ECB /* BebasNeue-Book.ttf in Resources */,
 				66F4211C22EF3D7600B78375 /* Profile.storyboard in Resources */,
 				3737ED8422EF62F60038001E /* WalkThrough.storyboard in Resources */,
 			);

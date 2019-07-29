@@ -41,5 +41,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BebasNeue-Bold.ttf</string>
+		<string>BebasNeue-Book.ttf</string>
+		<string>BebasNeue-Light.ttf</string>
+		<string>BebasNeue-Thin.ttf</string>
+		<string>BebasNeue-Regular.ttf</string>
+	</array>
 </dict>
 </plist>
