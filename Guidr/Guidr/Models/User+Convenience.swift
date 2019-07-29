@@ -10,11 +10,13 @@ import Foundation
 import CoreData
 
 extension User {
-    @discardableResult convenience init(name: String?, imageURL: String?, identifier: String, context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
+    @discardableResult convenience init(email: String?, password: String?, name: String?, imageURL: String?, identifier: String?, context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         // Set up NSManagedObject part of the class
         self.init(context: context)
         
         // Set up the unique parts of the Task class
+        self.email = email
+        self.password = password
         self.name = name
         self.identifier = identifier
         self.imageURL = imageURL
@@ -24,13 +26,15 @@ extension User {
                                          context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         self.init(context: context)
         
+        self.email = userRepresentation.email
+        self.password = userRepresentation.password
         self.name = userRepresentation.name
         self.identifier = userRepresentation.identifier
         self.imageURL = userRepresentation.imageURL
         
     }
     
-    var tourRepresentation: UserRepresentation {
-        return UserRepresentation(name: name, imageURL: imageURL, identifier: identifier)
+    var userRepresentation: UserRepresentation {
+        return UserRepresentation(email: email, password: password, name: name, imageURL: imageURL, identifier: identifier)
     }
 }
