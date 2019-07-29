@@ -18,6 +18,7 @@
 		3737ED9622EF69460038001E /* BebasNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED9322EF69390038001E /* BebasNeue-Light.ttf */; };
 		3737ED9822EF694D0038001E /* BebasNeue-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED9222EF69390038001E /* BebasNeue-Thin.ttf */; };
 		3737ED9922EF69510038001E /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8E22EF69240038001E /* BebasNeue-Regular.ttf */; };
+		37C851CC22EF872600406985 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C851CB22EF872600406985 /* ProfileViewController.swift */; };
 		66F4211722EF3D7600B78375 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4211622EF3D7600B78375 /* AppDelegate.swift */; };
 		66F4211C22EF3D7600B78375 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F4211A22EF3D7600B78375 /* Profile.storyboard */; };
 		66F4211E22EF3D7700B78375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F4211D22EF3D7700B78375 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		3737ED9022EF69390038001E /* BebasNeue-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Book.ttf"; sourceTree = "<group>"; };
 		3737ED9222EF69390038001E /* BebasNeue-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Thin.ttf"; sourceTree = "<group>"; };
 		3737ED9322EF69390038001E /* BebasNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Light.ttf"; sourceTree = "<group>"; };
+		37C851CB22EF872600406985 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		66F4211322EF3D7600B78375 /* Guidr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F4211622EF3D7600B78375 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66F4211B22EF3D7600B78375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		37C851CD22EF872B00406985 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				37C851CB22EF872600406985 /* ProfileViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		66F4210A22EF3D7600B78375 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				3737ED8022EF62390038001E /* Views */,
+				37C851CD22EF872B00406985 /* ViewControllers */,
 				3737ED7F22EF62280038001E /* Resources */,
 				66F4212B22EF584500B78375 /* Models */,
 				66F4213C22EF623F00B78375 /* Model Controllers */,
@@ -259,6 +270,7 @@
 				3737ED8C22EF65E50038001E /* ProjectColors.swift in Sources */,
 				66F4213122EF597200B78375 /* TourRepresentation.swift in Sources */,
 				66F4214122EF747F00B78375 /* KeychainWrapper.swift in Sources */,
+				37C851CC22EF872600406985 /* ProfileViewController.swift in Sources */,
 				66F4212D22EF592D00B78375 /* CoreDataStack.swift in Sources */,
 				66F4214022EF747F00B78375 /* KeychainItemAccessibility.swift in Sources */,
 			);
