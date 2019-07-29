@@ -15,10 +15,10 @@
         <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="tours" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tour" inverseName="user" inverseEntity="Tour" syncable="YES"/>
+        <relationship name="tours" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tour" inverseName="user" inverseEntity="Tour" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-236.2578125" positionY="4.8203125" width="128" height="103"/>
         <element name="Tour" positionX="-54" positionY="9" width="128" height="178"/>
+        <element name="User" positionX="-236.2578125" positionY="4.8203125" width="128" height="105"/>
     </elements>
 </model>

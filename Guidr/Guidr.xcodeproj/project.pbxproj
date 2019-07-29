@@ -18,6 +18,8 @@
 		66F4213122EF597200B78375 /* TourRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4213022EF597200B78375 /* TourRepresentation.swift */; };
 		66F4213322EF597C00B78375 /* Tour+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4213222EF597C00B78375 /* Tour+Convenience.swift */; };
 		66F4213522EF598800B78375 /* User+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4213422EF598800B78375 /* User+Convenience.swift */; };
+		66F4213922EF622F00B78375 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4213822EF622F00B78375 /* UserController.swift */; };
+		66F4213B22EF623A00B78375 /* TourController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4213A22EF623A00B78375 /* TourController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		66F4213022EF597200B78375 /* TourRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourRepresentation.swift; sourceTree = "<group>"; };
 		66F4213222EF597C00B78375 /* Tour+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tour+Convenience.swift"; sourceTree = "<group>"; };
 		66F4213422EF598800B78375 /* User+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Convenience.swift"; sourceTree = "<group>"; };
+		66F4213822EF622F00B78375 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		66F4213A22EF623A00B78375 /* TourController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +70,12 @@
 		66F4211522EF3D7600B78375 /* Guidr */ = {
 			isa = PBXGroup;
 			children = (
-				66F4212B22EF584500B78375 /* Models */,
 				66F4211622EF3D7600B78375 /* AppDelegate.swift */,
+				66F4213D22EF625100B78375 /* Storyboards */,
+				66F4212B22EF584500B78375 /* Models */,
+				66F4213C22EF623F00B78375 /* Model Controllers */,
 				66F4211822EF3D7600B78375 /* ViewController.swift */,
-				66F4211A22EF3D7600B78375 /* Main.storyboard */,
 				66F4211D22EF3D7700B78375 /* Assets.xcassets */,
-				66F4211F22EF3D7700B78375 /* LaunchScreen.storyboard */,
 				66F4212222EF3D7700B78375 /* Info.plist */,
 			);
 			path = Guidr;
@@ -88,6 +92,24 @@
 				66F4213222EF597C00B78375 /* Tour+Convenience.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		66F4213C22EF623F00B78375 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				66F4213822EF622F00B78375 /* UserController.swift */,
+				66F4213A22EF623A00B78375 /* TourController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		66F4213D22EF625100B78375 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				66F4211A22EF3D7600B78375 /* Main.storyboard */,
+				66F4211F22EF3D7700B78375 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,10 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F4213922EF622F00B78375 /* UserController.swift in Sources */,
 				66F4213522EF598800B78375 /* User+Convenience.swift in Sources */,
 				66F4211922EF3D7600B78375 /* ViewController.swift in Sources */,
 				66F4213322EF597C00B78375 /* Tour+Convenience.swift in Sources */,
 				66F4212A22EF582E00B78375 /* Guidr.xcdatamodeld in Sources */,
+				66F4213B22EF623A00B78375 /* TourController.swift in Sources */,
 				66F4212F22EF596800B78375 /* UserRepresentation.swift in Sources */,
 				66F4211722EF3D7600B78375 /* AppDelegate.swift in Sources */,
 				66F4213122EF597200B78375 /* TourRepresentation.swift in Sources */,

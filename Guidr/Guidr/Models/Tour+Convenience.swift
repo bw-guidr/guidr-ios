@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 extension Tour {
-    @discardableResult convenience init(title: String?, description: String?, miles: Int16, date: Date, identifier: String, context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
+    @discardableResult convenience init(title: String?, description: String?, miles: Int16, date: Date, identifier: String?, context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         // Set up NSManagedObject part of the class
         self.init(context: context)
         
