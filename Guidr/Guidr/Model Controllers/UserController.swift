@@ -102,7 +102,7 @@ class UserController {
         }
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+            if let response = response as? HTTPURLResponse, response.statusCode != 201 {
                 print(response.statusCode)
                 completion(.badResponse)
                 return

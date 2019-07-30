@@ -20,7 +20,6 @@
 		376654A722EFA5A400448ECB /* BebasNeue-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 376654A222EFA5A400448ECB /* BebasNeue-Thin.ttf */; };
 		376654A822EFA5A400448ECB /* BebasNeue-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 376654A322EFA5A400448ECB /* BebasNeue-Bold.ttf */; };
 		376654A922EFA5A400448ECB /* BebasNeue-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 376654A422EFA5A400448ECB /* BebasNeue-Light.ttf */; };
-		376654AA22EFA5A400448ECB /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 376654A522EFA5A400448ECB /* BebasNeue-Regular.ttf */; };
 		376EF2B322F003AF0005F985 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376EF2B222F003AF0005F985 /* ProfileViewController.swift */; };
 		376EF2B522F0054D0005F985 /* GuideInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376EF2B422F0054D0005F985 /* GuideInfoCollectionViewCell.swift */; };
 		376EF2B722F005700005F985 /* AddFirstTourCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376EF2B622F005700005F985 /* AddFirstTourCollectionViewCell.swift */; };
@@ -60,7 +59,6 @@
 		376654A222EFA5A400448ECB /* BebasNeue-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Thin.ttf"; sourceTree = "<group>"; };
 		376654A322EFA5A400448ECB /* BebasNeue-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Bold.ttf"; sourceTree = "<group>"; };
 		376654A422EFA5A400448ECB /* BebasNeue-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Light.ttf"; sourceTree = "<group>"; };
-		376654A522EFA5A400448ECB /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BebasNeue-Regular.ttf"; path = "../../../../../../../Bebas-Neue-master-2/fonts/BebasNeue(2014)ByFontFabric/BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
 		376EF2B222F003AF0005F985 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		376EF2B422F0054D0005F985 /* GuideInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		376EF2B622F005700005F985 /* AddFirstTourCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFirstTourCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				376654A322EFA5A400448ECB /* BebasNeue-Bold.ttf */,
 				376654A122EFA5A400448ECB /* BebasNeue-Book.ttf */,
 				376654A422EFA5A400448ECB /* BebasNeue-Light.ttf */,
-				376654A522EFA5A400448ECB /* BebasNeue-Regular.ttf */,
 				376654A222EFA5A400448ECB /* BebasNeue-Thin.ttf */,
 				66F4214522EF92B900B78375 /* Montserrat-Medium.ttf */,
 				66F4214722EF970900B78375 /* Montserrat-Bold.ttf */,
@@ -278,7 +275,6 @@
 				66F4214A22EF982000B78375 /* Launch Screen.storyboard in Resources */,
 				3737ED8622EF63170038001E /* CreateTour.storyboard in Resources */,
 				66F4214822EF970900B78375 /* Montserrat-Bold.ttf in Resources */,
-				376654AA22EFA5A400448ECB /* BebasNeue-Regular.ttf in Resources */,
 				3737ED8222EF62BA0038001E /* Login.storyboard in Resources */,
 				3259886022F0969700D1A8BE /* TourDetail.storyboard in Resources */,
 				376654A722EFA5A400448ECB /* BebasNeue-Thin.ttf in Resources */,
