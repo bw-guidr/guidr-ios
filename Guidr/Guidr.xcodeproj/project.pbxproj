@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3259881022EF90E600D1A8BE /* TourGalleryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259880F22EF90E600D1A8BE /* TourGalleryCollectionViewController.swift */; };
+		3259881222EF90FE00D1A8BE /* TourCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259881122EF90FE00D1A8BE /* TourCollectionViewCell.swift */; };
+		3259881E22EFB47700D1A8BE /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259881D22EFB47700D1A8BE /* CustomLabel.swift */; };
 		3737ED8222EF62BA0038001E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8122EF62BA0038001E /* Login.storyboard */; };
 		3737ED8422EF62F60038001E /* WalkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8322EF62F60038001E /* WalkThrough.storyboard */; };
 		3737ED8622EF63170038001E /* CreateTour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8522EF63170038001E /* CreateTour.storyboard */; };
@@ -39,6 +42,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3259880F22EF90E600D1A8BE /* TourGalleryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TourGalleryCollectionViewController.swift; path = ../../../../../../Documents/TourGalleryCollectionViewController.swift; sourceTree = "<group>"; };
+		3259881122EF90FE00D1A8BE /* TourCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TourCollectionViewCell.swift; path = ../../../../../../Documents/TourCollectionViewCell.swift; sourceTree = "<group>"; };
+		3259881D22EFB47700D1A8BE /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		3737ED8122EF62BA0038001E /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3737ED8322EF62F60038001E /* WalkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkThrough.storyboard; sourceTree = "<group>"; };
 		3737ED8522EF63170038001E /* CreateTour.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateTour.storyboard; sourceTree = "<group>"; };
@@ -91,6 +97,7 @@
 				66F4211622EF3D7600B78375 /* AppDelegate.swift */,
 				3737ED8D22EF69120038001E /* Fonts */,
 				3737ED8B22EF65E50038001E /* ProjectColors.swift */,
+				3259881D22EFB47700D1A8BE /* CustomLabel.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -105,6 +112,7 @@
 				3737ED8722EF63DD0038001E /* TourGallery.storyboard */,
 				3737ED8922EF63EB0038001E /* Settings.storyboard */,
 				66F4211A22EF3D7600B78375 /* Profile.storyboard */,
+				3259881122EF90FE00D1A8BE /* TourCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +136,7 @@
 			children = (
 				66F4214322EF8C8600B78375 /* LoginViewController.swift */,
 				37C851CB22EF872600406985 /* ProfileViewController.swift */,
+				3259880F22EF90E600D1A8BE /* TourGalleryCollectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -279,6 +288,9 @@
 				66F4213922EF622F00B78375 /* UserController.swift in Sources */,
 				66F4213522EF598800B78375 /* User+Convenience.swift in Sources */,
 				66F4213322EF597C00B78375 /* Tour+Convenience.swift in Sources */,
+				3259881222EF90FE00D1A8BE /* TourCollectionViewCell.swift in Sources */,
+				3259881E22EFB47700D1A8BE /* CustomLabel.swift in Sources */,
+				3259881022EF90E600D1A8BE /* TourGalleryCollectionViewController.swift in Sources */,
 				66F4212A22EF582E00B78375 /* Guidr.xcdatamodeld in Sources */,
 				66F4213B22EF623A00B78375 /* TourController.swift in Sources */,
 				66F4212F22EF596800B78375 /* UserRepresentation.swift in Sources */,
