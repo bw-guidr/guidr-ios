@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ProfileViewController: UICollectionViewController {
+class ProfileViewController: UICollectionViewController, NSFetchedResultsControllerDelegate {
 
     let tourController = TourController()
     var user: UserRepresentation {
@@ -28,28 +28,28 @@ class ProfileViewController: UICollectionViewController {
     }
     
     
-//    lazy var fetchedResultsController: NSFetchedResultsController<Tour> = {
-//        let fetchRequest: NSFetchRequest<Tour> = Tour.fetchRequest()
-//
-//        // FRCs need at least one sort descriptor. If you are using "sectionNameKeyPath", the first sort descriptor must be the same attribute
-//        let dateDescriptor = NSSortDescriptor(key: "date", ascending: true)
-//        let titleDescriptor = NSSortDescriptor(key: "title", ascending: false)
-//        fetchRequest.sortDescriptors = [dateDescriptor, titleDescriptor]
-//
-//        let moc = CoreDataStack.shared.mainContext
-//
-//        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: "date", cacheName: nil)
-//
-//        frc.delegate = self
-//
-//        do {
-//            try frc.performFetch()
-//        } catch {
-//            fatalError("Error performing fetch for frc: \(error)")
-//        }
-//
-//        return frc
-//    }()
+    lazy var fetchedResultsController: NSFetchedResultsController<Tour> = {
+        let fetchRequest: NSFetchRequest<Tour> = Tour.fetchRequest()
+
+        // FRCs need at least one sort descriptor. If you are using "sectionNameKeyPath", the first sort descriptor must be the same attribute
+        let dateDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        let titleDescriptor = NSSortDescriptor(key: "title", ascending: false)
+        fetchRequest.sortDescriptors = [dateDescriptor, titleDescriptor]
+
+        let moc = CoreDataStack.shared.mainContext
+
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+
+        frc.delegate = self
+
+        do {
+            try frc.performFetch()
+        } catch {
+            fatalError("Error performing fetch for frc: \(error)")
+        }
+
+        return frc
+    }()
     
 	var tourPhotos: [UIImage] = [UIImage(named: "bearVector")!, UIImage(named: "hikeVector")!, UIImage(named: "MountainRedVector")!, UIImage(named: "treeAndMoonVector")!, UIImage(named: "MountainVector")!]
 
@@ -58,7 +58,6 @@ class ProfileViewController: UICollectionViewController {
 	let locations = "9"
     
     let token: String? = KeychainWrapper.standard.string(forKey: "token")
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,9 +72,9 @@ class ProfileViewController: UICollectionViewController {
         }
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        tourController.fetchToursFromServer(userID: user.identifier!)
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        tourController.fetchToursFromServer(userID: user.identifier!)
+    }
 
 
     // MARK: - Navigation
@@ -112,7 +111,7 @@ class ProfileViewController: UICollectionViewController {
 		case 0:
 			return guideInfoCell(from: collectionView.dequeueReusableCell(withReuseIdentifier: "GuideInfoCell", for: indexPath), atIndex: indexPath.item)
 		default:
-			return tourPhotoCell(from: collectionView.dequeueReusableCell(withReuseIdentifier: "TourPhotoCell", for: indexPath), atIndex: indexPath.item)
+            return tourPhotoCell(from: collectionView.dequeueReusableCell(withReuseIdentifier: "TourPhotoCell", for: indexPath), indexPath: indexPath, atIndex: indexPath.item)
 		}
     }
 
@@ -126,10 +125,11 @@ class ProfileViewController: UICollectionViewController {
 		return cell
 	}
 
-	private func tourPhotoCell(from cell: UICollectionViewCell, atIndex index: Int) -> TourPhotoCollectionViewCell {
+    private func tourPhotoCell(from cell: UICollectionViewCell, indexPath: IndexPath, atIndex index: Int) -> TourPhotoCollectionViewCell {
 		guard let cell = cell as? TourPhotoCollectionViewCell else { return TourPhotoCollectionViewCell() }
 		cell.tourImageView.image = tourPhotos.randomElement()
-
+//        let tour = fetchedResultsController.object(at: indexPath)
+        
 		return cell
 	}
     
