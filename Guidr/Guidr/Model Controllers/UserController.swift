@@ -23,14 +23,14 @@ struct Bearer: Codable {
 
 enum LoginType: String {
     case signUp = "register"
-    case signIn = "auth"
+    case signIn = "login"
 }
 
 class UserController {
     var bearer: Bearer?
     var user: UserRepresentation?
     
-    let baseURL = URL(string: "placeholder")!
+    let baseURL = URL(string: "https://guidr-backend-justin-chen.herokuapp.com/")!
     
     func loginWith(user: UserRepresentation, loginType: LoginType, completion: @escaping (Result<Bearer, NetworkError>) -> ()) {
         let requestURL = baseURL.appendingPathComponent("\(loginType.rawValue)")
