@@ -17,19 +17,74 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var nameIcon: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    let userController = UserController()
+    var isLogin: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        forgotPasswordButton.isHidden = true
     }
     
 
     @IBAction func registerButtonTapped(_ sender: Any) {
+        if isLogin {
+            login()
+        } else {
+            register()
+        }
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {
+        if isLogin {
+            nameIcon.isHidden = false
+            nameLabel.isHidden = false
+            forgotPasswordButton.isHidden = true
+            registerButton.setTitle("Register", for: .normal)
+            loginButton.setTitle("Login", for: .normal)
+            isLogin = false
+        } else {
+            nameIcon.isHidden = true
+            nameLabel.isHidden = true
+            forgotPasswordButton.isHidden = false
+            registerButton.setTitle("Log In", for: .normal)
+            loginButton.setTitle("Register", for: .normal)
+            isLogin = true
+        }
+        
     }
+    
+    func login() {
+        guard let email = emailTextField.text,
+            !email.isEmpty,
+            let password = passwordTextField.text,
+            !password.isEmpty else { return }
+        
+        let user = UserRepresentation(email: email, password: password, name: nil, imageURL: nil, identifier: nil)
+        userController.loginWith(user: user, loginType: .signIn) { (error) in
+            if let error = error {
+                NSLog("Error logging in with \(error)")
+            }
+        }
+    }
+    
+    func register() {
+        guard let email = emailTextField.text,
+            !email.isEmpty,
+            let password = passwordTextField.text,
+            !password.isEmpty,
+            let name = nameTextField.text,
+            !name.isEmpty else { return }
+        
+        let user = UserRepresentation(email: email, password: password, name: name, imageURL: nil, identifier: nil)
+        userController.signUpWith(user: user, loginType: .signUp) { (error) in
+            if let error = error {
+                NSLog("Error logging in with \(error)")
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

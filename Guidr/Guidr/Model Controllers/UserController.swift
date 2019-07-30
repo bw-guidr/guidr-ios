@@ -32,7 +32,7 @@ class UserController {
     
     let baseURL = URL(string: "https://guidr-backend-justin-chen.herokuapp.com/")!
     
-    func loginWith(user: UserRepresentation, loginType: LoginType, completion: @escaping (Result<Bearer, NetworkError>) -> ()) {
+    func loginWith(user: UserRepresentation, loginType: LoginType, completion: @escaping (NetworkError?) -> ()) {
         let requestURL = baseURL.appendingPathComponent("\(loginType.rawValue)")
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.post.rawValue
@@ -43,24 +43,24 @@ class UserController {
             request.httpBody = try jsonEncoder.encode(user)
         } catch {
             print("error encoding: \(error)")
-            completion(.failure(.noEncode))
+            completion(.noEncode)
             return
         }
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse, response.statusCode != 200 {
-                completion(.failure(.badResponse))
+                completion(.badResponse)
                 return
             }
             
             if error != nil {
-                completion(.failure(.otherError))
+                completion(.otherError)
                 return
             }
             
             if loginType == .signIn {
                 guard let data = data else {
-                    completion(.failure(.badData))
+                    completion(.badData)
                     return
                 }
                 
@@ -73,12 +73,12 @@ class UserController {
                     try CoreDataStack.shared.save()
                     
                     if let bearer = self.bearer {
-                        completion(.success(bearer))
                         KeychainWrapper.standard.set(bearer.token, forKey: "token")
+                        completion(nil)
                     }
                 } catch {
                     print("error decoding data/token: \(error)")
-                    completion(.failure(.noDecode))
+                    completion(.noDecode)
                     return
                 }
             }

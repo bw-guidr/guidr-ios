@@ -213,6 +213,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="0Kb-6k-680" id="6QH-lH-pQx"/>
                         <outlet property="forgotPasswordButton" destination="b6L-hX-KLD" id="FSK-GH-ssv"/>
+                        <outlet property="loginButton" destination="LWv-QG-NgB" id="Epw-CZ-3fv"/>
                         <outlet property="nameIcon" destination="jdd-do-GsV" id="lZA-Fh-sbM"/>
                         <outlet property="nameLabel" destination="R2t-Ls-yX5" id="Eq2-yU-Z8q"/>
                         <outlet property="nameTextField" destination="A6l-hB-aKj" id="bsz-Of-VMW"/>
