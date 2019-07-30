@@ -66,7 +66,7 @@ class UserController {
                     let result = try jsonDecoder.decode(UserResult.self, from: data)
                     self.token = result.token
                     self.user = result.user
-                    print(self.user)
+
                     User(userRepresentation: self.user!)
                     try CoreDataStack.shared.save()
                     
@@ -118,7 +118,6 @@ class UserController {
             do {
                 self.user = try JSONDecoder().decode(UserRepresentation.self, from: data)
                 User(userRepresentation: self.user!)
-                print("\(self.user)")
                 try CoreDataStack.shared.save()
             } catch {
                 completion(.noDecode)
