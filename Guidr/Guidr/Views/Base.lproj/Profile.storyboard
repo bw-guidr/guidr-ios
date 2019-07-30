@@ -223,6 +223,7 @@
                                 <size key="customSize" width="107" height="103"/>
                                 <connections>
                                     <outlet property="tourImageView" destination="O7c-ti-EoV" id="vDT-aU-FkE"/>
+                                    <segue destination="mfb-3I-qNt" kind="presentation" identifier="ShowDetailSegue" id="qZC-U7-0m1"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -240,13 +241,22 @@
             </objects>
             <point key="canvasLocation" x="4597.1014492753629" y="139.95535714285714"/>
         </scene>
+        <!--TourDetail-->
+        <scene sceneID="EE4-G1-IBn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TourDetail" id="mfb-3I-qNt" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dA8-gr-vSN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5236" y="73"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="o17-cN-PEl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="hSY-jz-ida" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="account" id="lci-nw-8d0"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="account" id="mk4-A7-Kdt"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y8r-mU-REE">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -271,17 +281,50 @@
                     </tabBar>
                     <connections>
                         <segue destination="hSY-jz-ida" kind="relationship" relationship="viewControllers" id="zjZ-CC-MYH"/>
+                        <segue destination="0p2-H6-TrH" kind="relationship" relationship="viewControllers" id="zuC-Jj-8Xw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dKL-mz-Bhz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2776.811594202899" y="139.95535714285714"/>
         </scene>
+        <!--CreateTour-->
+        <scene sceneID="78p-BR-aTN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateTour" id="P1k-oC-2vL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Add Tour" image="add" id="NeQ-BX-xTj"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wqJ-xR-Anh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2570" y="556"/>
+        </scene>
+        <!--TourGallery-->
+        <scene sceneID="kZ5-lS-lHv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TourGallery" id="0p2-H6-TrH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tour Gallery" image="explore" id="6ep-EJ-NjY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f5L-k9-mmb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2777" y="556"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="qQa-sY-SpD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="8NE-eX-e9o" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="Setting" id="wjR-xK-MNc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hiu-PG-01s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2973" y="556"/>
+        </scene>
     </scenes>
     <resources>
         <image name="MountainRedVector" width="5000" height="3542"/>
+        <image name="Setting" width="36" height="36"/>
         <image name="account" width="24" height="24"/>
         <image name="add" width="36" height="36"/>
+        <image name="explore" width="24" height="24"/>
         <image name="profilePhoto" width="2286" height="3569"/>
     </resources>
 </document>
