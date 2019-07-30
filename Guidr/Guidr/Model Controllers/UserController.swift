@@ -28,7 +28,7 @@ class UserController {
     
     let baseURL = URL(string: "https://guidr-backend-justin-chen.herokuapp.com/user")!
     
-    func loginWith(user: UserRepresentation, loginType: LoginType, completion: @escaping (NetworkError?) -> ()) {
+    func loginWith(user: UserRepresentation, loginType: LoginType, completion: @escaping (Result<String, NetworkError>) -> ()) {
         let requestURL = baseURL.appendingPathComponent("\(loginType.rawValue)")
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.post.rawValue
@@ -39,46 +39,43 @@ class UserController {
             request.httpBody = try jsonEncoder.encode(user)
         } catch {
             print("error encoding: \(error)")
-            completion(.noEncode)
+            completion(.failure(.noEncode))
             return
         }
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse, response.statusCode != 200 {
                 print(response.statusCode)
-                completion(.badResponse)
+                completion(.failure(.badResponse))
                 return
             }
             
             if error != nil {
-                completion(.otherError)
+                completion(.failure(.otherError))
                 return
             }
             
-            if loginType == .signIn {
-                guard let data = data else {
-                    completion(.badData)
-                    return
-                }
-                
-                let jsonDecoder = JSONDecoder()
-                do {
-                    let result = try jsonDecoder.decode(UserResult.self, from: data)
-                    self.token = result.token
-                    self.user = result.user
+            guard let data = data else {
+                completion(.failure(.badData))
+                return
+            }
+            
+            let jsonDecoder = JSONDecoder()
+            do {
+                let result = try jsonDecoder.decode(UserResult.self, from: data)
+                self.token = result.token
+                self.user = result.user
 
-                    User(userRepresentation: self.user!)
-                    try CoreDataStack.shared.save()
-                    
-                    if let token = self.token {
-                        KeychainWrapper.standard.set(token, forKey: "token")
-                        completion(nil)
-                    }
-                } catch {
-                    print("error decoding data/token: \(error)")
-                    completion(.noDecode)
-                    return
+                User(userRepresentation: self.user!)
+                try CoreDataStack.shared.save()
+                if let token = self.token {
+                    KeychainWrapper.standard.set(token, forKey: "token")
+                    completion(.success(token))
                 }
+            } catch {
+                print("error decoding data/token: \(error)")
+                completion(.failure(.noDecode))
+                return
             }
         }.resume()
     }

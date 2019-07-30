@@ -71,9 +71,13 @@ class LoginViewController: UIViewController {
             !password.isEmpty else { return }
         
         let user = UserRepresentation(email: email, password: password, name: nil, imageURL: nil, identifier: nil)
-        userController.loginWith(user: user, loginType: .signIn) { (error) in
-            if let error = error {
-                NSLog("Error logging in with \(error)")
+        userController.loginWith(user: user, loginType: .signIn) { (result) in
+            if (try? result.get()) != nil {
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "ShowProfileSegue", sender: self)
+                }
+            } else {
+               NSLog("Error logging in with \(result)")
             }
         }
     }
@@ -90,6 +94,15 @@ class LoginViewController: UIViewController {
         userController.signUpWith(user: user, loginType: .signUp) { (error) in
             if let error = error {
                 NSLog("Error registering with \(error)")
+            }
+            self.userController.loginWith(user: user, loginType: .signIn) { (result) in
+                if (try? result.get()) != nil {
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "ShowProfileSegue", sender: self)
+                    }
+                } else {
+                    NSLog("Error logging in with \(result)")
+                }
             }
         }
     }

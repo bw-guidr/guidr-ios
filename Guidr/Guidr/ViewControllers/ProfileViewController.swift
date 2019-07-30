@@ -25,6 +25,8 @@ class ProfileViewController: UICollectionViewController {
 		tabBarController?.tabBar.tintColor = .mainPeach
         
         // check if first launch or not logged in
+        
+        
         if UserDefaults.isFirstLaunch() && token == nil {
             performSegue(withIdentifier: "LoginViewModalSegue", sender: self)
         } else if token == nil {

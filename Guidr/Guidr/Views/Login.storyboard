@@ -220,11 +220,20 @@
                         <outlet property="nameTextField" destination="A6l-hB-aKj" id="bsz-Of-VMW"/>
                         <outlet property="passwordTextField" destination="B3c-zd-BRr" id="yDx-bY-lG6"/>
                         <outlet property="registerButton" destination="xEh-uC-Pnf" id="A5s-7h-T2J"/>
+                        <segue destination="HKK-EZ-Pqp" kind="show" identifier="ShowProfileSegue" id="hm3-11-3b0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fjY-tP-0Ge" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-33.333333333333336" y="65.625"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="7Lz-06-Cvl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="HKK-EZ-Pqp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKg-ZN-NtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="637" y="82"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="keh-Zt-HfV">
