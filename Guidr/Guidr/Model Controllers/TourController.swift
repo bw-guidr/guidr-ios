@@ -16,18 +16,19 @@ enum HTTPMethod: String {
     case delete = "DELETE"
 }
 
+enum PutType: String {
+    case add
+    case update
+}
+
 class TourController {
     
-    init() {
-        fetchToursFromServer()
-    }
+    let baseURL = URL(string: "https://guidr-backend-justin-chen.herokuapp.com/user")!
     
-    let baseURL = URL(string: "placeholder")!
-    
-    func createTour(title: String, description: String?, miles: Int16, date: Date) {
-        let tour = Tour(title: title, description: description, miles: miles, date: date, identifier: nil)
+    func createTour(title: String, description: String?, miles: Int32, date: Date, userID: Int32, imageURL: String?, location: String?, tourType: String?) {
+        let tour = Tour(title: title, description: description, miles: miles, date: date, userID: userID, imageURL: imageURL ?? "", location: location ?? "", tourType: tourType ?? "")
         
-        put(tour: tour)
+        put(tour: tour, type: .add)
         
         do {
             try CoreDataStack.shared.save()
@@ -36,14 +37,14 @@ class TourController {
         }
     }
     
-    func updateTour(tour: Tour, title: String, description: String?, miles: Int16, imageURL: String?, date: Date) {
+    func updateTour(tour: Tour, title: String, description: String?, miles: Int32, imageURL: String?, date: Date) {
         tour.title = title
         tour.summary = description
         tour.miles = miles
         tour.date = date
         tour.imageURL = imageURL
         
-        put(tour: tour)
+        put(tour: tour, type: .update)
         
         do {
             try CoreDataStack.shared.save()
@@ -65,8 +66,8 @@ class TourController {
         }
     }
     
-    func fetchToursFromServer(completion: @escaping () -> Void = { }) {
-        let requestURL = baseURL.appendingPathExtension("json")
+    func fetchToursFromServer(userID: Int32, completion: @escaping () -> Void = { }) {
+        let requestURL = baseURL.appendingPathComponent("\(userID)").appendingPathComponent("trips")
         
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.get.rawValue
@@ -105,9 +106,14 @@ class TourController {
             }.resume()
     }
     
-    func put(tour: Tour, completion: @escaping () -> Void = { }) {
-        guard let identifier = tour.identifier else { return }
-        let requestURL = baseURL.appendingPathComponent(identifier).appendingPathExtension("json")
+    func put(tour: Tour, type: PutType,completion: @escaping () -> Void = { }) {
+        var requestURL: URL
+        if type == .add {
+            requestURL = baseURL.appendingPathComponent("\(tour.userID)").appendingPathComponent("trips")
+        } else {
+            requestURL = baseURL.appendingPathComponent("trips").appendingPathComponent("\(tour.identifier)")
+        }
+        
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.put.rawValue
         
@@ -131,8 +137,7 @@ class TourController {
     }
     
     func deleteTourFromServer(tour: Tour, completion: @escaping (Error?) -> Void = { _ in }) {
-        guard let identifier = tour.identifier else { return }
-        let requestURL = baseURL.appendingPathComponent(identifier).appendingPathExtension("json")
+        let requestURL = baseURL.appendingPathComponent("trips").appendingPathComponent("\(tour.identifier)")
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.delete.rawValue
         
@@ -144,7 +149,7 @@ class TourController {
             }
             
             completion(nil)
-            }.resume()
+        }.resume()
     }
     
     private func fetchSingleTourFromPersistentStore(identifier: String, context: NSManagedObjectContext) -> Tour? {
@@ -167,7 +172,7 @@ class TourController {
     private func update(tour: Tour, representation: TourRepresentation) {
         tour.title = representation.title
         tour.summary = representation.description
-        tour.miles = representation.miles ?? 0
+        tour.miles = representation.miles!
         tour.date = representation.date
         tour.imageURL = representation.imageURL
     }
@@ -175,7 +180,7 @@ class TourController {
     private func updateTours(with representations: [TourRepresentation], context: NSManagedObjectContext) {
         context.performAndWait {
             for representation in representations {
-                guard let identifier = representation.identifier else { return }
+                let identifier = "\(representation.userID)"
                 let tour = fetchSingleTourFromPersistentStore(identifier: identifier, context: context)
                 
                 if let tour = tour {

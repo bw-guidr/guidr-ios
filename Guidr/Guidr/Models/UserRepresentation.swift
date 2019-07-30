@@ -13,7 +13,15 @@ struct UserRepresentation: Codable {
     var password: String?
     var name: String?
     var imageURL: String?
-    var identifier: String?
+    var identifier: Int32?
+    
+    enum CodingKeys: String, CodingKey {
+        case email = "username"
+        case password
+        case name
+        case imageURL
+        case identifier = "id"
+    }
 }
 
 extension UserRepresentation: Equatable {

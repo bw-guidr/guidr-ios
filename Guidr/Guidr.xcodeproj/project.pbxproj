@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3259881E22EFB47700D1A8BE /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259881D22EFB47700D1A8BE /* CustomLabel.swift */; };
+		3259886022F0969700D1A8BE /* TourDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3259885F22F0969700D1A8BE /* TourDetail.storyboard */; };
+		3259886222F09DD200D1A8BE /* TourDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259886122F09DD200D1A8BE /* TourDetailViewController.swift */; };
 		3737ED8222EF62BA0038001E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8122EF62BA0038001E /* Login.storyboard */; };
 		3737ED8422EF62F60038001E /* WalkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8322EF62F60038001E /* WalkThrough.storyboard */; };
 		3737ED8622EF63170038001E /* CreateTour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8522EF63170038001E /* CreateTour.storyboard */; };
@@ -39,9 +42,14 @@
 		66F4214622EF92B900B78375 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66F4214522EF92B900B78375 /* Montserrat-Medium.ttf */; };
 		66F4214822EF970900B78375 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66F4214722EF970900B78375 /* Montserrat-Bold.ttf */; };
 		66F4214A22EF982000B78375 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F4214922EF981F00B78375 /* Launch Screen.storyboard */; };
+		66F4585522F0B0AC00756BC9 /* TourCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4585422F0B0AC00756BC9 /* TourCollectionViewCell.swift */; };
+		66F4585722F0B0B500756BC9 /* TourGalleryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4585622F0B0B500756BC9 /* TourGalleryCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3259881D22EFB47700D1A8BE /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		3259885F22F0969700D1A8BE /* TourDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TourDetail.storyboard; sourceTree = "<group>"; };
+		3259886122F09DD200D1A8BE /* TourDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourDetailViewController.swift; sourceTree = "<group>"; };
 		3737ED8122EF62BA0038001E /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3737ED8322EF62F60038001E /* WalkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkThrough.storyboard; sourceTree = "<group>"; };
 		3737ED8522EF63170038001E /* CreateTour.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateTour.storyboard; sourceTree = "<group>"; };
@@ -76,6 +84,8 @@
 		66F4214522EF92B900B78375 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		66F4214722EF970900B78375 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		66F4214922EF981F00B78375 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		66F4585422F0B0AC00756BC9 /* TourCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourCollectionViewCell.swift; sourceTree = "<group>"; };
+		66F4585622F0B0B500756BC9 /* TourGalleryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourGalleryCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +107,7 @@
 				66F4211622EF3D7600B78375 /* AppDelegate.swift */,
 				3737ED8D22EF69120038001E /* Fonts */,
 				3737ED8B22EF65E50038001E /* ProjectColors.swift */,
+				3259881D22EFB47700D1A8BE /* CustomLabel.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -111,6 +122,8 @@
 				3737ED8722EF63DD0038001E /* TourGallery.storyboard */,
 				3737ED8922EF63EB0038001E /* Settings.storyboard */,
 				66F4211A22EF3D7600B78375 /* Profile.storyboard */,
+				3259885F22F0969700D1A8BE /* TourDetail.storyboard */,
+				66F4585422F0B0AC00756BC9 /* TourCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,11 +145,13 @@
 		37C851CD22EF872B00406985 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				66F4585622F0B0B500756BC9 /* TourGalleryCollectionViewController.swift */,
 				376EF2B222F003AF0005F985 /* ProfileViewController.swift */,
 				376EF2B422F0054D0005F985 /* GuideInfoCollectionViewCell.swift */,
 				376EF2B622F005700005F985 /* AddFirstTourCollectionViewCell.swift */,
 				376EF2B822F005840005F985 /* TourPhotoCollectionViewCell.swift */,
 				66F4214322EF8C8600B78375 /* LoginViewController.swift */,
+				3259886122F09DD200D1A8BE /* TourDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -265,6 +280,7 @@
 				66F4214822EF970900B78375 /* Montserrat-Bold.ttf in Resources */,
 				376654AA22EFA5A400448ECB /* BebasNeue-Regular.ttf in Resources */,
 				3737ED8222EF62BA0038001E /* Login.storyboard in Resources */,
+				3259886022F0969700D1A8BE /* TourDetail.storyboard in Resources */,
 				376654A722EFA5A400448ECB /* BebasNeue-Thin.ttf in Resources */,
 				3737ED8A22EF63EB0038001E /* Settings.storyboard in Resources */,
 				376654A922EFA5A400448ECB /* BebasNeue-Light.ttf in Resources */,
@@ -290,14 +306,18 @@
 				376EF2B922F005840005F985 /* TourPhotoCollectionViewCell.swift in Sources */,
 				66F4213522EF598800B78375 /* User+Convenience.swift in Sources */,
 				66F4213322EF597C00B78375 /* Tour+Convenience.swift in Sources */,
+				3259881E22EFB47700D1A8BE /* CustomLabel.swift in Sources */,
+				66F4585522F0B0AC00756BC9 /* TourCollectionViewCell.swift in Sources */,
 				376EF2B322F003AF0005F985 /* ProfileViewController.swift in Sources */,
 				66F4212A22EF582E00B78375 /* Guidr.xcdatamodeld in Sources */,
+				66F4585722F0B0B500756BC9 /* TourGalleryCollectionViewController.swift in Sources */,
 				66F4213B22EF623A00B78375 /* TourController.swift in Sources */,
 				66F4212F22EF596800B78375 /* UserRepresentation.swift in Sources */,
 				66F4211722EF3D7600B78375 /* AppDelegate.swift in Sources */,
 				3737ED8C22EF65E50038001E /* ProjectColors.swift in Sources */,
 				66F4213122EF597200B78375 /* TourRepresentation.swift in Sources */,
 				66F4214122EF747F00B78375 /* KeychainWrapper.swift in Sources */,
+				3259886222F09DD200D1A8BE /* TourDetailViewController.swift in Sources */,
 				376EF2B522F0054D0005F985 /* GuideInfoCollectionViewCell.swift in Sources */,
 				66F4212D22EF592D00B78375 /* CoreDataStack.swift in Sources */,
 				66F4214022EF747F00B78375 /* KeychainItemAccessibility.swift in Sources */,
