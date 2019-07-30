@@ -20,14 +20,19 @@ class TourDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        scrollView.contentInsetAdjustmentBehavior = .never
+        designSetup()
+        
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
+    func designSetup() {
+        scrollView.contentInsetAdjustmentBehavior = .never
+        detailImageView.layer.cornerRadius = 30
+        detailImageView.clipsToBounds = true
+    }
     /*
     // MARK: - Navigation
 

@@ -25,33 +25,33 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountainRedVector" translatesAutoresizingMaskIntoConstraints="NO" id="mMd-2D-b8Q">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="500.00000000000091"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="499.99999999999909" id="pYh-0T-LED"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvq-qv-wCD">
-                                                <rect key="frame" x="8" y="450" width="379" height="36"/>
+                                                <rect key="frame" x="33" y="450" width="354" height="36"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Orange trail">
                                                         <attributes>
                                                             <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <font key="NSFont" size="30" name="BebasNeue-Book"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="G9m-JM-GxZ">
-                                                <rect key="frame" x="30" y="507" width="354" height="20"/>
+                                                <rect key="frame" x="30" y="520" width="354" height="17"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="d2s-ca-zUE">
-                                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="20"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="17"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVo-Jk-dgk">
-                                                                <rect key="frame" x="0.0" y="0.0" width="54.5" height="20"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVo-Jk-dgk">
+                                                                <rect key="frame" x="0.0" y="0.0" width="36.5" height="17"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="15 July">
                                                                         <attributes>
@@ -62,8 +62,8 @@
                                                                 </attributedString>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rH0-GP-dbg">
-                                                                <rect key="frame" x="84.5" y="0.0" width="29" height="20"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rH0-GP-dbg">
+                                                                <rect key="frame" x="66.5" y="0.0" width="47" height="17"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="4.5 Miles">
                                                                         <attributes>
@@ -80,7 +80,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNU-LH-FiR" userLabel="Personal Label">
-                                                        <rect key="frame" x="213.5" y="0.0" width="140.5" height="20"/>
+                                                        <rect key="frame" x="213.5" y="0.0" width="140.5" height="17"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="personal">
                                                                 <attributes>
@@ -94,17 +94,17 @@
                                                 </subviews>
                                             </stackView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjg-9C-tKn">
-                                                <rect key="frame" x="30" y="562" width="354" height="250"/>
+                                                <rect key="frame" x="30" y="572" width="354" height="250"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="jur-C4-sgb"/>
                                                 </constraints>
-                                                <mutableString key="text">Today we went down the wonderful Orange Trail.  This one is at a medium difficulty but the view of the mountians is absolutly breath taking.  The entire hike, we were surrounded by wildlife to keep us entertained.  We made a pit stop at "Old Mans Lookout" and had lunch over-looking the Valley.  Does life get any better??  As we made our way down from the lookout, we ran into a doe and her two fawns.  We all took a knee and just watched for what seemed like 30 minuites before they even realized we were there.  What a great trip!</mutableString>
+                                                <string key="text">Today we went down the wonderful Orange Trail.  This one is at a medium difficulty but the view of the mountians is absolutly breath taking.  The entire hike, we were surrounded by wildlife to keep us entertained.  We made a pit stop at "Old Mans Lookout" and had lunch over-looking the Valley.  Does life get any better??  As we made our way down from the lookout, we ran into a doe and her two fawns.  We all took a knee and just watched for what seemed like 30 minuites before they even realized we were there.  What a great trip!</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MW0-Yk-Dam">
-                                                <rect key="frame" x="30" y="35" width="16" height="22"/>
+                                                <rect key="frame" x="30" y="35" width="48" height="48"/>
                                                 <state key="normal" image="Back"/>
                                                 <connections>
                                                     <action selector="backButtonPressed:" destination="h2B-EP-d3w" eventType="touchUpInside" id="bFr-kC-mLA"/>
@@ -128,7 +128,7 @@
                                             <constraint firstAttribute="trailing" secondItem="Kjg-9C-tKn" secondAttribute="trailing" constant="30" id="XXi-Sv-QDG"/>
                                             <constraint firstAttribute="trailing" secondItem="mMd-2D-b8Q" secondAttribute="trailing" id="YRc-rE-dl3"/>
                                             <constraint firstAttribute="trailing" secondItem="i9u-Us-Ef6" secondAttribute="trailing" constant="30" id="bSi-Qr-XNd"/>
-                                            <constraint firstItem="G9m-JM-GxZ" firstAttribute="top" secondItem="mMd-2D-b8Q" secondAttribute="bottom" constant="7" id="cDm-Gq-C06"/>
+                                            <constraint firstItem="G9m-JM-GxZ" firstAttribute="top" secondItem="mMd-2D-b8Q" secondAttribute="bottom" constant="20" id="cDm-Gq-C06"/>
                                             <constraint firstAttribute="width" constant="414" id="erU-5P-hP4"/>
                                             <constraint firstItem="MW0-Yk-Dam" firstAttribute="top" secondItem="Zki-UJ-Pb5" secondAttribute="top" constant="35" id="f3X-M7-c2o"/>
                                             <constraint firstItem="mMd-2D-b8Q" firstAttribute="leading" secondItem="Zki-UJ-Pb5" secondAttribute="leading" id="ox2-ms-243"/>
