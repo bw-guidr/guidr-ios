@@ -23,11 +23,7 @@ enum PutType: String {
 
 class TourController {
     
-    init() {
-        fetchToursFromServer()
-    }
-    
-    let baseURL = URL(string: "user")!
+    let baseURL = URL(string: "https://guidr-backend-justin-chen.herokuapp.com/user")!
     
     func createTour(title: String, description: String?, miles: Int32, date: Date, userID: Int32) {
         let tour = Tour(title: title, description: description, miles: miles, date: date, userID: userID)
@@ -70,8 +66,8 @@ class TourController {
         }
     }
     
-    func fetchToursFromServer(completion: @escaping () -> Void = { }) {
-        let requestURL = baseURL.appendingPathExtension("json")
+    func fetchToursFromServer(userID: Int32, completion: @escaping () -> Void = { }) {
+        let requestURL = baseURL.appendingPathComponent("\(userID)").appendingPathComponent("trips")
         
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.get.rawValue
@@ -111,10 +107,10 @@ class TourController {
     }
     
     func put(tour: Tour, type: PutType,completion: @escaping () -> Void = { }) {
-        let requestURL: URL
+        var requestURL: URL
         if type == .add {
             requestURL = baseURL.appendingPathComponent("\(tour.userID)").appendingPathComponent("trips")
-        } else if type == .update {
+        } else {
             requestURL = baseURL.appendingPathComponent("trips").appendingPathComponent("\(tour.identifier)")
         }
         
