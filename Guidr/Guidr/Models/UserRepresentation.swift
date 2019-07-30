@@ -13,7 +13,7 @@ struct UserRepresentation: Codable {
     var password: String?
     var name: String?
     var imageURL: String?
-    var identifier: String?
+    var identifier: Int32?
 }
 
 extension UserRepresentation: Equatable {
