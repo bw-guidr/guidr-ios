@@ -15,6 +15,18 @@ struct TourRepresentation: Codable {
     var date: Date?
     var imageURL: String?
     var userID: Int32
+    var identifier: Int32
+    var tourType: String
+    
+    enum CodingKeys: String, CodingKey {
+        case title
+        case description
+        case miles
+        case imageURL
+        case userID = "user_id"
+        case identifier = "id"
+        case tourType = "trip_type"
+    }
 }
 
 extension TourRepresentation: Equatable {
