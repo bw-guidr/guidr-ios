@@ -27,15 +27,17 @@ extension User {
                                          context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         self.init(context: context)
         
+        guard let id = userRepresentation.identifier else { return nil }
+        
         self.email = userRepresentation.email
         self.password = userRepresentation.password
         self.name = userRepresentation.name
-        self.identifier = userRepresentation.identifier!
+        self.identifier = Int32(id)
         self.imageURL = userRepresentation.imageURL
         
     }
     
     var userRepresentation: UserRepresentation {
-        return UserRepresentation(email: email, password: password, name: name, imageURL: imageURL, identifier: identifier)
+        return UserRepresentation(email: email, password: password, name: name, imageURL: imageURL, identifier: Int(identifier))
     }
 }

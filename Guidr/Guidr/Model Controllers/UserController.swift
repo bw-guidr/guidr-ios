@@ -17,17 +17,13 @@ enum NetworkError: Error {
     case badResponse
 }
 
-struct Bearer: Codable {
-    let token: String
-}
-
 enum LoginType: String {
     case signUp = "register"
     case signIn = "login"
 }
 
 class UserController {
-    var bearer: Bearer?
+    var token: String?
     var user: UserRepresentation?
     
     let baseURL = URL(string: "https://guidr-backend-justin-chen.herokuapp.com/user")!
@@ -67,14 +63,15 @@ class UserController {
                 
                 let jsonDecoder = JSONDecoder()
                 do {
-                    self.bearer = try jsonDecoder.decode(Bearer.self, from: data)
-                    self.user = try jsonDecoder.decode(UserRepresentation.self, from: data)
-                    
+                    let result = try jsonDecoder.decode(UserResult.self, from: data)
+                    self.token = result.token
+                    self.user = result.user
+                    print(self.user)
                     User(userRepresentation: self.user!)
                     try CoreDataStack.shared.save()
                     
-                    if let bearer = self.bearer {
-                        KeychainWrapper.standard.set(bearer.token, forKey: "token")
+                    if let token = self.token {
+                        KeychainWrapper.standard.set(token, forKey: "token")
                         completion(nil)
                     }
                 } catch {

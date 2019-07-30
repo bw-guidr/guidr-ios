@@ -133,7 +133,7 @@ class TourController {
             }
             
             completion()
-            }.resume()
+        }.resume()
     }
     
     func deleteTourFromServer(tour: Tour, completion: @escaping (Error?) -> Void = { _ in }) {
