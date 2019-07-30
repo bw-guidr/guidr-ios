@@ -24,6 +24,7 @@
 		376EF2B522F0054D0005F985 /* GuideInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376EF2B422F0054D0005F985 /* GuideInfoCollectionViewCell.swift */; };
 		376EF2B722F005700005F985 /* AddFirstTourCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376EF2B622F005700005F985 /* AddFirstTourCollectionViewCell.swift */; };
 		376EF2B922F005840005F985 /* TourPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376EF2B822F005840005F985 /* TourPhotoCollectionViewCell.swift */; };
+		376EF2BB22F0BFFC0005F985 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 376EF2BA22F0BFFC0005F985 /* BebasNeue-Regular.ttf */; };
 		66F4211722EF3D7600B78375 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4211622EF3D7600B78375 /* AppDelegate.swift */; };
 		66F4211C22EF3D7600B78375 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F4211A22EF3D7600B78375 /* Profile.storyboard */; };
 		66F4211E22EF3D7700B78375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F4211D22EF3D7700B78375 /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		376EF2B422F0054D0005F985 /* GuideInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		376EF2B622F005700005F985 /* AddFirstTourCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFirstTourCollectionViewCell.swift; sourceTree = "<group>"; };
 		376EF2B822F005840005F985 /* TourPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		376EF2BA22F0BFFC0005F985 /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
 		66F4211322EF3D7600B78375 /* Guidr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F4211622EF3D7600B78375 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66F4211B22EF3D7600B78375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				376654A322EFA5A400448ECB /* BebasNeue-Bold.ttf */,
 				376654A122EFA5A400448ECB /* BebasNeue-Book.ttf */,
+				376EF2BA22F0BFFC0005F985 /* BebasNeue-Regular.ttf */,
 				376654A422EFA5A400448ECB /* BebasNeue-Light.ttf */,
 				376654A222EFA5A400448ECB /* BebasNeue-Thin.ttf */,
 				66F4214522EF92B900B78375 /* Montserrat-Medium.ttf */,
@@ -281,6 +284,7 @@
 				3737ED8A22EF63EB0038001E /* Settings.storyboard in Resources */,
 				376654A922EFA5A400448ECB /* BebasNeue-Light.ttf in Resources */,
 				376654A822EFA5A400448ECB /* BebasNeue-Bold.ttf in Resources */,
+				376EF2BB22F0BFFC0005F985 /* BebasNeue-Regular.ttf in Resources */,
 				66F4211E22EF3D7700B78375 /* Assets.xcassets in Resources */,
 				66F4214622EF92B900B78375 /* Montserrat-Medium.ttf in Resources */,
 				376654A622EFA5A400448ECB /* BebasNeue-Book.ttf in Resources */,
