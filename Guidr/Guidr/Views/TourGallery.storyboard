@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T0u-5l-48l">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -78,13 +78,36 @@
                             <outlet property="delegate" destination="RgT-Iw-tMd" id="Aos-zI-tBR"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" id="jyr-Oe-ZNB"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPq-Ge-iPs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060.8695652173915" y="233.70535714285714"/>
+        </scene>
+        <!--Tour Gallery-->
+        <scene sceneID="Tvu-E2-Oo7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T0u-5l-48l" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tour Gallery" selectedImage="explore" id="U4k-4n-Esa"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="25d-0u-Mf8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RgT-Iw-tMd" kind="relationship" relationship="rootViewController" id="cTP-Cz-w8y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sQJ-92-o6t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="150.72463768115944" y="233.70535714285714"/>
         </scene>
     </scenes>
     <resources>
         <image name="MountainRedVector" width="5000" height="3542"/>
+        <image name="explore" width="36" height="36"/>
     </resources>
 </document>

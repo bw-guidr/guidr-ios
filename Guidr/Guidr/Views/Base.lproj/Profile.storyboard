@@ -223,7 +223,7 @@
                                 <size key="customSize" width="107" height="103"/>
                                 <connections>
                                     <outlet property="tourImageView" destination="O7c-ti-EoV" id="vDT-aU-FkE"/>
-                                    <segue destination="mfb-3I-qNt" kind="show" identifier="ShowDetailSegue" id="qZC-U7-0m1"/>
+                                    <segue destination="mfb-3I-qNt" kind="presentation" identifier="ShowDetailSegue" id="qZC-U7-0m1"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -249,13 +249,14 @@
             </objects>
             <point key="canvasLocation" x="5236" y="73"/>
         </scene>
-        <!--Profile-->
+        <!--Item-->
         <scene sceneID="o17-cN-PEl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="hSY-jz-ida" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="account" id="lci-nw-8d0"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="mk4-A7-Kdt"/>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y8r-mU-REE">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -289,7 +290,6 @@
     </scenes>
     <resources>
         <image name="MountainRedVector" width="5000" height="3542"/>
-        <image name="account" width="24" height="24"/>
         <image name="add" width="36" height="36"/>
         <image name="profilePhoto" width="2286" height="3569"/>
     </resources>
