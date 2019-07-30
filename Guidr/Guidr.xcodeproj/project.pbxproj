@@ -151,7 +151,6 @@
 				376EF2B622F005700005F985 /* AddFirstTourCollectionViewCell.swift */,
 				376EF2B822F005840005F985 /* TourPhotoCollectionViewCell.swift */,
 				66F4214322EF8C8600B78375 /* LoginViewController.swift */,
-				37C851CB22EF872600406985 /* ProfileViewController.swift */,
 				3259886122F09DD200D1A8BE /* TourDetailViewController.swift */,
 			);
 			path = ViewControllers;
@@ -318,7 +317,6 @@
 				3737ED8C22EF65E50038001E /* ProjectColors.swift in Sources */,
 				66F4213122EF597200B78375 /* TourRepresentation.swift in Sources */,
 				66F4214122EF747F00B78375 /* KeychainWrapper.swift in Sources */,
-				37C851CC22EF872600406985 /* ProfileViewController.swift in Sources */,
 				3259886222F09DD200D1A8BE /* TourDetailViewController.swift in Sources */,
 				376EF2B522F0054D0005F985 /* GuideInfoCollectionViewCell.swift in Sources */,
 				66F4212D22EF592D00B78375 /* CoreDataStack.swift in Sources */,
