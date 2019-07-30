@@ -23,7 +23,7 @@ struct Bearer: Codable {
 
 enum LoginType: String {
     case signUp = "register"
-    case signIn = "auth"
+    case signIn = "login"
 }
 
 class UserController {
