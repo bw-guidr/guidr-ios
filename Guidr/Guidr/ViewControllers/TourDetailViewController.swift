@@ -14,13 +14,14 @@ class TourDetailViewController: UIViewController {
     @IBOutlet weak var tourNameLabel: UILabel!
     @IBOutlet weak var tourDataLabel: UILabel!
     @IBOutlet weak var tourMilesLabel: UILabel!
-    @IBOutlet weak var tourHoursLabel: UILabel!
+    @IBOutlet weak var personalLabel: UILabel!
     @IBOutlet weak var tourDetailTextView: UITextView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        scrollView.contentInsetAdjustmentBehavior = .never
     }
     
 
