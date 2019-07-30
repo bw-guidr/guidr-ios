@@ -66,7 +66,7 @@ class TourController {
         }
     }
     
-    func fetchToursFromServer(userID: Int32, completion: @escaping () -> Void = { }) {
+    func fetchToursFromServer(userID: Int, completion: @escaping () -> Void = { }) {
         let requestURL = baseURL.appendingPathComponent("\(userID)").appendingPathComponent("trips")
         
         var request = URLRequest(url: requestURL)
