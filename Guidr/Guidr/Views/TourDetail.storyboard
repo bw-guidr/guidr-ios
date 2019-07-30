@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tour Detail View Controller-->
         <scene sceneID="WG2-JC-lfy">
             <objects>
-                <viewController id="h2B-EP-d3w" sceneMemberID="viewController">
+                <viewController id="h2B-EP-d3w" customClass="TourDetailViewController" customModule="Guidr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="foB-Mx-Ggg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,10 +45,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="163" translatesAutoresizingMaskIntoConstraints="NO" id="G9m-JM-GxZ">
-                                                <rect key="frame" x="30" y="507" width="354" height="20"/>
+                                                <rect key="frame" x="30" y="507" width="354" height="17"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVo-Jk-dgk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="54.5" height="20"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="94" height="17"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="94" id="1zF-eg-w6J"/>
+                                                        </constraints>
                                                         <attributedString key="attributedText">
                                                             <fragment content="15 July">
                                                                 <attributes>
@@ -60,10 +63,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7nj-80-JQj">
-                                                        <rect key="frame" x="217.5" y="0.0" width="136.5" height="20"/>
+                                                        <rect key="frame" x="257" y="0.0" width="97" height="17"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rH0-GP-dbg">
-                                                                <rect key="frame" x="0.0" y="0.0" width="68.5" height="20"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="47" height="17"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="4.5 Miles">
                                                                         <attributes>
@@ -75,7 +78,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNU-LH-FiR">
-                                                                <rect key="frame" x="76.5" y="0.0" width="60" height="20"/>
+                                                                <rect key="frame" x="55" y="0.0" width="42" height="17"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="4 Hours">
                                                                         <attributes>
@@ -91,7 +94,7 @@
                                                 </subviews>
                                             </stackView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Kjg-9C-tKn">
-                                                <rect key="frame" x="30" y="562" width="354" height="152"/>
+                                                <rect key="frame" x="30" y="559" width="354" height="152"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="152" id="jur-C4-sgb"/>
@@ -101,7 +104,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="i9u-Us-Ef6">
-                                                <rect key="frame" x="30" y="749" width="354" height="163"/>
+                                                <rect key="frame" x="30" y="746" width="354" height="163"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="163" id="xUK-FK-Hjp"/>
                                                 </constraints>
@@ -144,6 +147,14 @@
                         <viewLayoutGuide key="safeArea" id="6mi-Yj-bL2"/>
                     </view>
                     <size key="freeformSize" width="414" height="1200"/>
+                    <connections>
+                        <outlet property="detailImageView" destination="mMd-2D-b8Q" id="qJ5-1H-zIP"/>
+                        <outlet property="tourDataLabel" destination="HVo-Jk-dgk" id="GyH-vI-pmc"/>
+                        <outlet property="tourDetailTextView" destination="Kjg-9C-tKn" id="zzT-FM-lMx"/>
+                        <outlet property="tourHoursLabel" destination="oNU-LH-FiR" id="MbK-YP-Qjd"/>
+                        <outlet property="tourMilesLabel" destination="rH0-GP-dbg" id="23r-ae-kQA"/>
+                        <outlet property="tourNameLabel" destination="kvq-qv-wCD" id="lLC-fp-QNG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBh-bk-Cbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

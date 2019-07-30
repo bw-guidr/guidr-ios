@@ -11,6 +11,7 @@
 		3259881222EF90FE00D1A8BE /* TourCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259881122EF90FE00D1A8BE /* TourCollectionViewCell.swift */; };
 		3259881E22EFB47700D1A8BE /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259881D22EFB47700D1A8BE /* CustomLabel.swift */; };
 		3259886022F0969700D1A8BE /* TourDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3259885F22F0969700D1A8BE /* TourDetail.storyboard */; };
+		3259886222F09DD200D1A8BE /* TourDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259886122F09DD200D1A8BE /* TourDetailViewController.swift */; };
 		3737ED8222EF62BA0038001E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8122EF62BA0038001E /* Login.storyboard */; };
 		3737ED8422EF62F60038001E /* WalkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8322EF62F60038001E /* WalkThrough.storyboard */; };
 		3737ED8622EF63170038001E /* CreateTour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8522EF63170038001E /* CreateTour.storyboard */; };
@@ -47,6 +48,7 @@
 		3259881122EF90FE00D1A8BE /* TourCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TourCollectionViewCell.swift; path = ../../../../../../Documents/TourCollectionViewCell.swift; sourceTree = "<group>"; };
 		3259881D22EFB47700D1A8BE /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		3259885F22F0969700D1A8BE /* TourDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TourDetail.storyboard; sourceTree = "<group>"; };
+		3259886122F09DD200D1A8BE /* TourDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourDetailViewController.swift; sourceTree = "<group>"; };
 		3737ED8122EF62BA0038001E /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3737ED8322EF62F60038001E /* WalkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkThrough.storyboard; sourceTree = "<group>"; };
 		3737ED8522EF63170038001E /* CreateTour.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateTour.storyboard; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				66F4214322EF8C8600B78375 /* LoginViewController.swift */,
 				37C851CB22EF872600406985 /* ProfileViewController.swift */,
 				3259880F22EF90E600D1A8BE /* TourGalleryCollectionViewController.swift */,
+				3259886122F09DD200D1A8BE /* TourDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				66F4213122EF597200B78375 /* TourRepresentation.swift in Sources */,
 				66F4214122EF747F00B78375 /* KeychainWrapper.swift in Sources */,
 				37C851CC22EF872600406985 /* ProfileViewController.swift in Sources */,
+				3259886222F09DD200D1A8BE /* TourDetailViewController.swift in Sources */,
 				66F4212D22EF592D00B78375 /* CoreDataStack.swift in Sources */,
 				66F4214022EF747F00B78375 /* KeychainItemAccessibility.swift in Sources */,
 			);
