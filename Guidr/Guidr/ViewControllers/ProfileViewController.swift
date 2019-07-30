@@ -22,6 +22,7 @@ class ProfileViewController: UICollectionViewController {
         super.viewDidLoad()
 		navigationController?.navigationBar.barTintColor = .black
 		tabBarController?.tabBar.tintColor = .mainPeach
+
     }
 
 
@@ -30,7 +31,7 @@ class ProfileViewController: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
     }
-
+	
 
     // MARK: UICollectionViewDataSource
 
@@ -41,10 +42,15 @@ class ProfileViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		switch section {
+		// Tour Guide Info
 		case 0:
 			return 1
+		// Add First Tour Button
+		case 1:
+			return tourPhotos.count == 0 ? 1 : 0
+		// Tour Photos Grid
 		default:
-			return tourPhotos.count
+			return tourPhotos.count * 3
 		}
     }
 
@@ -70,7 +76,7 @@ class ProfileViewController: UICollectionViewController {
 
 	private func tourPhotoCell(from cell: UICollectionViewCell, atIndex index: Int) -> TourPhotoCollectionViewCell {
 		guard let cell = cell as? TourPhotoCollectionViewCell else { return TourPhotoCollectionViewCell() }
-		cell.tourImageView.backgroundColor = UIColor(hue: CGFloat.random(in: 0...1), saturation: 0.8, brightness: 0.7, alpha: 1)
+		cell.tourImageView.image = tourPhotos.randomElement()
 
 		return cell
 	}
@@ -80,9 +86,21 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		switch indexPath.section {
 		case 0:
-			return CGSize(width: view.bounds.width, height: 600)
+			return CGSize(width: view.bounds.width - 80, height: 600)
 		default:
-			return CGSize(width: 110, height: 110)
+			let cellSpacing = self.collectionView(collectionView, layout: collectionViewLayout, minimumInteritemSpacingForSectionAt: indexPath.section)
+			let sectionInsets = self.collectionView(collectionView, layout: collectionViewLayout, insetForSectionAt: indexPath.section)
+			let viewSpacing = sectionInsets.left + sectionInsets.right + cellSpacing * 2
+			let cellSize = (view.bounds.width - viewSpacing) / 3
+			return CGSize(width: cellSize, height: cellSize)
 		}
+	}
+
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+		return 2
+	}
+
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+		return UIEdgeInsets(top: 0, left: 40, bottom: 20, right: 40)
 	}
 }
