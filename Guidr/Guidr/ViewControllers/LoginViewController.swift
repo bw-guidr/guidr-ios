@@ -40,6 +40,7 @@ class LoginViewController: UIViewController {
         if isLogin {
             nameIcon.isHidden = false
             nameLabel.isHidden = false
+            nameTextField.isHidden = false
             forgotPasswordButton.isHidden = true
             registerButton.setTitle("Register", for: .normal)
             loginButton.setTitle("Login", for: .normal)
@@ -47,6 +48,7 @@ class LoginViewController: UIViewController {
         } else {
             nameIcon.isHidden = true
             nameLabel.isHidden = true
+            nameTextField.isHidden = true
             forgotPasswordButton.isHidden = false
             registerButton.setTitle("Log In", for: .normal)
             loginButton.setTitle("Register", for: .normal)
@@ -80,7 +82,7 @@ class LoginViewController: UIViewController {
         let user = UserRepresentation(email: email, password: password, name: name, imageURL: nil, identifier: nil)
         userController.signUpWith(user: user, loginType: .signUp) { (error) in
             if let error = error {
-                NSLog("Error logging in with \(error)")
+                NSLog("Error registering with \(error)")
             }
         }
     }

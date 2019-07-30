@@ -182,9 +182,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="registerLogo" translatesAutoresizingMaskIntoConstraints="NO" id="bpc-iN-gTW">
                                 <rect key="frame" x="72" y="124" width="270" height="75"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWv-QG-NgB">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWv-QG-NgB">
                                 <rect key="frame" x="351" y="47" width="45" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -199,6 +198,7 @@
                             <constraint firstItem="IFb-d0-YO7" firstAttribute="top" secondItem="HNh-YQ-xYX" secondAttribute="top" id="3Bd-Td-0da"/>
                             <constraint firstItem="bpc-iN-gTW" firstAttribute="top" secondItem="CZn-mI-4gL" secondAttribute="top" constant="80" id="7Pt-eR-mNT"/>
                             <constraint firstItem="bpc-iN-gTW" firstAttribute="centerX" secondItem="HNh-YQ-xYX" secondAttribute="centerX" id="EZP-qR-L03"/>
+                            <constraint firstItem="CZn-mI-4gL" firstAttribute="trailing" secondItem="LWv-QG-NgB" secondAttribute="trailing" constant="18" id="K7V-tG-wNJ"/>
                             <constraint firstAttribute="trailing" secondItem="bpc-iN-gTW" secondAttribute="trailing" constant="72" id="PoI-I4-Kna"/>
                             <constraint firstItem="j3a-8B-XaJ" firstAttribute="leading" secondItem="CZn-mI-4gL" secondAttribute="leading" constant="40" id="QeA-c7-6yt"/>
                             <constraint firstItem="IFb-d0-YO7" firstAttribute="leading" secondItem="CZn-mI-4gL" secondAttribute="leading" id="QgJ-Te-1DV"/>
@@ -207,6 +207,7 @@
                             <constraint firstItem="IFb-d0-YO7" firstAttribute="trailing" secondItem="CZn-mI-4gL" secondAttribute="trailing" id="dum-GS-fuV"/>
                             <constraint firstAttribute="bottom" secondItem="IFb-d0-YO7" secondAttribute="bottom" id="jB0-ke-g6b"/>
                             <constraint firstItem="bpc-iN-gTW" firstAttribute="leading" secondItem="CZn-mI-4gL" secondAttribute="leading" constant="72" id="nSj-7G-PwI"/>
+                            <constraint firstItem="LWv-QG-NgB" firstAttribute="top" secondItem="CZn-mI-4gL" secondAttribute="top" constant="3" id="yvY-W3-u3e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CZn-mI-4gL"/>
                     </view>
