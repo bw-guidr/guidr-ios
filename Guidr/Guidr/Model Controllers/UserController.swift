@@ -30,7 +30,7 @@ class UserController {
     var bearer: Bearer?
     var user: UserRepresentation?
     
-    let baseURL = URL(string: "https://guidr-backend-justin-chen.herokuapp.com/")!
+    let baseURL = URL(string: "https://guidr-backend-justin-chen.herokuapp.com/user")!
     
     func loginWith(user: UserRepresentation, loginType: LoginType, completion: @escaping (NetworkError?) -> ()) {
         let requestURL = baseURL.appendingPathComponent("\(loginType.rawValue)")
@@ -49,6 +49,7 @@ class UserController {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+                print(response.statusCode)
                 completion(.badResponse)
                 return
             }
@@ -102,6 +103,7 @@ class UserController {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse, response.statusCode != 200 {
+                print(response.statusCode)
                 completion(.badResponse)
                 return
             }
@@ -119,6 +121,7 @@ class UserController {
             do {
                 self.user = try JSONDecoder().decode(UserRepresentation.self, from: data)
                 User(userRepresentation: self.user!)
+                print("\(self.user)")
                 try CoreDataStack.shared.save()
             } catch {
                 completion(.noDecode)
