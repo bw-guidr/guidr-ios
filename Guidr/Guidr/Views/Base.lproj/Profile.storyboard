@@ -14,6 +14,14 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Login-->
+        <scene sceneID="yPP-Bd-izI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="IJ5-9L-MrF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SM7-0U-bAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5121" y="-259"/>
+        </scene>
         <!--Profile View Controller-->
         <scene sceneID="szq-xz-w7c">
             <objects>
@@ -225,6 +233,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="urY-fB-pek"/>
+                    <connections>
+                        <segue destination="IJ5-9L-MrF" kind="show" identifier="LoginViewModalSegue" animates="NO" id="7GU-Uz-pfN"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opZ-2O-CJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

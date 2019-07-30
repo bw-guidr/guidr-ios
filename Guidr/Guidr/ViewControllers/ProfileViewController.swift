@@ -15,13 +15,23 @@ class ProfileViewController: UICollectionViewController {
 	let miles = "272"
 	let tours = "15"
 	let locations = "9"
-
+    
+    let token: String? = KeychainWrapper.standard.string(forKey: "token")
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
 		navigationController?.navigationBar.barTintColor = .black
 		tabBarController?.tabBar.tintColor = .mainPeach
+        
+        // check if first launch or not logged in
+        
+        
+        if UserDefaults.isFirstLaunch() && token == nil {
+            performSegue(withIdentifier: "LoginViewModalSegue", sender: self)
+        } else if token == nil {
+            performSegue(withIdentifier: "LoginViewModalSegue", sender: self)
+        }
 
     }
 

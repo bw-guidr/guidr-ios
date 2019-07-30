@@ -44,6 +44,7 @@
 		66F4214A22EF982000B78375 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F4214922EF981F00B78375 /* Launch Screen.storyboard */; };
 		66F4585522F0B0AC00756BC9 /* TourCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4585422F0B0AC00756BC9 /* TourCollectionViewCell.swift */; };
 		66F4585722F0B0B500756BC9 /* TourGalleryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4585622F0B0B500756BC9 /* TourGalleryCollectionViewController.swift */; };
+		66F4585922F0DDA400756BC9 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4585822F0DDA400756BC9 /* UserDefaultsHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		66F4214922EF981F00B78375 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		66F4585422F0B0AC00756BC9 /* TourCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourCollectionViewCell.swift; sourceTree = "<group>"; };
 		66F4585622F0B0B500756BC9 /* TourGalleryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourGalleryCollectionViewController.swift; sourceTree = "<group>"; };
+		66F4585822F0DDA400756BC9 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				3737ED8D22EF69120038001E /* Fonts */,
 				3737ED8B22EF65E50038001E /* ProjectColors.swift */,
 				3259881D22EFB47700D1A8BE /* CustomLabel.swift */,
+				66F4585822F0DDA400756BC9 /* UserDefaultsHelper.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				66F4213122EF597200B78375 /* TourRepresentation.swift in Sources */,
 				66F4214122EF747F00B78375 /* KeychainWrapper.swift in Sources */,
 				3259886222F09DD200D1A8BE /* TourDetailViewController.swift in Sources */,
+				66F4585922F0DDA400756BC9 /* UserDefaultsHelper.swift in Sources */,
 				376EF2B522F0054D0005F985 /* GuideInfoCollectionViewCell.swift in Sources */,
 				66F4212D22EF592D00B78375 /* CoreDataStack.swift in Sources */,
 				66F4214022EF747F00B78375 /* KeychainItemAccessibility.swift in Sources */,
