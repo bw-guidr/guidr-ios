@@ -67,6 +67,11 @@ class UserController {
                 let jsonDecoder = JSONDecoder()
                 do {
                     self.bearer = try jsonDecoder.decode(Bearer.self, from: data)
+                    self.user = try jsonDecoder.decode(UserRepresentation.self, from: data)
+                    
+                    User(userRepresentation: self.user!)
+                    try CoreDataStack.shared.save()
+                    
                     if let bearer = self.bearer {
                         completion(.success(bearer))
                         KeychainWrapper.standard.set(bearer.token, forKey: "token")
@@ -77,11 +82,10 @@ class UserController {
                     return
                 }
             }
-            
-            }.resume()
+        }.resume()
     }
     
-    func signUpWith(user: UserRepresentation, loginType: LoginType, completion: @escaping (Error?) -> ()) {
+    func signUpWith(user: UserRepresentation, loginType: LoginType, completion: @escaping (NetworkError?) -> ()) {
         let requestURL = baseURL.appendingPathComponent("\(loginType.rawValue)")
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.post.rawValue
@@ -92,56 +96,64 @@ class UserController {
             request.httpBody = try jsonEncoder.encode(user)
         } catch {
             print("error encoding: \(error)")
-            completion(error)
+            completion(.noEncode)
             return
         }
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse, response.statusCode != 200 {
-                completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
+                completion(.badResponse)
                 return
             }
             
-            if let error = error {
-                completion(error)
+            if error != nil {
+                completion(.otherError)
+                return
+            }
+            
+            guard let data = data else {
+                completion(.badData)
                 return
             }
             
             do {
-                User(userRepresentation: user)
+                self.user = try JSONDecoder().decode(UserRepresentation.self, from: data)
+                User(userRepresentation: self.user!)
                 try CoreDataStack.shared.save()
             } catch {
-                NSLog("Error saving context: \(error)")
+                completion(.noDecode)
             }
             
             completion(nil)
         }.resume()
     }
     
-    func getCurrentUser(for token: String, completion: @escaping (Result<UserRepresentation, NetworkError>) -> ()) {
-        let currentUserURL = baseURL.appendingPathComponent("current")
-        var request = URLRequest(url: currentUserURL)
-        request.httpMethod = HTTPMethod.get.rawValue
-        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-        
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if let _ = error {
-                completion(.failure(.otherError))
-                return
-            }
-            
-            guard let data = data else {
-                completion(.failure(.badData))
-                return
-            }
-            
-            let jsonDecoder = JSONDecoder()
-            do {
-                self.user = try jsonDecoder.decode(UserRepresentation.self, from: data)
-                completion(.success(self.user!))
-            } catch {
-                completion(.failure(.noDecode))
-            }
-            }.resume()
-    }
+//    func getCurrentUser(for token: String, completion: @escaping (Result<UserRepresentation, NetworkError>) -> ()) {
+//        let currentUserURL = baseURL.appendingPathComponent("current")
+//        var request = URLRequest(url: currentUserURL)
+//        request.httpMethod = HTTPMethod.get.rawValue
+//        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+//
+//        URLSession.shared.dataTask(with: request) { (data, response, error) in
+//            if let _ = error {
+//                completion(.failure(.otherError))
+//                return
+//            }
+//
+//            guard let data = data else {
+//                completion(.failure(.badData))
+//                return
+//            }
+//
+//            let jsonDecoder = JSONDecoder()
+//            do {
+//                self.user = try jsonDecoder.decode(UserRepresentation.self, from: data)
+//                User(userRepresentation: self.user!)
+//                try CoreDataStack.shared.save()
+//                completion(.success(self.user!))
+//            } catch {
+//                completion(.failure(.noDecode))
+//            }
+//        }.resume()
+//    }
 }

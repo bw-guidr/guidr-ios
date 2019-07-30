@@ -11,15 +11,15 @@ import Foundation
 struct TourRepresentation: Codable {
     var title: String?
     var description: String?
-    var miles: Int16?
+    var miles: Int32?
     var date: Date?
     var imageURL: String?
-    var identifier: String?
+    var userID: Int32
 }
 
 extension TourRepresentation: Equatable {
     static func == (lhs: TourRepresentation, rhs: Tour) -> Bool {
-        return lhs.identifier == rhs.identifier
+        return lhs.userID == rhs.userID
     }
     
     static func == (lhs: Tour, rhs: TourRepresentation) -> Bool {
