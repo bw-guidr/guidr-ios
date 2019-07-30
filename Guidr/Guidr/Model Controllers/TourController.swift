@@ -68,7 +68,6 @@ class TourController {
     
     func fetchToursFromServer(userID: Int, completion: @escaping () -> Void = { }) {
         let requestURL = baseURL.appendingPathComponent("\(userID)").appendingPathComponent("trips")
-        
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.get.rawValue
         
@@ -92,8 +91,7 @@ class TourController {
             }
             
             do {
-                let decodedJSON = try JSONDecoder().decode([String : TourRepresentation].self, from: data)
-                let tourRepresentations = Array(decodedJSON.values)
+                let tourRepresentations = try JSONDecoder().decode([TourRepresentation].self, from: data)
                 let backgroundContext = CoreDataStack.shared.container.newBackgroundContext()
                 
                 self.updateTours(with: tourRepresentations, context: backgroundContext)
@@ -180,7 +178,7 @@ class TourController {
     private func updateTours(with representations: [TourRepresentation], context: NSManagedObjectContext) {
         context.performAndWait {
             for representation in representations {
-                let identifier = "\(representation.userID)"
+                let identifier = "\(representation.identifier)"
                 let tour = fetchSingleTourFromPersistentStore(identifier: identifier, context: context)
                 
                 if let tour = tour {
