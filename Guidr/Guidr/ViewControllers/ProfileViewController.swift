@@ -69,6 +69,8 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
             performSegue(withIdentifier: "LoginViewModalSegue", sender: self)
         } else if token == nil {
             performSegue(withIdentifier: "LoginViewModalSegue", sender: self)
+        } else if user.identifier == nil {
+            performSegue(withIdentifier: "LoginViewModalSegue", sender: self)
         }
     }
     
