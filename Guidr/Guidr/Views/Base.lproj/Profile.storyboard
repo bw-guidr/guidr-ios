@@ -14,6 +14,14 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Login-->
+        <scene sceneID="yPP-Bd-izI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="IJ5-9L-MrF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SM7-0U-bAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5121" y="-259"/>
+        </scene>
         <!--Profile View Controller-->
         <scene sceneID="szq-xz-w7c">
             <objects>
@@ -160,7 +168,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add First Tour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fea-Ux-QtV">
-                                            <rect key="frame" x="103.66666666666669" y="12" width="107" height="20.666666666666671"/>
+                                            <rect key="frame" x="103.66666666666669" y="12.000000000000002" width="107" height="20.666666666666671"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -224,6 +232,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="urY-fB-pek"/>
+                    <connections>
+                        <segue destination="IJ5-9L-MrF" kind="show" identifier="LoginViewModalSegue" animates="NO" id="7GU-Uz-pfN"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opZ-2O-CJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -254,6 +265,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AQf-UR-vZm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fEb-bh-BC5">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

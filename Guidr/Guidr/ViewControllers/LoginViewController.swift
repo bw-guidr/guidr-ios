@@ -25,6 +25,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         forgotPasswordButton.isHidden = true
+        self.tabBarController?.tabBar.isHidden = true
     }
     
 
@@ -38,20 +39,26 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         if isLogin {
-            nameIcon.isHidden = false
-            nameLabel.isHidden = false
-            nameTextField.isHidden = false
-            forgotPasswordButton.isHidden = true
-            registerButton.setTitle("Register", for: .normal)
-            loginButton.setTitle("Login", for: .normal)
+            UIView.animate(withDuration: 0.5) {
+                self.nameIcon.alpha = 1
+                self.nameLabel.alpha = 1
+                self.nameTextField.alpha = 1
+                self.forgotPasswordButton.isHidden = true
+                self.registerButton.setTitle("Register", for: .normal)
+                self.loginButton.setTitle("Login", for: .normal)
+            }
+            
             isLogin = false
         } else {
-            nameIcon.isHidden = true
-            nameLabel.isHidden = true
-            nameTextField.isHidden = true
-            forgotPasswordButton.isHidden = false
-            registerButton.setTitle("Log In", for: .normal)
-            loginButton.setTitle("Register", for: .normal)
+            UIView.animate(withDuration: 0.5) {
+                self.nameIcon.alpha = 0
+                self.nameLabel.alpha = 0
+                self.nameTextField.alpha = 0
+                self.forgotPasswordButton.isHidden = false
+                self.registerButton.setTitle("Log In", for: .normal)
+                self.loginButton.setTitle("Register", for: .normal)
+            }
+            
             isLogin = true
         }
         
