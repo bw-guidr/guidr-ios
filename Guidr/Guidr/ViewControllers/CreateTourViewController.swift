@@ -45,11 +45,14 @@ class CreateTourViewController: UIViewController {
 	@IBOutlet weak var dateLabel: UILabel!
 	@IBOutlet weak var imageView: UIImageView!
 	@IBOutlet weak var addTourButton: UIButton!
+	@IBOutlet weak var chooseDateButton: UIButton!
+	@IBOutlet weak var choosePhotoButton: UIButton!
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
         
         imageView.layer.cornerRadius = 8
+
     }
 
 	
@@ -87,16 +90,13 @@ class CreateTourViewController: UIViewController {
     }
 
 
-    /*
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+		guard let datePickerVC = segue.destination as? DatePickerViewController else { return }
+		datePickerVC.delegate = self
     }
-    */
-
 }
 
 extension CreateTourViewController: UIImagePickerControllerDelegate {
