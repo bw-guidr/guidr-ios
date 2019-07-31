@@ -19,13 +19,21 @@ class DatePickerViewController: UIViewController {
 	@IBOutlet weak var cancelButton: UIButton!
 	@IBOutlet weak var datePicker: UIDatePicker!
 	@IBOutlet weak var selectDateButton: UIButton!
+	@IBOutlet weak var modalView: UIView!
 
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-
+		modalView.layer.cornerRadius = 30
+		modalView.layer.shadowRadius = 12
+		modalView.layer.shadowOffset = .zero
+		modalView.layer.shadowColor = UIColor.black.cgColor
+		modalView.layer.shadowOpacity = 0.3
     }
 
+	@IBAction func blankSpaceTapped(_ sender: UITapGestureRecognizer) {
+		dismiss(animated: true, completion: nil)
+	}
 
 	@IBAction func cancelTapped(_ sender: UIButton) {
 		dismiss(animated: true, completion: nil)

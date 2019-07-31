@@ -15,7 +15,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--ADD TOUR-->
+        <!--Add Tour-->
         <scene sceneID="Ofg-ES-5Bf">
             <objects>
                 <viewController id="M0i-gc-Zna" customClass="CreateTourViewController" customModule="Guidr" customModuleProvider="target" sceneMemberID="viewController">
@@ -70,7 +70,7 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00.0" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5fC-hE-Rnh">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5fC-hE-Rnh">
                                                 <rect key="frame" x="0.0" y="29" width="354" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="YYN-db-IuG"/>
@@ -141,7 +141,7 @@
                                                         <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                                         <state key="normal" title="Choose Date"/>
                                                         <connections>
-                                                            <segue destination="Qgu-FV-XCc" kind="presentation" identifier="ChooseDateSegue" id="blj-em-Cwh"/>
+                                                            <segue destination="Qgu-FV-XCc" kind="presentation" identifier="ChooseDateSegue" modalPresentationStyle="overFullScreen" id="blj-em-Cwh"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -261,7 +261,7 @@
                             <outletCollection property="gestureRecognizers" destination="wmr-wO-zyx" appends="YES" id="nqV-1e-L9V"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="ADD TOUR" id="Wma-WD-W9c">
+                    <navigationItem key="navigationItem" title="Add Tour" id="Wma-WD-W9c">
                         <barButtonItem key="rightBarButtonItem" title="Clear All" id="H7d-RY-McP">
                             <color key="tintColor" red="0.95053964849999995" green="0.75592082739999999" blue="0.52196490760000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -298,58 +298,92 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O53-rU-Brh">
-                                <rect key="frame" x="267" y="804.5" width="100" height="28"/>
-                                <color key="tintColor" red="0.95053964849999995" green="0.75592082739999999" blue="0.52196490760000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
-                                <state key="normal" title="Select Date"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RzW-sc-ojW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="432"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="selectDateTapped:" destination="Qgu-FV-XCc" eventType="touchUpInside" id="Z4t-kc-XBk"/>
+                                    <outletCollection property="gestureRecognizers" destination="h2k-s1-OfZ" appends="YES" id="szd-7M-zIJ"/>
                                 </connections>
-                            </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="78h-lU-554">
-                                <rect key="frame" x="40" y="445" width="334" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="586218436.60346198">
-                                    <!--2019-07-30 22:27:16 +0000-->
-                                </date>
-                            </datePicker>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountainPng" translatesAutoresizingMaskIntoConstraints="NO" id="k4j-JM-rOo">
-                                <rect key="frame" x="0.0" y="741" width="240" height="155"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gay-e4-7vp">
+                                <rect key="frame" x="0.0" y="446" width="414" height="450"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O53-rU-Brh">
+                                        <rect key="frame" x="267" y="358.5" width="100" height="28"/>
+                                        <color key="tintColor" red="0.95053964849999995" green="0.75592082739999999" blue="0.52196490760000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                        <state key="normal" title="Select Date"/>
+                                        <connections>
+                                            <action selector="selectDateTapped:" destination="Qgu-FV-XCc" eventType="touchUpInside" id="Z4t-kc-XBk"/>
+                                        </connections>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="78h-lU-554">
+                                        <rect key="frame" x="40" y="69" width="334" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="586218436.60346198">
+                                            <!--2019-07-30 22:27:16 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountainPng" translatesAutoresizingMaskIntoConstraints="NO" id="k4j-JM-rOo">
+                                        <rect key="frame" x="0.0" y="295" width="240" height="155"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="Tov-CW-tKc"/>
+                                            <constraint firstAttribute="height" constant="155" id="iVW-GM-SoC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbH-qt-3to">
+                                        <rect key="frame" x="369" y="20" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="KA5-TR-KOE"/>
+                                            <constraint firstAttribute="height" constant="25" id="Xaz-Qb-qqf"/>
+                                        </constraints>
+                                        <state key="normal" image="Artboard1"/>
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="Qgu-FV-XCc" eventType="touchUpInside" id="4bU-tD-zrb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Tov-CW-tKc"/>
-                                    <constraint firstAttribute="height" constant="155" id="iVW-GM-SoC"/>
+                                    <constraint firstAttribute="bottom" secondItem="k4j-JM-rOo" secondAttribute="bottom" id="8nF-dl-2vu"/>
+                                    <constraint firstAttribute="height" constant="450" id="AkE-09-lqE"/>
+                                    <constraint firstItem="O53-rU-Brh" firstAttribute="centerY" secondItem="k4j-JM-rOo" secondAttribute="centerY" id="EG6-5d-qvs"/>
+                                    <constraint firstItem="k4j-JM-rOo" firstAttribute="top" secondItem="78h-lU-554" secondAttribute="bottom" constant="10" id="F8R-qR-bVy"/>
+                                    <constraint firstAttribute="trailing" secondItem="O53-rU-Brh" secondAttribute="trailing" constant="47" id="Lvn-RQ-jFd"/>
+                                    <constraint firstAttribute="trailing" secondItem="wbH-qt-3to" secondAttribute="trailing" constant="20" id="R9L-UY-M9M"/>
+                                    <constraint firstItem="wbH-qt-3to" firstAttribute="top" secondItem="gay-e4-7vp" secondAttribute="top" constant="20" id="SYt-hs-mDO"/>
+                                    <constraint firstAttribute="trailing" secondItem="78h-lU-554" secondAttribute="trailing" constant="40" id="bzE-Cn-EyQ"/>
+                                    <constraint firstItem="O53-rU-Brh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="k4j-JM-rOo" secondAttribute="trailing" constant="16" id="fNw-Pb-cCQ"/>
+                                    <constraint firstItem="78h-lU-554" firstAttribute="leading" secondItem="gay-e4-7vp" secondAttribute="leading" constant="40" id="h6n-KQ-glk"/>
+                                    <constraint firstItem="k4j-JM-rOo" firstAttribute="leading" secondItem="gay-e4-7vp" secondAttribute="leading" id="jbr-ao-DjX"/>
+                                    <constraint firstAttribute="bottom" secondItem="k4j-JM-rOo" secondAttribute="bottom" id="yPB-EM-2Sb"/>
                                 </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeJ-AM-bC9">
-                                <rect key="frame" x="346" y="44" width="48" height="30"/>
-                                <color key="tintColor" red="0.7224125763" green="0.57546723700000002" blue="0.40093883889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <action selector="cancelTapped:" destination="Qgu-FV-XCc" eventType="touchUpInside" id="Zov-3O-z39"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="k4j-JM-rOo" firstAttribute="leading" secondItem="Yx9-LS-ymj" secondAttribute="leading" id="1KP-Jh-r6v"/>
-                            <constraint firstItem="O53-rU-Brh" firstAttribute="centerY" secondItem="k4j-JM-rOo" secondAttribute="centerY" id="409-Or-7j2"/>
-                            <constraint firstAttribute="bottom" secondItem="k4j-JM-rOo" secondAttribute="bottom" id="84l-d6-GhX"/>
-                            <constraint firstItem="Yx9-LS-ymj" firstAttribute="trailing" secondItem="jeJ-AM-bC9" secondAttribute="trailing" constant="20" id="ZPt-WV-haK"/>
-                            <constraint firstItem="78h-lU-554" firstAttribute="leading" secondItem="Yx9-LS-ymj" secondAttribute="leading" constant="40" id="g0z-We-gdM"/>
-                            <constraint firstItem="Yx9-LS-ymj" firstAttribute="trailing" secondItem="O53-rU-Brh" secondAttribute="trailing" constant="47" id="jvE-b3-alX"/>
-                            <constraint firstItem="jeJ-AM-bC9" firstAttribute="top" secondItem="Yx9-LS-ymj" secondAttribute="top" id="m8n-KW-NKP"/>
-                            <constraint firstItem="Yx9-LS-ymj" firstAttribute="trailing" secondItem="78h-lU-554" secondAttribute="trailing" constant="40" id="mzU-E3-AmO"/>
-                            <constraint firstItem="k4j-JM-rOo" firstAttribute="top" secondItem="78h-lU-554" secondAttribute="bottom" constant="80" id="vOl-LU-FQM"/>
+                            <constraint firstItem="gay-e4-7vp" firstAttribute="top" secondItem="RzW-sc-ojW" secondAttribute="bottom" constant="-30" id="1Bo-jw-gle"/>
+                            <constraint firstItem="gay-e4-7vp" firstAttribute="leading" secondItem="Yx9-LS-ymj" secondAttribute="leading" id="2sU-wx-FKq"/>
+                            <constraint firstAttribute="trailing" secondItem="RzW-sc-ojW" secondAttribute="trailing" id="E1D-bZ-17z"/>
+                            <constraint firstItem="RzW-sc-ojW" firstAttribute="leading" secondItem="BYO-Ip-HqP" secondAttribute="leading" id="a8v-eu-ATq"/>
+                            <constraint firstItem="RzW-sc-ojW" firstAttribute="top" secondItem="Yx9-LS-ymj" secondAttribute="top" id="ch3-T8-Kvh"/>
+                            <constraint firstAttribute="bottom" secondItem="gay-e4-7vp" secondAttribute="bottom" id="eve-Q6-6Kh"/>
+                            <constraint firstItem="Yx9-LS-ymj" firstAttribute="trailing" secondItem="gay-e4-7vp" secondAttribute="trailing" id="gt6-N8-O1c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Yx9-LS-ymj"/>
                     </view>
                     <connections>
-                        <outlet property="cancelButton" destination="jeJ-AM-bC9" id="XUL-Dt-pL1"/>
                         <outlet property="datePicker" destination="78h-lU-554" id="fQG-CK-gFO"/>
+                        <outlet property="modalView" destination="gay-e4-7vp" id="9Oj-3H-oqf"/>
                         <outlet property="selectDateButton" destination="O53-rU-Brh" id="xvM-Xk-cCv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYF-hZ-JCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="h2k-s1-OfZ">
+                    <connections>
+                        <action selector="blankSpaceTapped:" destination="Qgu-FV-XCc" id="gBd-os-dnL"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1660.8695652173915" y="150"/>
         </scene>
@@ -375,6 +409,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Artboard1" width="30" height="30"/>
         <image name="add" width="24" height="24"/>
         <image name="mountainPng" width="1029" height="703"/>
     </resources>
