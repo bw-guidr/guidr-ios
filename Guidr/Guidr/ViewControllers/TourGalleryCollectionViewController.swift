@@ -53,9 +53,6 @@ class TourGalleryCollectionViewController: UICollectionViewController, NSFetched
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "TourCell")
     }
     
     override func viewDidAppear(_ animated: Bool) {
