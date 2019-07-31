@@ -55,11 +55,6 @@ class TourGalleryCollectionViewController: UICollectionViewController, NSFetched
         super.viewDidLoad()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        tourController.fetchToursFromServer(userID: user.identifier!)
-    }
-
-    
     // MARK: - Navigation
 
     

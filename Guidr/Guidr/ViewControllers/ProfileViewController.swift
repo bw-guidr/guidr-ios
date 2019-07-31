@@ -72,10 +72,11 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
         } else if user.identifier == nil {
             performSegue(withIdentifier: "LoginViewModalSegue", sender: self)
         }
+        
+        tourController.fetchToursFromServer(userID: user.identifier!)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        tourController.fetchToursFromServer(userID: user.identifier!)
         collectionView.reloadData()
     }
 
