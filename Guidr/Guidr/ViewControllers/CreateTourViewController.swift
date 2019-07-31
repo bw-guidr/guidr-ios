@@ -58,16 +58,20 @@ class CreateTourViewController: UIViewController {
 		locationTextField.becomeFirstResponder()
 
         imageView.layer.cornerRadius = 8
-		addTourButton.layer.cornerRadius = 8
+		addTourButton.layer.cornerRadius = 19
 		addTourButton.backgroundColor = .mainPeach
 		addTourButton.tintColor = .grey
 		chooseDateButton.layer.borderWidth = 2
 		chooseDateButton.layer.borderColor = UIColor.mainPeach.cgColor
-		chooseDateButton.layer.cornerRadius = 6
+		chooseDateButton.layer.cornerRadius = 12
 		choosePhotoButton.layer.borderWidth = 2
 		choosePhotoButton.layer.borderColor = UIColor.mainPeach.cgColor
-		choosePhotoButton.layer.cornerRadius = 6
+		choosePhotoButton.layer.cornerRadius = 12
+
 		summaryTextView.layer.cornerRadius = 8
+		summaryTextView.layer.borderWidth = 1
+		summaryTextView.layer.borderColor = #colorLiteral(red: 0.9115869483, green: 0.9115869483, blue: 0.9115869483, alpha: 1)
+		summaryTextView.textContainerInset = UIEdgeInsets(top: 8,left: 5,bottom: 8,right: 5); // top, left, bottom, right
     }
 
 	@IBAction func clearAllTapped(_ sender: UIBarButtonItem) {

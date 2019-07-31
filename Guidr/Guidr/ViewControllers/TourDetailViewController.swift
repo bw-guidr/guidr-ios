@@ -28,7 +28,7 @@ class TourDetailViewController: UIViewController {
 		generator.prepare()
     }
     
-    @IBAction func backButtonPressed(_ sender: UIButton) {
+    @IBAction func arrowTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
