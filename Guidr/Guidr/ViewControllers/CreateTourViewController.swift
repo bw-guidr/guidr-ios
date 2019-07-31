@@ -25,11 +25,14 @@ class CreateTourViewController: UIViewController {
 	@IBOutlet weak var dateLabel: UILabel!
 	@IBOutlet weak var imageView: UIImageView!
 	@IBOutlet weak var addTourButton: UIButton!
+	@IBOutlet weak var chooseDateButton: UIButton!
+	@IBOutlet weak var choosePhotoButton: UIButton!
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
 
         imageView.layer.cornerRadius = 8
+		
     }
 
 	
