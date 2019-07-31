@@ -39,7 +39,10 @@ extension Tour {
         self.imageURL = tourRepresentation.imageURL
         self.location = tourRepresentation.location
         self.tourType = tourRepresentation.tourType
-        self.identifier = tourRepresentation.identifier
+        if let identifier = tourRepresentation.identifier {
+            self.identifier = identifier
+        }
+        
     }
     
     var tourRepresentation: TourRepresentation {

@@ -15,7 +15,7 @@ struct TourRepresentation: Codable {
     var date: String?
     var imageURL: String?
     var userID: Int32
-    var identifier: Int32
+    var identifier: Int32?
     var tourType: String?
     var location: String?
     
@@ -24,6 +24,7 @@ struct TourRepresentation: Codable {
         case description
         case miles
         case imageURL
+        case date
         case userID = "user_id"
         case identifier = "id"
         case tourType = "trip_type"

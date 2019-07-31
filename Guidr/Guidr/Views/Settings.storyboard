@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="Txx-yX-Myt">
@@ -17,7 +22,134 @@
                     <view key="view" contentMode="scaleToFill" id="byQ-Bc-rPL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRK-TL-wAn">
+                                <rect key="frame" x="30" y="148" width="152" height="45.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Settings">
+                                        <attributes>
+                                            <font key="NSFont" size="39" name="BebasNeueBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="jm2-s5-u61">
+                                <rect key="frame" x="30" y="223.5" width="354" height="391"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="157" translatesAutoresizingMaskIntoConstraints="NO" id="twW-cR-dOw">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="po9-jq-had">
+                                                <rect key="frame" x="0.0" y="0.0" width="148" height="31"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dCI-Vq-Mmo" customClass="CustomSwitch" customModule="Guidr" customModuleProvider="target">
+                                                <rect key="frame" x="305" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.95713239908218384" green="0.75926667451858521" blue="0.50620371103286743" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="131" translatesAutoresizingMaskIntoConstraints="NO" id="mm7-a8-wgl">
+                                        <rect key="frame" x="0.0" y="72" width="354" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect Healthkit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWG-Gb-2Vl">
+                                                <rect key="frame" x="0.0" y="0.0" width="174" height="31"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sdA-WR-Ugs" customClass="CustomSwitch" customModule="Guidr" customModuleProvider="target">
+                                                <rect key="frame" x="305" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.95713239910000003" green="0.75926667449999996" blue="0.50620371099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="141" translatesAutoresizingMaskIntoConstraints="NO" id="Wlu-lt-gKv">
+                                        <rect key="frame" x="0.0" y="144" width="354" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect Camera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CU2-Y0-fBo">
+                                                <rect key="frame" x="0.0" y="0.0" width="164" height="31"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="byD-DD-Zqc" customClass="CustomSwitch" customModule="Guidr" customModuleProvider="target">
+                                                <rect key="frame" x="305" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.95713239910000003" green="0.75926667449999996" blue="0.50620371099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="106" translatesAutoresizingMaskIntoConstraints="NO" id="Jy6-8Z-TPn">
+                                        <rect key="frame" x="0.0" y="216" width="354" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save Cropped Images" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tl-dM-zsk">
+                                                <rect key="frame" x="0.0" y="0.0" width="199" height="31"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kgB-ki-GEc" customClass="CustomSwitch" customModule="Guidr" customModuleProvider="target">
+                                                <rect key="frame" x="305" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.95713239910000003" green="0.75926667449999996" blue="0.50620371099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="137" translatesAutoresizingMaskIntoConstraints="NO" id="UC5-ac-xNy">
+                                        <rect key="frame" x="0.0" y="288" width="354" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low-power Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuT-vc-dnV">
+                                                <rect key="frame" x="0.0" y="0.0" width="168" height="31"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4w-cN-epZ" customClass="CustomSwitch" customModule="Guidr" customModuleProvider="target">
+                                                <rect key="frame" x="305" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.95713239910000003" green="0.75926667449999996" blue="0.50620371099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="170" translatesAutoresizingMaskIntoConstraints="NO" id="UIp-Kn-qSG">
+                                        <rect key="frame" x="0.0" y="360" width="354" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACL-G0-YtD">
+                                                <rect key="frame" x="0.0" y="0.0" width="135" height="31"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z7q-7o-TNm" customClass="CustomSwitch" customModule="Guidr" customModuleProvider="target">
+                                                <rect key="frame" x="305" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.95713239910000003" green="0.75926667449999996" blue="0.50620371099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLP-kK-zDl" customClass="CustomButton" customModule="Guidr" customModuleProvider="target">
+                                <rect key="frame" x="60" y="684.5" width="295" height="49.5"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="L7n-rS-gKN" firstAttribute="trailing" secondItem="jm2-s5-u61" secondAttribute="trailing" constant="30" id="DTH-do-IYT"/>
+                            <constraint firstItem="L7n-rS-gKN" firstAttribute="trailing" secondItem="PLP-kK-zDl" secondAttribute="trailing" constant="59" id="EQ9-ag-BDR"/>
+                            <constraint firstItem="jm2-s5-u61" firstAttribute="top" secondItem="HRK-TL-wAn" secondAttribute="bottom" constant="30" id="MyT-bp-bpG"/>
+                            <constraint firstItem="PLP-kK-zDl" firstAttribute="top" secondItem="jm2-s5-u61" secondAttribute="bottom" constant="70" id="UYj-B7-mBU"/>
+                            <constraint firstItem="PLP-kK-zDl" firstAttribute="leading" secondItem="L7n-rS-gKN" secondAttribute="leading" constant="60" id="Ubg-tX-MtK"/>
+                            <constraint firstItem="jm2-s5-u61" firstAttribute="leading" secondItem="L7n-rS-gKN" secondAttribute="leading" constant="30" id="VEj-lM-AmE"/>
+                            <constraint firstItem="HRK-TL-wAn" firstAttribute="leading" secondItem="L7n-rS-gKN" secondAttribute="leading" constant="30" id="Yvj-R1-Pmd"/>
+                            <constraint firstItem="L7n-rS-gKN" firstAttribute="trailing" secondItem="HRK-TL-wAn" secondAttribute="trailing" constant="232" id="cWz-vX-6qW"/>
+                            <constraint firstItem="HRK-TL-wAn" firstAttribute="top" secondItem="L7n-rS-gKN" secondAttribute="top" constant="60" id="eg0-DI-mix"/>
+                            <constraint firstItem="L7n-rS-gKN" firstAttribute="bottom" secondItem="PLP-kK-zDl" secondAttribute="bottom" constant="79" id="g4K-8W-vhb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="L7n-rS-gKN"/>
                     </view>
                     <navigationItem key="navigationItem" id="rTz-sy-yOE"/>
@@ -48,6 +180,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Setting" width="36" height="36"/>
+        <image name="Setting" width="24" height="24"/>
     </resources>
 </document>
