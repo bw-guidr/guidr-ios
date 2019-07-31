@@ -17,11 +17,15 @@ class TourDetailViewController: UIViewController {
     @IBOutlet weak var personalLabel: UILabel!
     @IBOutlet weak var tourDetailTextView: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
+
+	let generator = UIImpactFeedbackGenerator(style: .medium)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         designSetup()
-        
+
+		scrollView.delegate = self
+		generator.prepare()
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
@@ -43,4 +47,13 @@ class TourDetailViewController: UIViewController {
     }
     */
 
+}
+
+extension TourDetailViewController: UIScrollViewDelegate {
+	func scrollViewDidScroll(_ scrollView: UIScrollView) {
+		if scrollView.contentOffset.y <= -160 {
+			generator.impactOccurred()
+			dismiss(animated: true)
+		}
+	}
 }
