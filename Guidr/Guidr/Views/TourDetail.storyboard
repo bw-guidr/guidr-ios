@@ -14,18 +14,22 @@
         <scene sceneID="WG2-JC-lfy">
             <objects>
                 <viewController id="h2B-EP-d3w" customClass="TourDetailViewController" customModule="Guidr" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="foB-Mx-Ggg">
+                    <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="foB-Mx-Ggg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1F-LR-dQu">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bF-gp-oKG">
+                                        <rect key="frame" x="0.0" y="430" width="414" height="1270"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zki-UJ-Pb5" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountainRedVector" translatesAutoresizingMaskIntoConstraints="NO" id="mMd-2D-b8Q">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="500.00000000000091"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="499.99999999999909" id="pYh-0T-LED"/>
                                                 </constraints>
@@ -104,7 +108,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MW0-Yk-Dam">
-                                                <rect key="frame" x="30" y="35" width="48" height="48"/>
+                                                <rect key="frame" x="30" y="35" width="33.5" height="33.5"/>
                                                 <state key="normal" image="Back"/>
                                                 <connections>
                                                     <action selector="backButtonPressed:" destination="h2B-EP-d3w" eventType="touchUpInside" id="bFr-kC-mLA"/>
@@ -117,7 +121,7 @@
                                                 </constraints>
                                             </mapView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Kjg-9C-tKn" firstAttribute="leading" secondItem="Zki-UJ-Pb5" secondAttribute="leading" constant="30" id="2bI-qQ-tdB"/>
                                             <constraint firstAttribute="trailing" secondItem="G9m-JM-GxZ" secondAttribute="trailing" constant="30" id="O68-7B-ZNL"/>
@@ -141,12 +145,16 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Zki-UJ-Pb5" secondAttribute="bottom" id="0A1-5D-EX6"/>
                                     <constraint firstItem="Zki-UJ-Pb5" firstAttribute="leading" secondItem="d1F-LR-dQu" secondAttribute="leading" id="8nQ-sk-b8t"/>
+                                    <constraint firstItem="9bF-gp-oKG" firstAttribute="top" secondItem="mMd-2D-b8Q" secondAttribute="bottom" constant="-70" id="IKd-Se-fIb"/>
                                     <constraint firstAttribute="trailing" secondItem="Zki-UJ-Pb5" secondAttribute="trailing" id="Jvf-Ie-YUl"/>
+                                    <constraint firstItem="9bF-gp-oKG" firstAttribute="leading" secondItem="d1F-LR-dQu" secondAttribute="leading" id="KZ8-Ln-zNq"/>
                                     <constraint firstItem="Zki-UJ-Pb5" firstAttribute="top" secondItem="d1F-LR-dQu" secondAttribute="top" id="RO8-PI-drv"/>
+                                    <constraint firstAttribute="trailing" secondItem="9bF-gp-oKG" secondAttribute="trailing" id="UoU-fA-vjN"/>
+                                    <constraint firstAttribute="bottom" secondItem="9bF-gp-oKG" secondAttribute="bottom" constant="-500" id="yO9-nj-zkd"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="d1F-LR-dQu" firstAttribute="leading" secondItem="6mi-Yj-bL2" secondAttribute="leading" id="LU5-pT-LHS"/>
                             <constraint firstItem="d1F-LR-dQu" firstAttribute="trailing" secondItem="6mi-Yj-bL2" secondAttribute="trailing" id="MmD-f7-MlG"/>
@@ -173,7 +181,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Back" width="48" height="48"/>
+        <image name="Back" width="33.333332061767578" height="33.333332061767578"/>
         <image name="MountainRedVector" width="5000" height="3542"/>
     </resources>
 </document>
