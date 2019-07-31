@@ -31,11 +31,16 @@ class TourCollectionViewCell: UICollectionViewCell {
     
     private func updateStyle() {
         tourImageView.layer.cornerRadius = 30
-        tourImageView.clipsToBounds      = true
-        labelView.layer.cornerRadius     = 20
-        layer.borderColor                = UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1).cgColor
-        layer.borderWidth                = 0.8
-        layer.cornerRadius               = 30
+        tourImageView.clipsToBounds = true
+        labelView.layer.cornerRadius = 20
+        labelView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        cellView.layer.shadowOpacity = 0.8
+        cellView.layer.shadowRadius = 8
+        cellView.layer.shadowOffset = .zero
+        cellView.layer.cornerRadius = 30
+        layer.cornerRadius = 30
+        clipsToBounds = false
+        layer.masksToBounds = false
     }
     
 }
