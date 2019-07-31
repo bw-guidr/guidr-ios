@@ -37,15 +37,15 @@ class TourController {
     
     func updateTour(tour: Tour, title: String, description: String?, miles: Float, imageURL: String?, date: String, tourType: String) {
         let tourRepresentation = TourRepresentation(title: title, description: description, miles: miles, date: date, imageURL: nil, userID: tour.userID, identifier: tour.identifier, tourType: tourType, location: title)
-        put(tour: tourRepresentation) {
-            tour.title = title
-            tour.location = title
-            tour.summary = description
-            tour.miles = miles
-            tour.date = date
-            tour.imageURL = imageURL
-            tour.tourType = tourType
-        }
+        put(tour: tourRepresentation)
+        
+        tour.title = title
+        tour.location = title
+        tour.summary = description
+        tour.miles = miles
+        tour.date = date
+        tour.imageURL = imageURL
+        tour.tourType = tourType
         
         do {
             try CoreDataStack.shared.save()
