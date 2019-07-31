@@ -49,7 +49,7 @@ class TourDetailViewController: UIViewController {
     
     func updateViews() {
         guard let tour = tour else { return }
-        print(tour)
+        
         tourNameLabel.text = tour.title?.uppercased()
         tourDetailTextView.text = tour.summary
         tourDataLabel.text = tour.date?.uppercased()
@@ -61,7 +61,8 @@ class TourDetailViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditTourSegue" {
-            guard let editTourVC = segue.destination as? CreateTourViewController else { return }
+            print(segue.destination.children)
+            guard let editTourVC = segue.destination.children.first as? CreateTourViewController else { return }
             editTourVC.tour = tour
         }
     }
