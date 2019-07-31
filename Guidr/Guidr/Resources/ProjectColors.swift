@@ -25,6 +25,7 @@ extension UIColor {
 
 	static let secondaryGreen = UIColor(red: 143/255, green: 165/255, blue: 129/255, alpha: 1)
 	static let secondaryPeach = UIColor(red: 242/255, green: 203/255, blue: 180/255, alpha: 1)
+    static let secondaryOrange = UIColor(red: 242/255, green: 193/255, blue: 133/255, alpha: 1)
 
 }
 
