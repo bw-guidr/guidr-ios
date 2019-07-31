@@ -29,6 +29,10 @@ class TourDetailViewController: UIViewController {
 		generator.prepare()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        updateViews()
+    }
+    
     @IBAction func backButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
@@ -37,6 +41,16 @@ class TourDetailViewController: UIViewController {
         scrollView.contentInsetAdjustmentBehavior = .never
         detailImageView.layer.cornerRadius = 30
         detailImageView.clipsToBounds = true
+    }
+    
+    func updateViews() {
+        guard let tour = tour else { return }
+        print(tour)
+        tourNameLabel.text = tour.title?.uppercased()
+        tourDetailTextView.text = tour.summary
+        tourDataLabel.text = tour.date?.uppercased()
+        tourMilesLabel.text = "\(tour.miles) MILES"
+        personalLabel.text = tour.tourType?.uppercased()
     }
     /*
     // MARK: - Navigation
