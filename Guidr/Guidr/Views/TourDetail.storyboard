@@ -34,9 +34,8 @@
                                                     <constraint firstAttribute="height" constant="499.99999999999909" id="pYh-0T-LED"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvq-qv-wCD">
-                                                <rect key="frame" x="33" y="450" width="354" height="36"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvq-qv-wCD">
+                                                <rect key="frame" x="33" y="449" width="310" height="35"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Orange trail">
                                                         <attributes>
@@ -130,10 +129,14 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="mMd-2D-b8Q" firstAttribute="bottom" secondItem="kvq-qv-wCD" secondAttribute="bottom" constant="16" id="2bH-lD-SlY"/>
                                             <constraint firstItem="Kjg-9C-tKn" firstAttribute="leading" secondItem="Zki-UJ-Pb5" secondAttribute="leading" constant="30" id="2bI-qQ-tdB"/>
                                             <constraint firstItem="c5c-7w-mIy" firstAttribute="centerX" secondItem="Zki-UJ-Pb5" secondAttribute="centerX" id="BXS-47-6V2"/>
                                             <constraint firstAttribute="trailing" secondItem="G9m-JM-GxZ" secondAttribute="trailing" constant="30" id="O68-7B-ZNL"/>
                                             <constraint firstItem="mMd-2D-b8Q" firstAttribute="top" secondItem="Zki-UJ-Pb5" secondAttribute="top" id="Obj-oi-NIn"/>
+                                            <constraint firstItem="kvq-qv-wCD" firstAttribute="leading" secondItem="Zki-UJ-Pb5" secondAttribute="leading" constant="33" id="QTC-gC-KVu"/>
+                                            <constraint firstItem="Yxu-NF-vGL" firstAttribute="leading" secondItem="kvq-qv-wCD" secondAttribute="trailing" constant="16" id="R96-Mx-8N1"/>
+                                            <constraint firstItem="mMd-2D-b8Q" firstAttribute="bottom" secondItem="Yxu-NF-vGL" secondAttribute="bottom" constant="19" id="Suj-Hi-bKo"/>
                                             <constraint firstItem="Kjg-9C-tKn" firstAttribute="top" secondItem="G9m-JM-GxZ" secondAttribute="bottom" constant="35" id="Tps-S3-X6k"/>
                                             <constraint firstItem="i9u-Us-Ef6" firstAttribute="top" secondItem="Kjg-9C-tKn" secondAttribute="bottom" constant="35" id="VVt-0M-QrP"/>
                                             <constraint firstAttribute="trailing" secondItem="Kjg-9C-tKn" secondAttribute="trailing" constant="30" id="XXi-Sv-QDG"/>
@@ -186,9 +189,19 @@
             </objects>
             <point key="canvasLocation" x="-197.10144927536234" y="14.732142857142856"/>
         </scene>
+        <!--CreateTour-->
+        <scene sceneID="Wkp-lo-KVn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateTour" id="Dsg-Ka-tw7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UAe-5l-hWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="-72"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Arrow" width="66" height="10"/>
         <image name="MountainRedVector" width="5000" height="3542"/>
+        <image name="back" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="editButton" width="30" height="30"/>
     </resources>
 </document>

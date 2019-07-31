@@ -19,6 +19,7 @@ class TourDetailViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
 
 	let generator = UIImpactFeedbackGenerator(style: .medium)
+    var tour: Tour?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +29,15 @@ class TourDetailViewController: UIViewController {
 		generator.prepare()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        updateViews()
+    }
     @IBAction func arrowTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func editButtonPressed(_ sender: Any) {
+        
     }
     
     func designSetup() {
@@ -37,8 +45,26 @@ class TourDetailViewController: UIViewController {
         detailImageView.layer.cornerRadius = 30
         detailImageView.clipsToBounds = true
     }
-}
+    
+    func updateViews() {
+        guard let tour = tour else { return }
+        print(tour)
+        tourNameLabel.text = tour.title?.uppercased()
+        tourDetailTextView.text = tour.summary
+        tourDataLabel.text = tour.date?.uppercased()
+        tourMilesLabel.text = "\(tour.miles) MILES"
+        personalLabel.text = tour.tourType?.uppercased()
+    }
+    
+    // MARK: - Navigation
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EditTourSegue" {
+            guard let editTourVC = segue.destination as? CreateTourViewController else { return }
+            editTourVC.tour = tour
+        }
+    }
+}
 
 extension TourDetailViewController: UIScrollViewDelegate {
 	func scrollViewDidScroll(_ scrollView: UIScrollView) {
