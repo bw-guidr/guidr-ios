@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountainRedVector" translatesAutoresizingMaskIntoConstraints="NO" id="mMd-2D-b8Q">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="500.00000000000091"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="499.99999999999909" id="pYh-0T-LED"/>
                                                 </constraints>
@@ -104,7 +104,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MW0-Yk-Dam">
-                                                <rect key="frame" x="30" y="35" width="48" height="48"/>
+                                                <rect key="frame" x="30" y="35" width="33.5" height="33.5"/>
                                                 <state key="normal" image="Back"/>
                                                 <connections>
                                                     <action selector="backButtonPressed:" destination="h2B-EP-d3w" eventType="touchUpInside" id="bFr-kC-mLA"/>
@@ -173,7 +173,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Back" width="48" height="48"/>
+        <image name="Back" width="33.333332061767578" height="33.333332061767578"/>
         <image name="MountainRedVector" width="5000" height="3542"/>
     </resources>
 </document>

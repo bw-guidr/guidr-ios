@@ -174,7 +174,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMf-E0-S7i">
-                                            <rect key="frame" x="139" y="40.666666666666664" width="36" height="35.999999999999993"/>
+                                            <rect key="frame" x="145" y="40.666666666666664" width="24" height="23.999999999999993"/>
                                             <state key="normal" image="add"/>
                                         </button>
                                     </subviews>
@@ -281,7 +281,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="hSY-jz-ida" kind="relationship" relationship="viewControllers" id="zjZ-CC-MYH"/>
-                        <segue destination="0p2-H6-TrH" kind="relationship" relationship="viewControllers" id="zuC-Jj-8Xw"/>
+                        <segue destination="P1k-oC-2vL" kind="relationship" relationship="viewControllers" id="y0u-pI-LK6"/>
+                        <segue destination="0p2-H6-TrH" kind="relationship" relationship="viewControllers" id="iA1-WH-yao"/>
+                        <segue destination="8NE-eX-e9o" kind="relationship" relationship="viewControllers" id="0QW-cO-Per"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dKL-mz-Bhz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -321,9 +323,9 @@
     </scenes>
     <resources>
         <image name="MountainRedVector" width="5000" height="3542"/>
-        <image name="Setting" width="36" height="36"/>
+        <image name="Setting" width="24" height="24"/>
         <image name="account" width="24" height="24"/>
-        <image name="add" width="36" height="36"/>
+        <image name="add" width="24" height="24"/>
         <image name="explore" width="24" height="24"/>
         <image name="profilePhoto" width="2286" height="3569"/>
     </resources>
