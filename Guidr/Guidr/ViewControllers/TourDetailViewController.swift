@@ -19,6 +19,7 @@ class TourDetailViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
 
 	let generator = UIImpactFeedbackGenerator(style: .medium)
+    var tour: Tour?
     
     override func viewDidLoad() {
         super.viewDidLoad()
