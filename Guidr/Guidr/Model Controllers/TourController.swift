@@ -35,14 +35,17 @@ class TourController {
         post(tour: tourRepresentation)
     }
     
-    func updateTour(tour: Tour, title: String, description: String?, miles: Float, imageURL: String?, date: String) {
+    func updateTour(tour: Tour, title: String, description: String?, miles: Float, imageURL: String?, date: String, tourType: String) {
+        let tourRepresentation = TourRepresentation(title: title, description: description, miles: miles, date: date, imageURL: nil, userID: tour.userID, identifier: tour.identifier, tourType: tourType, location: title)
+        put(tour: tourRepresentation)
+        
         tour.title = title
+        tour.location = title
         tour.summary = description
         tour.miles = miles
         tour.date = date
         tour.imageURL = imageURL
-        
-        put(tour: tour, type: .update)
+        tour.tourType = tourType
         
         do {
             try CoreDataStack.shared.save()
@@ -145,26 +148,30 @@ class TourController {
         }.resume()
     }
     
-    func put(tour: Tour, type: PutType, completion: @escaping () -> Void = { }) {
-        var requestURL: URL
-        if type == .add {
-            requestURL = baseURL.appendingPathComponent("\(tour.userID)").appendingPathComponent("trips")
-        } else {
-            requestURL = baseURL.appendingPathComponent("trips").appendingPathComponent("\(tour.identifier)")
-        }
-        
+    func put(tour: TourRepresentation, completion: @escaping () -> Void = { }) {
+        guard let identifier = tour.identifier else { return }
+        let tripURL: URL = URL(string: "https://guidr-backend-justin-chen.herokuapp.com/")!
+        let requestURL: URL = tripURL.appendingPathComponent("trips").appendingPathComponent("\(identifier)")
+
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.put.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let token: String? = KeychainWrapper.standard.string(forKey: "token")
+        
+        if let token = token {
+            request.setValue("\(token)", forHTTPHeaderField: "Authorization")
+        }
         
         do {
-            request.httpBody = try JSONEncoder().encode(tour.tourRepresentation)
+            request.httpBody = try JSONEncoder().encode(tour)
+            request.httpBody?.printJSON()
         } catch {
             NSLog("Error encoding tour \(tour): \(error)")
             completion()
             return
         }
         
-        URLSession.shared.dataTask(with: request) { (data, _, error) in
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 NSLog("Error PUTting tour to server: \(error)")
                 completion()
