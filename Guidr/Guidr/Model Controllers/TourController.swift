@@ -150,8 +150,9 @@ class TourController {
     
     func put(tour: TourRepresentation, completion: @escaping () -> Void = { }) {
         guard let identifier = tour.identifier else { return }
-        let requestURL: URL = baseURL.appendingPathComponent("trips").appendingPathComponent("\(identifier)")
-        print(requestURL)
+        let tripURL: URL = URL(string: "https://guidr-backend-justin-chen.herokuapp.com/")!
+        let requestURL: URL = tripURL.appendingPathComponent("trips").appendingPathComponent("\(identifier)")
+
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.put.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -170,12 +171,15 @@ class TourController {
             return
         }
         
-        URLSession.shared.dataTask(with: request) { (data, _, error) in
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 NSLog("Error PUTting tour to server: \(error)")
                 completion()
                 return
             }
+            
+            print(data)
+            print(response)
             
             completion()
         }.resume()
