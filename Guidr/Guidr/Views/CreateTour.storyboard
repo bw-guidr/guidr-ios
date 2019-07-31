@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Create Tour View Controller-->
         <scene sceneID="Ofg-ES-5Bf">
             <objects>
-                <viewController id="M0i-gc-Zna" sceneMemberID="viewController">
+                <viewController id="M0i-gc-Zna" customClass="CreateTourViewController" customModule="Guidr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kwx-7e-O3Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,7 +142,7 @@
                                                         <rect key="frame" x="103" y="0.0" width="41" height="24"/>
                                                         <state key="normal" image="Cal"/>
                                                         <connections>
-                                                            <segue destination="Qgu-FV-XCc" kind="show" identifier="ShowDatePickerSegue" id="EF5-pd-vv0"/>
+                                                            <segue destination="Qgu-FV-XCc" kind="presentation" identifier="ShowDatePickerSegue" id="EF5-pd-vv0"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -175,6 +175,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUC-Lb-ctV">
                                                         <rect key="frame" x="113" y="0.0" width="24" height="24"/>
                                                         <state key="normal" image="PhotoPlaceholder"/>
+                                                        <connections>
+                                                            <action selector="choosePhotoTapped:" destination="M0i-gc-Zna" eventType="touchUpInside" id="64Q-55-Plg"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -212,18 +215,18 @@
                                     <segment title="Personal"/>
                                 </segments>
                                 <color key="tintColor" red="0.95053964849999995" green="0.75592082739999999" blue="0.52196490760000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segControlToggle:" destination="M0i-gc-Zna" eventType="valueChanged" id="mqW-i7-f7z"/>
+                                </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRe-HV-1eW">
-                                <rect key="frame" x="347" y="64" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.7224125763" green="0.57546723700000002" blue="0.40093883889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Cancel"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJ8-Kn-1St">
                                 <rect key="frame" x="156" y="764" width="102" height="28"/>
                                 <color key="tintColor" red="0.95053964849999995" green="0.75592082739999999" blue="0.52196490760000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="5" maxX="20" maxY="5"/>
                                 <state key="normal" title="Add Tour"/>
+                                <connections>
+                                    <action selector="addTourTapped:" destination="M0i-gc-Zna" eventType="touchUpInside" id="I1F-PH-1QG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -241,15 +244,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LdM-Oc-Mxt"/>
                     </view>
+                    <connections>
+                        <outlet property="addTourButton" destination="EJ8-Kn-1St" id="chj-uG-Le1"/>
+                        <outlet property="dateLabel" destination="pQw-QR-Wb0" id="hpg-x1-Trl"/>
+                        <outlet property="imageView" destination="kP6-cs-mjV" id="K07-2Y-NGx"/>
+                        <outlet property="locationTextField" destination="kKA-iQ-TPz" id="pNh-pq-Lfn"/>
+                        <outlet property="milesTextField" destination="5fC-hE-Rnh" id="ywN-fl-AoH"/>
+                        <outlet property="segControl" destination="kcZ-03-pkf" id="075-eE-K4g"/>
+                        <outlet property="summaryTextView" destination="qpd-E4-HaX" id="xo1-Lo-Zfq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Xh-Wl-9cN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="150"/>
         </scene>
-        <!--View Controller-->
+        <!--Date Picker View Controller-->
         <scene sceneID="vnI-T9-GVZ">
             <objects>
-                <viewController id="Qgu-FV-XCc" sceneMemberID="viewController">
+                <viewController id="Qgu-FV-XCc" customClass="DatePickerViewController" customModule="Guidr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BYO-Ip-HqP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -259,7 +271,16 @@
                                 <color key="tintColor" red="0.95053964849999995" green="0.75592082739999999" blue="0.52196490760000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
                                 <state key="normal" title="Select Date"/>
+                                <connections>
+                                    <action selector="selectDateTapped:" destination="Qgu-FV-XCc" eventType="touchUpInside" id="Z4t-kc-XBk"/>
+                                </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="78h-lU-554">
+                                <rect key="frame" x="40" y="445" width="334" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="586218436.60346198">
+                                    <!--2019-07-30 22:27:16 +0000-->
+                                </date>
+                            </datePicker>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mountainPng" translatesAutoresizingMaskIntoConstraints="NO" id="k4j-JM-rOo">
                                 <rect key="frame" x="0.0" y="741" width="240" height="155"/>
                                 <constraints>
@@ -267,25 +288,34 @@
                                     <constraint firstAttribute="height" constant="155" id="iVW-GM-SoC"/>
                                 </constraints>
                             </imageView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="78h-lU-554">
-                                <rect key="frame" x="40" y="445" width="334" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="586218436.60346198">
-                                    <!--2019-07-30 22:27:16 +0000-->
-                                </date>
-                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeJ-AM-bC9">
+                                <rect key="frame" x="346" y="44" width="48" height="30"/>
+                                <color key="tintColor" red="0.7224125763" green="0.57546723700000002" blue="0.40093883889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelTapped:" destination="Qgu-FV-XCc" eventType="touchUpInside" id="Zov-3O-z39"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="k4j-JM-rOo" firstAttribute="leading" secondItem="Yx9-LS-ymj" secondAttribute="leading" id="1KP-Jh-r6v"/>
                             <constraint firstItem="O53-rU-Brh" firstAttribute="centerY" secondItem="k4j-JM-rOo" secondAttribute="centerY" id="409-Or-7j2"/>
                             <constraint firstAttribute="bottom" secondItem="k4j-JM-rOo" secondAttribute="bottom" id="84l-d6-GhX"/>
+                            <constraint firstItem="Yx9-LS-ymj" firstAttribute="trailing" secondItem="jeJ-AM-bC9" secondAttribute="trailing" constant="20" id="ZPt-WV-haK"/>
                             <constraint firstItem="78h-lU-554" firstAttribute="leading" secondItem="Yx9-LS-ymj" secondAttribute="leading" constant="40" id="g0z-We-gdM"/>
                             <constraint firstItem="Yx9-LS-ymj" firstAttribute="trailing" secondItem="O53-rU-Brh" secondAttribute="trailing" constant="47" id="jvE-b3-alX"/>
+                            <constraint firstItem="jeJ-AM-bC9" firstAttribute="top" secondItem="Yx9-LS-ymj" secondAttribute="top" id="m8n-KW-NKP"/>
                             <constraint firstItem="Yx9-LS-ymj" firstAttribute="trailing" secondItem="78h-lU-554" secondAttribute="trailing" constant="40" id="mzU-E3-AmO"/>
                             <constraint firstItem="k4j-JM-rOo" firstAttribute="top" secondItem="78h-lU-554" secondAttribute="bottom" constant="80" id="vOl-LU-FQM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Yx9-LS-ymj"/>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="jeJ-AM-bC9" id="XUL-Dt-pL1"/>
+                        <outlet property="datePIcker" destination="78h-lU-554" id="9xP-lw-IJJ"/>
+                        <outlet property="selectDateButton" destination="O53-rU-Brh" id="xvM-Xk-cCv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYF-hZ-JCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
