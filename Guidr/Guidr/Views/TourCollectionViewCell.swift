@@ -14,6 +14,11 @@ class TourCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var tourNameLabel: UILabel!
     
+    var tour: Tour? {
+        didSet {
+            updateViews()
+        }
+    }
     
     // MARK: - Setting Cell Frame
     
@@ -35,6 +40,11 @@ class TourCollectionViewCell: UICollectionViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func updateViews() {
+        guard let tour = tour else { return }
+        tourNameLabel.text = tour.title
     }
     
 }

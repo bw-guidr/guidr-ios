@@ -14,16 +14,25 @@ class TourDetailViewController: UIViewController {
     @IBOutlet weak var tourNameLabel: UILabel!
     @IBOutlet weak var tourDataLabel: UILabel!
     @IBOutlet weak var tourMilesLabel: UILabel!
-    @IBOutlet weak var tourHoursLabel: UILabel!
+    @IBOutlet weak var personalLabel: UILabel!
     @IBOutlet weak var tourDetailTextView: UITextView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        designSetup()
+        
     }
     
-
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func designSetup() {
+        scrollView.contentInsetAdjustmentBehavior = .never
+        detailImageView.layer.cornerRadius = 30
+        detailImageView.clipsToBounds = true
+    }
     /*
     // MARK: - Navigation
 
