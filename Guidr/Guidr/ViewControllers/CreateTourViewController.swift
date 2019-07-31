@@ -86,7 +86,8 @@ class CreateTourViewController: UIViewController {
             let date = dateLabel.text,
             !date.isEmpty else { return }
         
-        tourController.createTour(title: title, description: description, miles: miles, date: "11/23/2019", userID: user.identifier!, imageURL: nil, location: title, tourType: tourType)
+        print(date)
+        tourController.createTour(title: title, description: description, miles: miles, date: date, userID: user.identifier!, imageURL: nil, location: title, tourType: tourType)
     }
 
 
