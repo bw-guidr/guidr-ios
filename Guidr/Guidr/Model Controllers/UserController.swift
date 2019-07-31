@@ -26,6 +26,8 @@ class UserController {
     var token: String?
     var user: UserRepresentation?
     
+    static let shared = UserController()
+    
     let baseURL = URL(string: "https://guidr-backend-justin-chen.herokuapp.com/user")!
     
     func loginWith(user: UserRepresentation, loginType: LoginType, completion: @escaping (Result<String, NetworkError>) -> ()) {

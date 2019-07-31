@@ -23,6 +23,8 @@ enum PutType: String {
 
 class TourController {
     
+    static let shared = TourController()
+    
     let baseURL = URL(string: "https://guidr-backend-justin-chen.herokuapp.com/user")!
     
     func createTour(title: String, description: String?, miles: Int32, date: Date, userID: Int32, imageURL: String?, location: String?, tourType: String?) {
