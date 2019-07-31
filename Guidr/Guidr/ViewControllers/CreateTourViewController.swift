@@ -123,7 +123,6 @@ class CreateTourViewController: UIViewController {
             let date = dateLabel.text,
             !date.isEmpty else { return }
         
-        print(date)
         tourController.createTour(title: title, description: description, miles: miles, date: date, userID: user.identifier!, imageURL: nil, location: title, tourType: tourType)
     }
 
@@ -134,8 +133,6 @@ class CreateTourViewController: UIViewController {
 		summaryTextView.text = nil
 		dateLabel.text = nil
 	}
-
-
 
     // MARK: - Navigation
 
