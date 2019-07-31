@@ -140,7 +140,11 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZw-Qz-atY">
                                                         <rect key="frame" x="103" y="0.0" width="41" height="24"/>
-                                                        <state key="normal" image="Cal"/>
+                                                        <color key="tintColor" red="0.7224125763" green="0.57546723700000002" blue="0.40093883889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" image="Cal">
+                                                            <color key="titleColor" red="0.95053964849999995" green="0.75592082739999999" blue="0.52196490760000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleShadowColor" red="0.95053964849999995" green="0.75592082739999999" blue="0.52196490760000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
                                                         <connections>
                                                             <segue destination="Qgu-FV-XCc" kind="presentation" identifier="ShowDatePickerSegue" id="EF5-pd-vv0"/>
                                                         </connections>
@@ -148,7 +152,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="January 15, 2019" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQw-QR-Wb0">
-                                                <rect key="frame" x="0.0" y="29" width="144" height="22"/>
+                                                <rect key="frame" x="0.0" y="32" width="144" height="22"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -247,6 +251,8 @@
                     <navigationItem key="navigationItem" id="Wma-WD-W9c"/>
                     <connections>
                         <outlet property="addTourButton" destination="EJ8-Kn-1St" id="chj-uG-Le1"/>
+                        <outlet property="chooseDateButton" destination="HZw-Qz-atY" id="zYG-6T-YOf"/>
+                        <outlet property="choosePhotoButton" destination="FUC-Lb-ctV" id="SMH-Si-Fc5"/>
                         <outlet property="dateLabel" destination="pQw-QR-Wb0" id="hpg-x1-Trl"/>
                         <outlet property="imageView" destination="kP6-cs-mjV" id="K07-2Y-NGx"/>
                         <outlet property="locationTextField" destination="kKA-iQ-TPz" id="pNh-pq-Lfn"/>

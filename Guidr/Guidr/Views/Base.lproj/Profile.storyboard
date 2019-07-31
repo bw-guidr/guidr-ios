@@ -223,7 +223,7 @@
                                 <size key="customSize" width="107" height="103"/>
                                 <connections>
                                     <outlet property="tourImageView" destination="O7c-ti-EoV" id="vDT-aU-FkE"/>
-                                    <segue destination="mfb-3I-qNt" kind="presentation" identifier="ShowDetailSegue" id="qZC-U7-0m1"/>
+                                    <segue destination="mfb-3I-qNt" kind="presentation" identifier="ShowDetailSegue" modalPresentationStyle="overCurrentContext" id="qZC-U7-0m1"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
