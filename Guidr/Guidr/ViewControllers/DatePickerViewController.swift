@@ -17,7 +17,7 @@ class DatePickerViewController: UIViewController {
 	weak var delegate: DatePickerDelegate?
 
 	@IBOutlet weak var cancelButton: UIButton!
-	@IBOutlet weak var datePIcker: UIDatePicker!
+	@IBOutlet weak var datePicker: UIDatePicker!
 	@IBOutlet weak var selectDateButton: UIButton!
 
 
@@ -32,7 +32,7 @@ class DatePickerViewController: UIViewController {
 	}
 
 	@IBAction func selectDateTapped(_ sender: UIButton) {
-		delegate?.tourDateWasChosen(date: datePIcker.date)
+		self.delegate?.tourDateWasChosen(date: datePicker.date)
 		dismiss(animated: true, completion: nil)
 	}
 }
