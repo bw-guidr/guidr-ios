@@ -63,7 +63,7 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
         super.viewDidLoad()
 		navigationController?.navigationBar.barTintColor = .black
 		tabBarController?.tabBar.tintColor = .mainPeach
-        
+        print("\(token ?? "")")
         // check if first launch or not logged in
         if UserDefaults.isFirstLaunch() && token == nil {
             performSegue(withIdentifier: "LoginViewModalSegue", sender: self)

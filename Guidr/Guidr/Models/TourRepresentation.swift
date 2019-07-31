@@ -11,8 +11,8 @@ import Foundation
 struct TourRepresentation: Codable {
     var title: String?
     var description: String?
-    var miles: Int32?
-    var date: Date?
+    var miles: Float?
+    var date: String?
     var imageURL: String?
     var userID: Int32
     var identifier: Int32
