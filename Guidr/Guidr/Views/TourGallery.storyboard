@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tour Gallery Collection View Controller-->
+        <!--Tours-->
         <scene sceneID="3AT-eZ-hw3">
             <objects>
                 <collectionViewController id="RgT-Iw-tMd" customClass="TourGalleryCollectionViewController" customModule="Guidr" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,29 +34,43 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N3q-OG-yA2">
                                             <rect key="frame" x="0.0" y="0.0" width="370" height="200"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountainRedVector" translatesAutoresizingMaskIntoConstraints="NO" id="LDV-Jw-ALT">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountainRedVector" translatesAutoresizingMaskIntoConstraints="NO" id="LDV-Jw-ALT" userLabel="Tour Image">
                                                     <rect key="frame" x="0.0" y="0.0" width="370" height="200"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vk1-8T-hl6" customClass="CustomLabel" customModule="Guidr" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="156" width="354" height="36"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="umu-CV-ic9">
+                                                    <rect key="frame" x="20" y="136" width="330" height="80"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7M-kA-KxI">
+                                                            <rect key="frame" x="38" y="23" width="254" height="35"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Label">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <font key="NSFont" size="30" name="BebasNeue-Regular"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <attributedString key="attributedText">
-                                                        <fragment content="Label">
-                                                            <attributes>
-                                                                <font key="NSFont" size="24" name="BebasNeue-Book"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="O7M-kA-KxI" secondAttribute="trailing" constant="30" id="6T2-hv-ZR2"/>
+                                                        <constraint firstItem="O7M-kA-KxI" firstAttribute="top" secondItem="umu-CV-ic9" secondAttribute="topMargin" constant="15" id="ZXk-Kp-04i"/>
+                                                        <constraint firstAttribute="height" constant="80" id="dnI-Fw-DQH"/>
+                                                        <constraint firstItem="O7M-kA-KxI" firstAttribute="leading" secondItem="umu-CV-ic9" secondAttribute="leadingMargin" constant="30" id="fGi-xE-yxy"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="umu-CV-ic9" secondAttribute="trailing" constant="20" id="Jvr-BS-iaj"/>
                                                 <constraint firstAttribute="bottom" secondItem="LDV-Jw-ALT" secondAttribute="bottom" id="Ush-Vm-9i4"/>
                                                 <constraint firstAttribute="trailing" secondItem="LDV-Jw-ALT" secondAttribute="trailing" id="dVY-iX-SKP"/>
                                                 <constraint firstItem="LDV-Jw-ALT" firstAttribute="leading" secondItem="N3q-OG-yA2" secondAttribute="leading" id="j6w-IA-2l0"/>
+                                                <constraint firstAttribute="bottom" secondItem="umu-CV-ic9" secondAttribute="bottom" constant="-16" id="jA5-8a-Cev"/>
+                                                <constraint firstItem="umu-CV-ic9" firstAttribute="leading" secondItem="N3q-OG-yA2" secondAttribute="leading" constant="20" id="nNd-fJ-yYN"/>
                                                 <constraint firstItem="LDV-Jw-ALT" firstAttribute="top" secondItem="N3q-OG-yA2" secondAttribute="top" id="zGW-dF-8uK"/>
                                             </constraints>
                                         </view>
@@ -69,7 +83,10 @@
                                     <constraint firstItem="N3q-OG-yA2" firstAttribute="leading" secondItem="q4H-ci-LeY" secondAttribute="leading" id="wvb-j2-4m6"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="tourNameLabel" destination="vk1-8T-hl6" id="Dvx-Oz-hPN"/>
+                                    <outlet property="cellView" destination="N3q-OG-yA2" id="JSQ-mO-Oq4"/>
+                                    <outlet property="labelView" destination="umu-CV-ic9" id="y1G-2h-ebs"/>
+                                    <outlet property="tourImageView" destination="LDV-Jw-ALT" id="Rd7-om-NSa"/>
+                                    <outlet property="tourNameLabel" destination="O7M-kA-KxI" id="to9-nr-h4C"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -78,7 +95,7 @@
                             <outlet property="delegate" destination="RgT-Iw-tMd" id="Aos-zI-tBR"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="jyr-Oe-ZNB"/>
+                    <navigationItem key="navigationItem" title="Tours" id="jyr-Oe-ZNB"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPq-Ge-iPs" userLabel="First Responder" sceneMemberID="firstResponder"/>

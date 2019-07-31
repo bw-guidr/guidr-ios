@@ -12,7 +12,10 @@ class TourCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Setting Label Frame
     
+    @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var tourNameLabel: UILabel!
+    @IBOutlet weak var tourImageView: UIImageView!
+    @IBOutlet weak var labelView: UIView!
     
     var tour: Tour? {
         didSet {
@@ -20,31 +23,19 @@ class TourCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    // MARK: - Setting Cell Frame
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        layer.shadowColor = UIColor.lightGray.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 2.0)
-        layer.shadowRadius = 5.0
-        layer.shadowOpacity = 1.0
-        layer.masksToBounds = false
-        layer.shadowPath = UIBezierPath(roundedRect: bounds, cornerRadius: contentView.layer.cornerRadius).cgPath
-        layer.backgroundColor = UIColor.clear.cgColor
-        
-        contentView.layer.masksToBounds = true
-        layer.cornerRadius = 10
-        
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     private func updateViews() {
+        updateStyle()
         guard let tour = tour else { return }
         tourNameLabel.text = tour.title
+    }
+    
+    private func updateStyle() {
+        tourImageView.layer.cornerRadius = 30
+        tourImageView.clipsToBounds      = true
+        labelView.layer.cornerRadius     = 20
+        layer.borderColor                = UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1).cgColor
+        layer.borderWidth                = 0.8
+        layer.cornerRadius               = 30
     }
     
 }
