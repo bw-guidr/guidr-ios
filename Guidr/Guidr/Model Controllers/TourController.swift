@@ -26,7 +26,7 @@ class TourController {
     static let shared = TourController()
     
     let baseURL = URL(string: "https://guidr-backend-justin-chen.herokuapp.com/user")!
-    let token: String? = KeychainWrapper.standard.string(forKey: "token")
+//    let token: String? = KeychainWrapper.standard.string(forKey: "token")
     
     func createTour(title: String, description: String?, miles: Float, date: String, userID: Int, imageURL: String?, location: String?, tourType: String?) {
         
@@ -108,6 +108,7 @@ class TourController {
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.post.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let token: String? = KeychainWrapper.standard.string(forKey: "token")
         
         if let token = token {
             request.setValue("\(token)", forHTTPHeaderField: "Authorization")
