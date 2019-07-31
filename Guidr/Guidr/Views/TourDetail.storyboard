@@ -34,9 +34,8 @@
                                                     <constraint firstAttribute="height" constant="499.99999999999909" id="pYh-0T-LED"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvq-qv-wCD">
-                                                <rect key="frame" x="33" y="450" width="354" height="36"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvq-qv-wCD">
+                                                <rect key="frame" x="33" y="449" width="310" height="35"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Orange trail">
                                                         <attributes>
@@ -49,13 +48,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="G9m-JM-GxZ">
-                                                <rect key="frame" x="30" y="520" width="354" height="17"/>
+                                                <rect key="frame" x="30" y="520" width="354" height="20"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="d2s-ca-zUE">
-                                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="20"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVo-Jk-dgk">
-                                                                <rect key="frame" x="0.0" y="0.0" width="36.5" height="17"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVo-Jk-dgk">
+                                                                <rect key="frame" x="0.0" y="0.0" width="54.5" height="20"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="15 July">
                                                                         <attributes>
@@ -66,8 +65,8 @@
                                                                 </attributedString>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rH0-GP-dbg">
-                                                                <rect key="frame" x="66.5" y="0.0" width="47" height="17"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rH0-GP-dbg">
+                                                                <rect key="frame" x="84.5" y="0.0" width="29" height="20"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="4.5 Miles">
                                                                         <attributes>
@@ -84,7 +83,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNU-LH-FiR" userLabel="Personal Label">
-                                                        <rect key="frame" x="213.5" y="0.0" width="140.5" height="17"/>
+                                                        <rect key="frame" x="213.5" y="0.0" width="140.5" height="20"/>
                                                         <attributedString key="attributedText">
                                                             <fragment content="personal">
                                                                 <attributes>
@@ -98,7 +97,7 @@
                                                 </subviews>
                                             </stackView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjg-9C-tKn">
-                                                <rect key="frame" x="30" y="572" width="354" height="250"/>
+                                                <rect key="frame" x="30" y="575" width="354" height="250"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="jur-C4-sgb"/>
@@ -108,24 +107,36 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MW0-Yk-Dam">
-                                                <rect key="frame" x="30" y="35" width="33.5" height="33.5"/>
+                                                <rect key="frame" x="30" y="35" width="16" height="22"/>
                                                 <state key="normal" image="back"/>
                                                 <connections>
                                                     <action selector="backButtonPressed:" destination="h2B-EP-d3w" eventType="touchUpInside" id="bFr-kC-mLA"/>
                                                 </connections>
                                             </button>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="i9u-Us-Ef6">
-                                                <rect key="frame" x="33" y="856" width="354" height="163"/>
+                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="i9u-Us-Ef6">
+                                                <rect key="frame" x="30" y="860" width="354" height="163"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="163" id="xUK-FK-Hjp"/>
                                                 </constraints>
                                             </mapView>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yxu-NF-vGL">
+                                                <rect key="frame" x="359" y="459" width="16" height="22"/>
+                                                <state key="normal" image="editButton"/>
+                                                <connections>
+                                                    <action selector="editButtonPressed:" destination="h2B-EP-d3w" eventType="touchUpInside" id="Ewp-Ng-P6P"/>
+                                                    <segue destination="Dsg-Ka-tw7" kind="show" identifier="EditTourSegue" id="Cic-xq-e4r"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="mMd-2D-b8Q" firstAttribute="bottom" secondItem="kvq-qv-wCD" secondAttribute="bottom" constant="16" id="2bH-lD-SlY"/>
                                             <constraint firstItem="Kjg-9C-tKn" firstAttribute="leading" secondItem="Zki-UJ-Pb5" secondAttribute="leading" constant="30" id="2bI-qQ-tdB"/>
                                             <constraint firstAttribute="trailing" secondItem="G9m-JM-GxZ" secondAttribute="trailing" constant="30" id="O68-7B-ZNL"/>
                                             <constraint firstItem="mMd-2D-b8Q" firstAttribute="top" secondItem="Zki-UJ-Pb5" secondAttribute="top" id="Obj-oi-NIn"/>
+                                            <constraint firstItem="kvq-qv-wCD" firstAttribute="leading" secondItem="Zki-UJ-Pb5" secondAttribute="leading" constant="33" id="QTC-gC-KVu"/>
+                                            <constraint firstItem="Yxu-NF-vGL" firstAttribute="leading" secondItem="kvq-qv-wCD" secondAttribute="trailing" constant="16" id="R96-Mx-8N1"/>
+                                            <constraint firstItem="mMd-2D-b8Q" firstAttribute="bottom" secondItem="Yxu-NF-vGL" secondAttribute="bottom" constant="19" id="Suj-Hi-bKo"/>
                                             <constraint firstItem="Kjg-9C-tKn" firstAttribute="top" secondItem="G9m-JM-GxZ" secondAttribute="bottom" constant="35" id="Tps-S3-X6k"/>
                                             <constraint firstItem="MW0-Yk-Dam" firstAttribute="leading" secondItem="Zki-UJ-Pb5" secondAttribute="leading" constant="30" id="VVU-Ck-CQX"/>
                                             <constraint firstItem="i9u-Us-Ef6" firstAttribute="top" secondItem="Kjg-9C-tKn" secondAttribute="bottom" constant="35" id="VVt-0M-QrP"/>
@@ -135,6 +146,7 @@
                                             <constraint firstItem="G9m-JM-GxZ" firstAttribute="top" secondItem="mMd-2D-b8Q" secondAttribute="bottom" constant="20" id="cDm-Gq-C06"/>
                                             <constraint firstAttribute="width" constant="414" id="erU-5P-hP4"/>
                                             <constraint firstItem="MW0-Yk-Dam" firstAttribute="top" secondItem="Zki-UJ-Pb5" secondAttribute="top" constant="35" id="f3X-M7-c2o"/>
+                                            <constraint firstAttribute="trailing" secondItem="Yxu-NF-vGL" secondAttribute="trailing" constant="39" id="ocd-qn-7BZ"/>
                                             <constraint firstItem="mMd-2D-b8Q" firstAttribute="leading" secondItem="Zki-UJ-Pb5" secondAttribute="leading" id="ox2-ms-243"/>
                                             <constraint firstAttribute="height" priority="250" constant="1200" id="u6c-Zm-PRJ"/>
                                             <constraint firstItem="i9u-Us-Ef6" firstAttribute="leading" secondItem="Zki-UJ-Pb5" secondAttribute="leading" constant="30" id="vPW-rH-cDv"/>
@@ -179,9 +191,18 @@
             </objects>
             <point key="canvasLocation" x="-197.10144927536234" y="14.732142857142856"/>
         </scene>
+        <!--CreateTour-->
+        <scene sceneID="Wkp-lo-KVn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateTour" id="Dsg-Ka-tw7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UAe-5l-hWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="-72"/>
+        </scene>
     </scenes>
     <resources>
         <image name="MountainRedVector" width="5000" height="3542"/>
         <image name="back" width="33.333332061767578" height="33.333332061767578"/>
+        <image name="editButton" width="30" height="30"/>
     </resources>
 </document>

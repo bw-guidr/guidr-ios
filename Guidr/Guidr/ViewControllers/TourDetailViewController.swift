@@ -37,6 +37,10 @@ class TourDetailViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func editButtonPressed(_ sender: Any) {
+        
+    }
+    
     func designSetup() {
         scrollView.contentInsetAdjustmentBehavior = .never
         detailImageView.layer.cornerRadius = 30
