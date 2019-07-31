@@ -314,7 +314,7 @@
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="jeJ-AM-bC9" id="XUL-Dt-pL1"/>
-                        <outlet property="datePIcker" destination="78h-lU-554" id="9xP-lw-IJJ"/>
+                        <outlet property="datePicker" destination="78h-lU-554" id="fQG-CK-gFO"/>
                         <outlet property="selectDateButton" destination="O53-rU-Brh" id="xvM-Xk-cCv"/>
                     </connections>
                 </viewController>
@@ -346,7 +346,7 @@
     <resources>
         <image name="Cal" width="24" height="24"/>
         <image name="PhotoPlaceholder" width="24" height="24"/>
-        <image name="add" width="36" height="36"/>
+        <image name="add" width="24" height="24"/>
         <image name="mountainPng" width="1029" height="703"/>
     </resources>
 </document>
