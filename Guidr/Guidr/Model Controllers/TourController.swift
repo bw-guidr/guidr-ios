@@ -178,9 +178,6 @@ class TourController {
                 return
             }
             
-            print(data)
-            print(response)
-            
             completion()
         }.resume()
     }
