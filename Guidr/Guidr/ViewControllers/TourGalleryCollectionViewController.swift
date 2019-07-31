@@ -59,15 +59,18 @@ class TourGalleryCollectionViewController: UICollectionViewController, NSFetched
         tourController.fetchToursFromServer(userID: user.identifier!)
     }
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowDetailSegue" {
+            guard let tourDetailVC = segue.destination as? TourDetailViewController,
+                let indexPath = collectionView.indexPathsForSelectedItems?.first else { return }
+            tourDetailVC.tour = fetchedResultsController.fetchedObjects?[indexPath.item]
+        }
     }
-    */
+    
 
     // MARK: UICollectionViewDataSource
 

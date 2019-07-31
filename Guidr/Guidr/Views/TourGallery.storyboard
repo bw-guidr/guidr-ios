@@ -35,13 +35,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="370" height="200"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountainRedVector" translatesAutoresizingMaskIntoConstraints="NO" id="LDV-Jw-ALT" userLabel="Tour Image">
-                                                    <rect key="frame" x="0.0" y="0.0" width="370" height="200.00000000000091"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="370" height="200"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="umu-CV-ic9">
                                                     <rect key="frame" x="25" y="140" width="320" height="60"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7M-kA-KxI">
-                                                            <rect key="frame" x="8" y="20" width="304" height="30"/>
+                                                            <rect key="frame" x="8" y="15" width="304" height="35"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Label">
                                                                     <attributes>
@@ -87,6 +87,7 @@
                                     <outlet property="labelView" destination="umu-CV-ic9" id="y1G-2h-ebs"/>
                                     <outlet property="tourImageView" destination="LDV-Jw-ALT" id="Rd7-om-NSa"/>
                                     <outlet property="tourNameLabel" destination="O7M-kA-KxI" id="to9-nr-h4C"/>
+                                    <segue destination="4xe-VV-9oC" kind="presentation" identifier="ShowDetailSegue" id="o6n-Fk-t8B"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -101,6 +102,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cPq-Ge-iPs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060.8695652173915" y="233.70535714285714"/>
+        </scene>
+        <!--TourDetail-->
+        <scene sceneID="kNw-WP-bKy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TourDetail" id="4xe-VV-9oC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q9D-7U-30L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1583" y="10"/>
         </scene>
         <!--Tour Gallery-->
         <scene sceneID="Tvu-E2-Oo7">
