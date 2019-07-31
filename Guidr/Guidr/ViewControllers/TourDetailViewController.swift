@@ -56,16 +56,15 @@ class TourDetailViewController: UIViewController {
         tourMilesLabel.text = "\(tour.miles) MILES"
         personalLabel.text = tour.tourType?.uppercased()
     }
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "EditTourSegue" {
+            guard let editTourVC = segue.destination as? CreateTourViewController else { return }
+            editTourVC.tour = tour
+        }
     }
-    */
-
 }
 
 extension TourDetailViewController: UIScrollViewDelegate {

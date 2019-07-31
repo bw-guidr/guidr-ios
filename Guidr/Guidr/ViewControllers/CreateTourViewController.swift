@@ -19,9 +19,14 @@ class CreateTourViewController: UIViewController {
 		return formatter
 	}
     
-    var tourType: String = "professional"
+    enum TourType: String {
+        case personal
+        case professional
+    }
     
+    var tourType: TourType = .professional
     var tourController = TourController.shared
+    var tour: Tour?
     
     var user: UserRepresentation {
         let moc = CoreDataStack.shared.mainContext
@@ -57,17 +62,7 @@ class CreateTourViewController: UIViewController {
 		summaryTextView.delegate = self
 		locationTextField.becomeFirstResponder()
 
-        imageView.layer.cornerRadius = 8
-		addTourButton.layer.cornerRadius = 8
-		addTourButton.backgroundColor = .mainPeach
-		addTourButton.tintColor = .grey
-		chooseDateButton.layer.borderWidth = 2
-		chooseDateButton.layer.borderColor = UIColor.mainPeach.cgColor
-		chooseDateButton.layer.cornerRadius = 6
-		choosePhotoButton.layer.borderWidth = 2
-		choosePhotoButton.layer.borderColor = UIColor.mainPeach.cgColor
-		choosePhotoButton.layer.cornerRadius = 6
-		summaryTextView.layer.cornerRadius = 8
+        updateViews()
     }
 
 	@IBAction func clearAllTapped(_ sender: UIBarButtonItem) {
@@ -88,9 +83,9 @@ class CreateTourViewController: UIViewController {
 
 	@IBAction func segControlToggle(_ sender: UISegmentedControl) {
         if segControl.selectedSegmentIndex == 0 {
-            tourType = "professional"
+            tourType = .professional
         } else {
-            tourType = "private"
+            tourType = .personal
         }
 	}
 
@@ -102,7 +97,7 @@ class CreateTourViewController: UIViewController {
 	}
 	
 	@IBAction func addTourTapped(_ sender: UIButton) {
-        addTour()
+        addEditTour()
 	}
 
 	@IBAction func dismissKeyboardTapView(_ sender: UITapGestureRecognizer) {
@@ -112,7 +107,7 @@ class CreateTourViewController: UIViewController {
 	}
 	
     
-    private func addTour() {
+    private func addEditTour() {
         guard let title = locationTextField.text,
             !title.isEmpty,
             let description = summaryTextView.text,
@@ -123,7 +118,11 @@ class CreateTourViewController: UIViewController {
             let date = dateLabel.text,
             !date.isEmpty else { return }
         
-        tourController.createTour(title: title, description: description, miles: miles, date: date, userID: user.identifier!, imageURL: nil, location: title, tourType: tourType)
+        if let tour = tour {
+            tourController.updateTour(tour: tour, title: title, description: description, miles: miles, imageURL: nil, date: date)
+        } else {
+            tourController.createTour(title: title, description: description, miles: miles, date: date, userID: user.identifier!, imageURL: nil, location: title, tourType: tourType.rawValue)
+        }
     }
 
 	private func clearAll() {
@@ -133,6 +132,33 @@ class CreateTourViewController: UIViewController {
 		summaryTextView.text = nil
 		dateLabel.text = nil
 	}
+    
+    private func updateViews() {
+        imageView.layer.cornerRadius = 8
+        addTourButton.layer.cornerRadius = 8
+        addTourButton.backgroundColor = .mainPeach
+        addTourButton.tintColor = .grey
+        chooseDateButton.layer.borderWidth = 2
+        chooseDateButton.layer.borderColor = UIColor.mainPeach.cgColor
+        chooseDateButton.layer.cornerRadius = 6
+        choosePhotoButton.layer.borderWidth = 2
+        choosePhotoButton.layer.borderColor = UIColor.mainPeach.cgColor
+        choosePhotoButton.layer.cornerRadius = 6
+        summaryTextView.layer.cornerRadius = 8
+        
+        if let tour = tour {
+            locationTextField.text = tour.title
+            summaryTextView.text = tour.summary
+            milesTextField.text = "\(tour.miles)"
+            dateLabel.text = tour.date
+            
+            if tour.tourType == "professional" {
+                tourType = .professional
+            } else {
+                tourType = .personal
+            }
+        }
+    }
 
     // MARK: - Navigation
 
