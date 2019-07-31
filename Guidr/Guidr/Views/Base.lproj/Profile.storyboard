@@ -160,7 +160,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add First Tour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fea-Ux-QtV">
-                                            <rect key="frame" x="103.66666666666669" y="12" width="107" height="20.666666666666671"/>
+                                            <rect key="frame" x="103.66666666666669" y="12.000000000000002" width="107" height="20.666666666666671"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -215,6 +215,7 @@
                                 <size key="customSize" width="107" height="103"/>
                                 <connections>
                                     <outlet property="tourImageView" destination="O7c-ti-EoV" id="vDT-aU-FkE"/>
+                                    <segue destination="XY3-pG-8LT" kind="show" identifier="TourDetailSegue" id="0uL-Qb-A8E"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -228,6 +229,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opZ-2O-CJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4597.1014492753629" y="139.95535714285714"/>
+        </scene>
+        <!--TourDetail-->
+        <scene sceneID="fBI-c3-C7T">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TourDetail" id="XY3-pG-8LT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ClJ-dg-5wQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5275" y="82"/>
         </scene>
         <!--Profile-->
         <scene sceneID="o17-cN-PEl">
@@ -254,6 +263,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AQf-UR-vZm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fEb-bh-BC5">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
