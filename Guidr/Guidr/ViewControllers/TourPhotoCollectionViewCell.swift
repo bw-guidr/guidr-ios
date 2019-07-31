@@ -10,6 +10,8 @@ import UIKit
 
 class TourPhotoCollectionViewCell: UICollectionViewCell {
 
+    var tour: Tour?
+    
 	@IBOutlet weak var tourImageView: UIImageView!
 
 }

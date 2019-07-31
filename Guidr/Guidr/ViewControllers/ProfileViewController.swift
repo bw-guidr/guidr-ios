@@ -75,7 +75,8 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //tourController.fetchToursFromServer(userID: user.identifier!)
+        tourController.fetchToursFromServer(userID: user.identifier!)
+        collectionView.reloadData()
     }
 
 
@@ -103,7 +104,7 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
 			return tourPhotos.count == 0 ? 1 : 0
 		// Tour Photos Grid
 		default:
-			return tourPhotos.count * 3
+            return fetchedResultsController.fetchedObjects?.count ?? 0
 		}
     }
 
@@ -119,8 +120,9 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
 
 	private func guideInfoCell(from cell: UICollectionViewCell, atIndex index: Int) -> GuideInfoCollectionViewCell {
 		guard let cell = cell as? GuideInfoCollectionViewCell else { return GuideInfoCollectionViewCell() }
-		cell.milesCountLabel.text = miles
-		cell.locationsCountLabel.text = locations
+        cell.tourCountLabel.text = "\(getLocationsCount())"
+		cell.milesCountLabel.text = "\(getMilesCount())"
+		cell.locationsCountLabel.text = "\(getLocationsCount())"
 		cell.nameLabel.text = user.name
 		cell.profileImageView.image = UIImage(named: "profilePhoto")
 
@@ -130,12 +132,79 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
     private func tourPhotoCell(from cell: UICollectionViewCell, indexPath: IndexPath, atIndex index: Int) -> TourPhotoCollectionViewCell {
 		guard let cell = cell as? TourPhotoCollectionViewCell else { return TourPhotoCollectionViewCell() }
 		cell.tourImageView.image = tourPhotos.randomElement()
-//        let tour = fetchedResultsController.object(at: indexPath)
+        
+        let tour = fetchedResultsController.object(at: IndexPath(item: index, section: 0))
+        cell.tour = tour
         
 		return cell
 	}
     
-    // MARK - NSFetchedResultsDelegate
+    private func getMilesCount() -> Float {
+        var milesCount: Float = 0.0
+        guard let tours = fetchedResultsController.fetchedObjects else { return 0.0 }
+        for tour in tours {
+            milesCount += tour.miles
+        }
+        
+        return milesCount
+    }
+    
+    private func getLocationsCount() -> Int {
+        var locationsCount: Int = 0
+        guard let tours = fetchedResultsController.fetchedObjects else { return 0 }
+        for _ in tours {
+            locationsCount += 1
+        }
+        
+        return locationsCount
+    }
+    
+    // MARK: NSFetchedResultsControllerDelegate
+    private var sectionChanges = [(type: NSFetchedResultsChangeType, sectionIndex: Int)]()
+    private var itemChanges = [(type: NSFetchedResultsChangeType, indexPath: IndexPath?, newIndexPath: IndexPath?)]()
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+        sectionChanges.append((type, sectionIndex))
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
+        let adjustedIndexPath = IndexPath(item: newIndexPath!.item, section: 2)
+        itemChanges.append((type, indexPath, adjustedIndexPath))
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>)
+    {
+        collectionView?.performBatchUpdates({
+            
+//            for change in self.sectionChanges {
+//                switch change.type {
+//                case .insert: self.collectionView?.insertSections([change.sectionIndex])
+//                case .delete: self.collectionView?.deleteSections([change.sectionIndex])
+//                default: break
+//                }
+//            }
+            
+            for change in self.itemChanges {
+                switch change.type {
+                case .insert: self.collectionView?.insertItems(at: [change.newIndexPath!])
+                case .delete: self.collectionView?.deleteItems(at: [change.indexPath!])
+                case .update: self.collectionView?.reloadItems(at: [change.indexPath!])
+                case .move:
+                    self.collectionView?.deleteItems(at: [change.indexPath!])
+                    self.collectionView?.insertItems(at: [change.newIndexPath!])
+                @unknown default:
+                    fatalError()
+                }
+            }
+            
+//            self.sectionChanges.removeAll()
+            self.itemChanges.removeAll()
+            
+        }, completion: { finished in
+            // moved section and item changes from here
+        })
+    }
     
 }
 
