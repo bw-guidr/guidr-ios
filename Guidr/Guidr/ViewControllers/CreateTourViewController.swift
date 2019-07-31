@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CreateTourViewController: UIViewController {
 
@@ -17,6 +18,25 @@ class CreateTourViewController: UIViewController {
 		formatter.dateFormat = "MMM dd yyyy"
 		return formatter
 	}
+    
+    var tourType: String = "professional"
+    
+    var tourController = TourController.shared
+    
+    var user: UserRepresentation {
+        let moc = CoreDataStack.shared.mainContext
+        let request: NSFetchRequest<User> = User.fetchRequest()
+        
+        do {
+            let users = try moc.fetch(request)
+            if let user = users.first {
+                return user.userRepresentation
+            }
+        } catch {
+            fatalError("Error performing fetch for user: \(error)")
+        }
+        return UserRepresentation()
+    }
 
 	@IBOutlet weak var segControl: UISegmentedControl!
 	@IBOutlet weak var locationTextField: UITextField!
@@ -28,13 +48,17 @@ class CreateTourViewController: UIViewController {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         imageView.layer.cornerRadius = 8
     }
 
 	
 	@IBAction func segControlToggle(_ sender: UISegmentedControl) {
-
+        if segControl.selectedSegmentIndex == 0 {
+            tourType = "professional"
+        } else {
+            tourType = "private"
+        }
 	}
 
 	@IBAction func choosePhotoTapped(_ sender: UIButton) {
@@ -45,8 +69,22 @@ class CreateTourViewController: UIViewController {
 	}
 	
 	@IBAction func addTourTapped(_ sender: UIButton) {
-
+        addTour()
 	}
+    
+    private func addTour() {
+        guard let title = locationTextField.text,
+            !title.isEmpty,
+            let description = summaryTextView.text,
+            !description.isEmpty,
+            let milesString = milesTextField.text,
+            !milesString.isEmpty,
+            let miles = Float(milesString),
+            let date = dateLabel.text,
+            !date.isEmpty else { return }
+        
+        tourController.createTour(title: title, description: description, miles: miles, date: "11/23/2019", userID: user.identifier!, imageURL: nil, location: title, tourType: tourType)
+    }
 
 
     /*

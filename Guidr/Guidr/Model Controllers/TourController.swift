@@ -27,8 +27,8 @@ class TourController {
     
     let baseURL = URL(string: "https://guidr-backend-justin-chen.herokuapp.com/user")!
     
-    func createTour(title: String, description: String?, miles: Int32, date: Date, userID: Int32, imageURL: String?, location: String?, tourType: String?) {
-        let tour = Tour(title: title, description: description, miles: miles, date: date, userID: userID, imageURL: imageURL ?? "", location: location ?? "", tourType: tourType ?? "")
+    func createTour(title: String, description: String?, miles: Float, date: String, userID: Int, imageURL: String?, location: String?, tourType: String?) {
+        let tour = Tour(title: title, description: description, miles: miles, date: date, userID: Int32(userID), imageURL: imageURL ?? "", location: location ?? "", tourType: tourType ?? "")
         
         put(tour: tour, type: .add)
         
@@ -39,7 +39,7 @@ class TourController {
         }
     }
     
-    func updateTour(tour: Tour, title: String, description: String?, miles: Int32, imageURL: String?, date: Date) {
+    func updateTour(tour: Tour, title: String, description: String?, miles: Float, imageURL: String?, date: String) {
         tour.title = title
         tour.summary = description
         tour.miles = miles
