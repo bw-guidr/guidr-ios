@@ -11,7 +11,7 @@ import CoreData
 
 class ProfileViewController: UICollectionViewController, NSFetchedResultsControllerDelegate {
 
-    let tourController = TourController()
+    let tourController = TourController.shared
     var user: UserRepresentation {
         let moc = CoreDataStack.shared.mainContext
         let request: NSFetchRequest<User> = User.fetchRequest()

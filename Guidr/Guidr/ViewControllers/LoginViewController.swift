@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
     
-    let userController = UserController()
+    let userController = UserController.shared
     var isLogin: Bool = false
     
     override func viewDidLoad() {
