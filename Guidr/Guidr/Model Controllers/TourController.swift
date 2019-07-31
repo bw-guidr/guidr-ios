@@ -29,16 +29,10 @@ class TourController {
     let token: String? = KeychainWrapper.standard.string(forKey: "token")
     
     func createTour(title: String, description: String?, miles: Float, date: String, userID: Int, imageURL: String?, location: String?, tourType: String?) {
-//        let tour = Tour(title: title, description: description, miles: miles, date: date, userID: Int32(userID), imageURL: imageURL ?? "", location: location ?? "", tourType: tourType ?? "")
-        let tourRepresentation = TourRepresentation(title: title, description: description, miles: miles, date: date, imageURL: imageURL ?? "", userID: Int32(userID), identifier: nil, tourType: tourType ?? "", location: location ?? "")
+        
+        let tourRepresentation = TourRepresentation(title: title, description: description, miles: miles, date: date, imageURL: nil, userID: Int32(userID), identifier: nil, tourType: tourType ?? "", location: location ?? "")
         
         post(tour: tourRepresentation)
-        
-//        do {
-//            try CoreDataStack.shared.save()
-//        } catch {
-//            NSLog("Error saving context: \(error)")
-//        }
     }
     
     func updateTour(tour: Tour, title: String, description: String?, miles: Float, imageURL: String?, date: String) {
@@ -110,12 +104,13 @@ class TourController {
     
     func post(tour: TourRepresentation, completion: @escaping () -> Void = { }) {
         let requestURL: URL = baseURL.appendingPathComponent("\(tour.userID)").appendingPathComponent("trips")
-        
+        print(requestURL)
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         if let token = token {
-            request.addValue("\(token)", forHTTPHeaderField: "Authorization")
+            request.setValue("\(token)", forHTTPHeaderField: "Authorization")
         }
         
         do {
@@ -126,7 +121,7 @@ class TourController {
             return
         }
         
-        URLSession.shared.dataTask(with: request) { (data, _, error) in
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 NSLog("Error PUTting tour to server: \(error)")
                 completion()
@@ -134,12 +129,8 @@ class TourController {
             }
             
             guard let data = data else { return }
-            
             do {
-//                let tourRepresentation = try JSONDecoder().decode(TourRepresentation.self, from: data)
-                let tourID = Array(data)
-                print(tourID)
-                print(data)
+                let tourID = try JSONDecoder().decode([Int].self, from: data)
                 let tour = Tour(tourRepresentation: tour)
                 
                 guard let identifier = tourID.first else { return }
@@ -199,9 +190,9 @@ class TourController {
         }.resume()
     }
     
-    private func fetchSingleTourFromPersistentStore(identifier: String, context: NSManagedObjectContext) -> Tour? {
+    private func fetchSingleTourFromPersistentStore(identifier: Int32, context: NSManagedObjectContext) -> Tour? {
         let fetchRequest: NSFetchRequest<Tour> = Tour.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "identifier == %@")
+        fetchRequest.predicate = NSPredicate(format: "identifier == %i", identifier)
         
         var tour: Tour? = nil
         
@@ -227,7 +218,8 @@ class TourController {
     private func updateTours(with representations: [TourRepresentation], context: NSManagedObjectContext) {
         context.performAndWait {
             for representation in representations {
-                let identifier = "\(representation.identifier)"
+                guard let identifier = representation.identifier else { return }
+                print(identifier)
                 let tour = fetchSingleTourFromPersistentStore(identifier: identifier, context: context)
                 
                 if let tour = tour {
@@ -238,6 +230,14 @@ class TourController {
                     Tour(tourRepresentation: representation)
                 }
             }
+        }
+    }
+}
+
+extension Data {
+    func printJSON() {
+        if let JSONString = String(data: self, encoding: String.Encoding.utf8) {
+            print(JSONString)
         }
     }
 }

@@ -24,6 +24,7 @@ struct TourRepresentation: Codable {
         case description
         case miles
         case imageURL
+        case date
         case userID = "user_id"
         case identifier = "id"
         case tourType = "trip_type"
