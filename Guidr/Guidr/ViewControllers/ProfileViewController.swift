@@ -52,7 +52,7 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
     }()
     
 	var tourPhotos: [UIImage] = [UIImage(named: "bearVector")!, UIImage(named: "hikeVector")!, UIImage(named: "MountainRedVector")!, UIImage(named: "treeAndMoonVector")!, UIImage(named: "MountainVector")!]
-
+    
     let token: String? = KeychainWrapper.standard.string(forKey: "token")
 
     override func viewDidLoad() {
@@ -73,10 +73,6 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
             tourController.fetchToursFromServer(userID: id)
         }
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        collectionView.reloadData()
     }
 
 
@@ -197,7 +193,9 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>)
     {
         collectionView?.performBatchUpdates({
-            
+			// Makes sure labels are *always* updated in the first collectionView cell
+            self.collectionView.reloadItems(at: [IndexPath(item: 0, section: 0)])
+
             for change in self.sectionChanges {
                 switch change.type {
                 case .insert: self.collectionView?.insertSections([change.sectionIndex])
