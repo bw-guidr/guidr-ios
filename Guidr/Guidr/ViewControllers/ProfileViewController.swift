@@ -101,7 +101,7 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
 			return 1
 		// Add First Tour Button
 		case 1:
-			return tourPhotos.count == 0 ? 1 : 0
+			return fetchedResultsController.fetchedObjects?.count == 0 ? 1 : 0
 		// Tour Photos Grid
 		default:
             return fetchedResultsController.fetchedObjects?.count ?? 0
@@ -113,9 +113,16 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
 		switch indexPath.section {
 		case 0:
 			return guideInfoCell(from: collectionView.dequeueReusableCell(withReuseIdentifier: "GuideInfoCell", for: indexPath), atIndex: indexPath.item)
+        case 1:
+            return addFirstTourCell(from: collectionView.dequeueReusableCell(withReuseIdentifier: "AddFirstTourCell", for: indexPath), atIndex: indexPath.item)
 		default:
             return tourPhotoCell(from: collectionView.dequeueReusableCell(withReuseIdentifier: "TourPhotoCell", for: indexPath), indexPath: indexPath, atIndex: indexPath.item)
 		}
+    }
+    
+    private func addFirstTourCell(from cell: UICollectionViewCell, atIndex index: Int) -> AddFirstTourCollectionViewCell {
+        guard let cell = cell as? AddFirstTourCollectionViewCell else { return AddFirstTourCollectionViewCell() }
+        return cell
     }
 
 	private func guideInfoCell(from cell: UICollectionViewCell, atIndex index: Int) -> GuideInfoCollectionViewCell {
