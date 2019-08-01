@@ -87,7 +87,7 @@
                                     <outlet property="labelView" destination="umu-CV-ic9" id="y1G-2h-ebs"/>
                                     <outlet property="tourImageView" destination="LDV-Jw-ALT" id="Rd7-om-NSa"/>
                                     <outlet property="tourNameLabel" destination="O7M-kA-KxI" id="to9-nr-h4C"/>
-                                    <segue destination="4xe-VV-9oC" kind="presentation" identifier="ShowDetailSegue" id="o6n-Fk-t8B"/>
+                                    <segue destination="4xe-VV-9oC" kind="presentation" identifier="ShowDetailSegue" modalPresentationStyle="overCurrentContext" id="o6n-Fk-t8B"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
