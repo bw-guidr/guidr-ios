@@ -140,9 +140,11 @@ class CreateTourViewController: UIViewController {
             tourController.updateTour(tour: tour, title: title, description: description, miles: miles, imageURL: nil, date: date, tourType: tourType.rawValue)
 			delegate?.createTourViewController(self, didEditTour: tour)
 			self.dismiss(animated: true, completion: nil)
+            clearAll()
         } else {
             tourController.createTour(title: title, description: description, miles: miles, date: date, userID: user.identifier!, imageURL: nil, location: title, tourType: tourType.rawValue)
 			self.tabBarController?.selectedIndex = 0
+            clearAll()
         }
     }
 
@@ -152,6 +154,7 @@ class CreateTourViewController: UIViewController {
 		milesTextField.text = nil
 		summaryTextView.text = nil
 		dateLabel.text = nil
+        locationTextField.becomeFirstResponder()
 	}
 
 	private func setupUIElements() {

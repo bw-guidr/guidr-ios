@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="LFK-6d-hgu">
-                                <rect key="frame" x="30" y="156" width="354" height="555"/>
+                                <rect key="frame" x="30" y="208" width="354" height="555"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dwO-7x-55k">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="69"/>
@@ -227,7 +227,7 @@
                                 </constraints>
                             </stackView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kcZ-03-pkf">
-                                <rect key="frame" x="90" y="108" width="234" height="29"/>
+                                <rect key="frame" x="90" y="160" width="234" height="29"/>
                                 <segments>
                                     <segment title="Professional"/>
                                     <segment title="Personal"/>
@@ -399,8 +399,8 @@
                     <tabBarItem key="tabBarItem" title="Add Tour" image="add" id="PAr-25-y7W"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HNG-7L-C0D">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="HNG-7L-C0D">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -18,11 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="NzA-dk-Izz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="NzA-dk-Izz">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="registerLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Rbj-hp-T4d">
-                                <rect key="frame" x="87" y="74" width="240" height="75"/>
+                                <rect key="frame" x="87" y="124" width="240" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="0Zb-kk-Sxo"/>
                                     <constraint firstAttribute="width" constant="240" id="Eid-Di-gWV"/>
@@ -33,7 +33,7 @@
                         <constraints>
                             <constraint firstItem="NzA-dk-Izz" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="Lbv-k2-cl1"/>
                             <constraint firstItem="NzA-dk-Izz" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="QAr-cf-Kjc"/>
-                            <constraint firstItem="Rbj-hp-T4d" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="30" id="SBy-pW-EOv"/>
+                            <constraint firstItem="Rbj-hp-T4d" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="80" id="SBy-pW-EOv"/>
                             <constraint firstItem="Rbj-hp-T4d" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="WFD-Dv-OGd"/>
                             <constraint firstAttribute="bottom" secondItem="NzA-dk-Izz" secondAttribute="bottom" id="czB-hO-0dq"/>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="NzA-dk-Izz" secondAttribute="trailing" id="t0u-p8-zMq"/>
@@ -47,7 +47,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launchImage" width="1242" height="2688"/>
+        <image name="profilePhoto" width="1500" height="1000"/>
         <image name="registerLogo" width="600" height="75"/>
     </resources>
 </document>
