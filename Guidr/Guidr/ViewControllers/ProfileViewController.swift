@@ -87,7 +87,7 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowDetailSegue" {
-            guard let tourDetailVC = segue.destination as? TourDetailViewController, let indexPath = collectionView.indexPathsForSelectedItems?.first else { return }
+            guard let tourDetailVC = segue.destination.children.first as? TourDetailViewController, let indexPath = collectionView.indexPathsForSelectedItems?.first else { return }
             
             tourDetailVC.tour = fetchedResultsController.fetchedObjects?[indexPath.item]
         }

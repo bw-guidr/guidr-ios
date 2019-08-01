@@ -21,7 +21,7 @@ class TourDetailViewController: UIViewController {
 
 
 	let generator = UIImpactFeedbackGenerator(style: .medium)
-    var tour: Tour?
+	var tour: Tour?
     
     override func viewDidLoad() {
         super.viewDidLoad()
