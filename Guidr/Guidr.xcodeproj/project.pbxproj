@@ -29,6 +29,7 @@
 		376EF2BB22F0BFFC0005F985 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 376EF2BA22F0BFFC0005F985 /* BebasNeue-Regular.ttf */; };
 		376EF2BD22F1137A0005F985 /* CreateTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376EF2BC22F1137A0005F985 /* CreateTourViewController.swift */; };
 		376EF2BF22F119070005F985 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376EF2BE22F119070005F985 /* DatePickerViewController.swift */; };
+		660018DB22F375BA00F3BC35 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660018DA22F375BA00F3BC35 /* AppearanceHelper.swift */; };
 		66F4211722EF3D7600B78375 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4211622EF3D7600B78375 /* AppDelegate.swift */; };
 		66F4211C22EF3D7600B78375 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F4211A22EF3D7600B78375 /* Profile.storyboard */; };
 		66F4211E22EF3D7700B78375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F4211D22EF3D7700B78375 /* Assets.xcassets */; };
@@ -74,6 +75,7 @@
 		376EF2BA22F0BFFC0005F985 /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
 		376EF2BC22F1137A0005F985 /* CreateTourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTourViewController.swift; sourceTree = "<group>"; };
 		376EF2BE22F119070005F985 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		660018DA22F375BA00F3BC35 /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
 		66F4211322EF3D7600B78375 /* Guidr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F4211622EF3D7600B78375 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66F4211B22EF3D7600B78375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				66F4585822F0DDA400756BC9 /* UserDefaultsHelper.swift */,
 				327EDEEB22F1F61800B2E132 /* CustomButton.swift */,
 				327EDEED22F1FDF600B2E132 /* CustomSwitch.swift */,
+				660018DA22F375BA00F3BC35 /* AppearanceHelper.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				327EDEEA22F1F1BF00B2E132 /* SettingsViewController.swift in Sources */,
 				376EF2B322F003AF0005F985 /* ProfileViewController.swift in Sources */,
 				327EDEEE22F1FDF600B2E132 /* CustomSwitch.swift in Sources */,
+				660018DB22F375BA00F3BC35 /* AppearanceHelper.swift in Sources */,
 				66F4212A22EF582E00B78375 /* Guidr.xcdatamodeld in Sources */,
 				66F4585722F0B0B500756BC9 /* TourGalleryCollectionViewController.swift in Sources */,
 				66F4213B22EF623A00B78375 /* TourController.swift in Sources */,

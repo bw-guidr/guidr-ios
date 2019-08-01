@@ -12,7 +12,7 @@ import UIKit
 extension UIColor {
 
 	// MARK: - Neutral Palette
-
+    static let offBlack = UIColor(red: 34.0/255.0, green: 36.0/255.0, blue: 42.0/255.0, alpha: 1.0)
 	static let grey = UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1)
 	static let offWhite = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
 
