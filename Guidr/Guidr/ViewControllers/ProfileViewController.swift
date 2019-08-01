@@ -73,7 +73,9 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
             performSegue(withIdentifier: "LoginViewModalSegue", sender: self)
         }
         
-        tourController.fetchToursFromServer(userID: user.identifier!)
+        if let id = user.identifier {
+            tourController.fetchToursFromServer(userID: id)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
