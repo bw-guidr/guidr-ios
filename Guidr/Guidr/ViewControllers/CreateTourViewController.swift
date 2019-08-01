@@ -129,7 +129,7 @@ class CreateTourViewController: UIViewController {
             !date.isEmpty else { return }
         
         if let tour = tour {
-            tourController.updateTour(tour: tour, title: title, description: description, miles: miles, imageURL: nil, date: date)
+            tourController.updateTour(tour: tour, title: title, description: description, miles: miles, imageURL: nil, date: date, tourType: tourType.rawValue)
         } else {
             tourController.createTour(title: title, description: description, miles: miles, date: date, userID: user.identifier!, imageURL: nil, location: title, tourType: tourType.rawValue)
         }
@@ -174,6 +174,8 @@ class CreateTourViewController: UIViewController {
             } else {
                 tourType = .personal
             }
+            
+            addTourButton.setTitle("Edit Tour", for: .normal)
         }
     }
 
