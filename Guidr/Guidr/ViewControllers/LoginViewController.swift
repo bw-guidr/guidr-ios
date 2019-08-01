@@ -26,6 +26,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         forgotPasswordButton.isHidden = true
         self.tabBarController?.tabBar.isHidden = true
+
     }
     
 
@@ -65,37 +66,15 @@ class LoginViewController: UIViewController {
     }
     
     func login() {
-        guard let email = emailTextField.text,
-            !email.isEmpty,
-            let password = passwordTextField.text,
-            !password.isEmpty else { return }
-        
-        let user = UserRepresentation(email: email, password: password, name: nil, imageURL: nil, identifier: nil)
-        userController.loginWith(user: user, loginType: .signIn) { (result) in
-            if (try? result.get()) != nil {
-                DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "ShowProfileSegue", sender: self)
-                }
-            } else {
-               NSLog("Error logging in with \(result)")
-            }
-        }
-    }
-    
-    func register() {
-        guard let email = emailTextField.text,
-            !email.isEmpty,
-            let password = passwordTextField.text,
-            !password.isEmpty,
-            let name = nameTextField.text,
-            !name.isEmpty else { return }
-        
-        let user = UserRepresentation(email: email, password: password, name: name, imageURL: nil, identifier: nil)
-        userController.signUpWith(user: user, loginType: .signUp) { (error) in
-            if let error = error {
-                NSLog("Error registering with \(error)")
-            }
-            self.userController.loginWith(user: user, loginType: .signIn) { (result) in
+        let check = completeFieldsChecker()
+        if check == true {
+            guard let email = emailTextField.text,
+                !email.isEmpty,
+                let password = passwordTextField.text,
+                !password.isEmpty else { return }
+            
+            let user = UserRepresentation(email: email, password: password, name: nil, imageURL: nil, identifier: nil)
+            userController.loginWith(user: user, loginType: .signIn) { (result) in
                 if (try? result.get()) != nil {
                     DispatchQueue.main.async {
                         self.performSegue(withIdentifier: "ShowProfileSegue", sender: self)
@@ -104,17 +83,77 @@ class LoginViewController: UIViewController {
                     NSLog("Error logging in with \(result)")
                 }
             }
+        } else {
+            return
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func register() {
+        let check = completeFieldsChecker()
+        if check == true {
+            guard let email = emailTextField.text,
+                !email.isEmpty,
+                let password = passwordTextField.text,
+                !password.isEmpty,
+                let name = nameTextField.text,
+                !name.isEmpty else { return }
+            
+            let user = UserRepresentation(email: email, password: password, name: name, imageURL: nil, identifier: nil)
+            userController.signUpWith(user: user, loginType: .signUp) { (error) in
+                if let error = error {
+                    NSLog("Error registering with \(error)")
+                }
+                self.userController.loginWith(user: user, loginType: .signIn) { (result) in
+                    if (try? result.get()) != nil {
+                        DispatchQueue.main.async {
+                            self.performSegue(withIdentifier: "ShowProfileSegue", sender: self)
+                        }
+                    } else {
+                        NSLog("Error logging in with \(result)")
+                    }
+                }
+            }
+        }
     }
-    */
+    
+    func completeFieldsChecker() -> Bool{
+        
+        let title: String = "Oops!"
+        var message: String?
+        var checker: Bool = false
+
+        if let name = nameTextField.text,
+            let email = emailTextField.text,
+            let password = passwordTextField.text {
+            if name.isEmpty {
+                message = "Please enter your name."
+            } else if email.isEmpty || email.contains("@") == false {
+                message = "Please enter a valid email."
+            } else if password.isEmpty {
+                message = "Please enter your password"
+            } else if password.count < 5 {
+                message = "Your password must be at least 5 characters long."
+            } else {
+                checker = true
+            }
+        }
+        
+        if checker == false {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }
+        
+        return checker
+    }
 
 }
+
+//nameTextField: UITextField!
+//emailTextField: UITextField!
+//passwordTextField: UITextField
+//forgotPasswordButton: UIButton
+//registerButton: UIButton!
+//nameIcon: UIImageView!
+//nameLabel: UILabel!
+//loginButton: UIButton!
