@@ -176,22 +176,39 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
     }
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        var adjustedNewIndexPath = newIndexPath
+        var adjustedOldIndexPath = indexPath
         
-        let adjustedIndexPath = IndexPath(item: newIndexPath!.item, section: 2)
-        itemChanges.append((type, indexPath, adjustedIndexPath))
+        
+        switch type {
+        case .insert:
+            adjustedNewIndexPath = IndexPath(item: newIndexPath!.item, section: 2)
+        case .delete:
+            adjustedOldIndexPath = IndexPath(item: indexPath!.item, section: 2)
+        case .update:
+            adjustedNewIndexPath = IndexPath(item: newIndexPath!.item, section: 2)
+            adjustedOldIndexPath = IndexPath(item: indexPath!.item, section: 2)
+        case .move:
+            adjustedNewIndexPath = IndexPath(item: newIndexPath!.item, section: 2)
+            adjustedOldIndexPath = IndexPath(item: indexPath!.item, section: 2)
+        @unknown default:
+            break
+        }
+        
+        itemChanges.append((type, adjustedOldIndexPath, adjustedNewIndexPath))
     }
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>)
     {
         collectionView?.performBatchUpdates({
             
-//            for change in self.sectionChanges {
-//                switch change.type {
-//                case .insert: self.collectionView?.insertSections([change.sectionIndex])
-//                case .delete: self.collectionView?.deleteSections([change.sectionIndex])
-//                default: break
-//                }
-//            }
+            for change in self.sectionChanges {
+                switch change.type {
+                case .insert: self.collectionView?.insertSections([change.sectionIndex])
+                case .delete: self.collectionView?.deleteSections([change.sectionIndex])
+                default: break
+                }
+            }
             
             for change in self.itemChanges {
                 switch change.type {
