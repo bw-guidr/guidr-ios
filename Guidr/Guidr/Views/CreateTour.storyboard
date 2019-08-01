@@ -100,11 +100,11 @@
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qpd-E4-HaX">
                                                 <rect key="frame" x="0.0" y="29" width="354" height="119"/>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="119" id="Kn7-g4-xFa"/>
                                                 </constraints>
-                                                <inset key="scrollIndicatorInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                                <inset key="scrollIndicatorInsets" minX="12" minY="5" maxX="12" maxY="5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                             </textView>
@@ -121,29 +121,34 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aMX-GE-gIh">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="24"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlJ-fv-8XT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="253" height="24"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="date">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.054345573607427089" green="0.054345573607427089" blue="0.054345573607427089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" size="24" name="BebasNeue-Regular"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZk-ee-tih">
-                                                        <rect key="frame" x="261" y="0.0" width="93" height="24"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                                                        <state key="normal" title="Choose Date"/>
-                                                        <connections>
-                                                            <segue destination="Qgu-FV-XCc" kind="presentation" identifier="ChooseDateSegue" modalPresentationStyle="overFullScreen" id="blj-em-Cwh"/>
-                                                        </connections>
-                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kiG-wQ-WiX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="24"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlJ-fv-8XT">
+                                                                <rect key="frame" x="0.0" y="0.0" width="253" height="24"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="date">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.054345573607427089" green="0.054345573607427089" blue="0.054345573607427089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <font key="NSFont" size="24" name="BebasNeue-Regular"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZk-ee-tih">
+                                                                <rect key="frame" x="261" y="0.0" width="93" height="24"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                                                <state key="normal" title="Choose Date"/>
+                                                                <connections>
+                                                                    <segue destination="Qgu-FV-XCc" kind="presentation" identifier="ChooseDateSegue" modalPresentationStyle="overFullScreen" id="blj-em-Cwh"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQw-QR-Wb0">
@@ -232,11 +237,10 @@
                                     <action selector="segControlToggle:" destination="M0i-gc-Zna" eventType="valueChanged" id="mqW-i7-f7z"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJ8-Kn-1St">
-                                <rect key="frame" x="134.5" y="735" width="145" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJ8-Kn-1St" customClass="CustomButton" customModule="Guidr" customModuleProvider="target">
+                                <rect key="frame" x="174.5" y="743" width="65" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <color key="tintColor" red="0.95053964849999995" green="0.75592082739999999" blue="0.52196490760000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <inset key="contentEdgeInsets" minX="40" minY="10" maxX="40" maxY="10"/>
                                 <state key="normal" title="Add Tour"/>
                                 <connections>
                                     <action selector="addTourTapped:" destination="M0i-gc-Zna" eventType="touchUpInside" id="I1F-PH-1QG"/>
@@ -273,6 +277,7 @@
                         <outlet property="addTourButton" destination="EJ8-Kn-1St" id="chj-uG-Le1"/>
                         <outlet property="chooseDateButton" destination="QZk-ee-tih" id="KBQ-gm-jJj"/>
                         <outlet property="choosePhotoButton" destination="N7s-oo-flA" id="aPW-MQ-WNY"/>
+                        <outlet property="clearButton" destination="H7d-RY-McP" id="Ny1-ro-rEx"/>
                         <outlet property="dateLabel" destination="pQw-QR-Wb0" id="hpg-x1-Trl"/>
                         <outlet property="imageView" destination="kP6-cs-mjV" id="K07-2Y-NGx"/>
                         <outlet property="locationTextField" destination="kKA-iQ-TPz" id="pNh-pq-Lfn"/>

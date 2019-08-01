@@ -22,8 +22,9 @@ class CustomButton: UIButton {
     
     func setUpButton() {
         setTitleColor(.grey, for: .normal)
+		contentEdgeInsets = UIEdgeInsets(top: 10, left: 40, bottom: 10, right: 40)
         backgroundColor = .secondaryOrange
         titleLabel?.font = UIFont(name: "Montserrat", size: 14)
-        layer.cornerRadius = 25
+        layer.cornerRadius = 19
     }
 }

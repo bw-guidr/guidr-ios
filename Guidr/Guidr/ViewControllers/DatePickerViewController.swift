@@ -25,10 +25,10 @@ class DatePickerViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		modalView.layer.cornerRadius = 30
-		modalView.layer.shadowRadius = 12
+		modalView.layer.shadowRadius = 15
 		modalView.layer.shadowOffset = .zero
-		modalView.layer.shadowColor = UIColor.black.cgColor
-		modalView.layer.shadowOpacity = 0.3
+		modalView.layer.shadowColor = #colorLiteral(red: 0.2124917535, green: 0.271030252, blue: 0.3560721495, alpha: 1)
+		modalView.layer.shadowOpacity = 0.2
     }
 
 	@IBAction func blankSpaceTapped(_ sender: UITapGestureRecognizer) {

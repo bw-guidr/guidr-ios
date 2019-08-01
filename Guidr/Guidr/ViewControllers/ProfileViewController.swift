@@ -72,10 +72,11 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
         } else if user.identifier == nil {
             performSegue(withIdentifier: "LoginViewModalSegue", sender: self)
         }
+        
+        tourController.fetchToursFromServer(userID: user.identifier!)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        tourController.fetchToursFromServer(userID: user.identifier!)
         collectionView.reloadData()
     }
 
@@ -83,7 +84,11 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        if segue.identifier == "ShowDetailSegue" {
+            guard let tourDetailVC = segue.destination as? TourDetailViewController, let indexPath = collectionView.indexPathsForSelectedItems?.first else { return }
+            
+            tourDetailVC.tour = fetchedResultsController.fetchedObjects?[indexPath.item]
+        }
     }
 	
 

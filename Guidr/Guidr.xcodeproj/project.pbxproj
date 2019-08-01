@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3259881E22EFB47700D1A8BE /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259881D22EFB47700D1A8BE /* CustomLabel.swift */; };
 		3259886022F0969700D1A8BE /* TourDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3259885F22F0969700D1A8BE /* TourDetail.storyboard */; };
 		3259886222F09DD200D1A8BE /* TourDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259886122F09DD200D1A8BE /* TourDetailViewController.swift */; };
 		327EDEEA22F1F1BF00B2E132 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327EDEE922F1F1BF00B2E132 /* SettingsViewController.swift */; };
@@ -53,7 +52,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3259881D22EFB47700D1A8BE /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		3259885F22F0969700D1A8BE /* TourDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TourDetail.storyboard; sourceTree = "<group>"; };
 		3259886122F09DD200D1A8BE /* TourDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourDetailViewController.swift; sourceTree = "<group>"; };
 		327EDEE922F1F1BF00B2E132 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 				66F4211622EF3D7600B78375 /* AppDelegate.swift */,
 				3737ED8D22EF69120038001E /* Fonts */,
 				3737ED8B22EF65E50038001E /* ProjectColors.swift */,
-				3259881D22EFB47700D1A8BE /* CustomLabel.swift */,
 				66F4585822F0DDA400756BC9 /* UserDefaultsHelper.swift */,
 				327EDEEB22F1F61800B2E132 /* CustomButton.swift */,
 				327EDEED22F1FDF600B2E132 /* CustomSwitch.swift */,
@@ -168,8 +165,8 @@
 				376EF2B622F005700005F985 /* AddFirstTourCollectionViewCell.swift */,
 				376EF2B822F005840005F985 /* TourPhotoCollectionViewCell.swift */,
 				66F4214322EF8C8600B78375 /* LoginViewController.swift */,
-				3259886122F09DD200D1A8BE /* TourDetailViewController.swift */,
 				327EDEE922F1F1BF00B2E132 /* SettingsViewController.swift */,
+				3259886122F09DD200D1A8BE /* TourDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -325,7 +322,6 @@
 				376EF2B922F005840005F985 /* TourPhotoCollectionViewCell.swift in Sources */,
 				66F4213522EF598800B78375 /* User+Convenience.swift in Sources */,
 				66F4213322EF597C00B78375 /* Tour+Convenience.swift in Sources */,
-				3259881E22EFB47700D1A8BE /* CustomLabel.swift in Sources */,
 				66F4585522F0B0AC00756BC9 /* TourCollectionViewCell.swift in Sources */,
 				327EDEEA22F1F1BF00B2E132 /* SettingsViewController.swift in Sources */,
 				376EF2B322F003AF0005F985 /* ProfileViewController.swift in Sources */,
