@@ -84,6 +84,7 @@ class TourDetailViewController: UIViewController {
             print(segue.destination.children)
             guard let editTourVC = segue.destination.children.first as? CreateTourViewController else { return }
             editTourVC.tour = tour
+			editTourVC.delegate = self
         }
     }
 }
@@ -94,5 +95,11 @@ extension TourDetailViewController: UIScrollViewDelegate {
 			generator.impactOccurred()
 			dismiss(animated: true)
 		}
+	}
+}
+
+extension TourDetailViewController: CreateTourViewControllerDelegate {
+	func createTourViewController(_ createTourViewController: CreateTourViewController, didEditTour tour: Tour) {
+		updateViews()
 	}
 }
