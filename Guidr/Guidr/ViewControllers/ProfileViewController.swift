@@ -127,8 +127,9 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
 
 	private func guideInfoCell(from cell: UICollectionViewCell, atIndex index: Int) -> GuideInfoCollectionViewCell {
 		guard let cell = cell as? GuideInfoCollectionViewCell else { return GuideInfoCollectionViewCell() }
+		// TODO: Format miles count
         cell.tourCountLabel.text = "\(getLocationsCount())"
-		cell.milesCountLabel.text = "\(getMilesCount())"
+		cell.milesCountLabel.text = String(format: "%.01f", getMilesCount())
 		cell.locationsCountLabel.text = "\(getLocationsCount())"
 		cell.nameLabel.text = user.name
 		cell.profileImageView.image = UIImage(named: "profilePhoto")
@@ -175,22 +176,39 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
     }
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        var adjustedNewIndexPath = newIndexPath
+        var adjustedOldIndexPath = indexPath
         
-        let adjustedIndexPath = IndexPath(item: newIndexPath!.item, section: 2)
-        itemChanges.append((type, indexPath, adjustedIndexPath))
+        
+        switch type {
+        case .insert:
+            adjustedNewIndexPath = IndexPath(item: newIndexPath!.item, section: 2)
+        case .delete:
+            adjustedOldIndexPath = IndexPath(item: indexPath!.item, section: 2)
+        case .update:
+            adjustedNewIndexPath = IndexPath(item: newIndexPath!.item, section: 2)
+            adjustedOldIndexPath = IndexPath(item: indexPath!.item, section: 2)
+        case .move:
+            adjustedNewIndexPath = IndexPath(item: newIndexPath!.item, section: 2)
+            adjustedOldIndexPath = IndexPath(item: indexPath!.item, section: 2)
+        @unknown default:
+            break
+        }
+        
+        itemChanges.append((type, adjustedOldIndexPath, adjustedNewIndexPath))
     }
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>)
     {
         collectionView?.performBatchUpdates({
             
-//            for change in self.sectionChanges {
-//                switch change.type {
-//                case .insert: self.collectionView?.insertSections([change.sectionIndex])
-//                case .delete: self.collectionView?.deleteSections([change.sectionIndex])
-//                default: break
-//                }
-//            }
+            for change in self.sectionChanges {
+                switch change.type {
+                case .insert: self.collectionView?.insertSections([change.sectionIndex])
+                case .delete: self.collectionView?.deleteSections([change.sectionIndex])
+                default: break
+                }
+            }
             
             for change in self.itemChanges {
                 switch change.type {
