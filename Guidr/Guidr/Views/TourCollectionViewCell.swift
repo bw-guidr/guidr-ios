@@ -16,7 +16,8 @@ class TourCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var tourNameLabel: UILabel!
     @IBOutlet weak var tourImageView: UIImageView!
     @IBOutlet weak var labelView: UIView!
-    
+	@IBOutlet weak var viewForCellContents: UIView!
+
     var tour: Tour? {
         didSet {
             updateViews()
@@ -30,10 +31,11 @@ class TourCollectionViewCell: UICollectionViewCell {
     }
     
     private func updateStyle() {
-        tourImageView.layer.cornerRadius = 30
+		viewForCellContents.layer.cornerRadius = 10
         tourImageView.clipsToBounds = true
-        labelView.layer.cornerRadius = 20
-        labelView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+		tourNameLabel.textColor = .offWhite
+		labelView.backgroundColor = .offBlack
+//        labelView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         cellView.layer.shadowOpacity = 0.2
 		cellView.layer.shadowColor = #colorLiteral(red: 0.2124917535, green: 0.271030252, blue: 0.3560721495, alpha: 1)
         cellView.layer.shadowRadius = 10
@@ -43,7 +45,6 @@ class TourCollectionViewCell: UICollectionViewCell {
         clipsToBounds = false
         layer.masksToBounds = false
     }
-    
 }
 
 
