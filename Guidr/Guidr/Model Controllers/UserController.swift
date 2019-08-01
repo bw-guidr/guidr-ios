@@ -120,7 +120,10 @@ class UserController {
             
             do {
                 self.user = try JSONDecoder().decode(UserRepresentation.self, from: data)
-                User(userRepresentation: self.user!)
+                let context = CoreDataStack.shared.mainContext
+                context.performAndWait {
+                    User(userRepresentation: self.user!)
+                }
                 try CoreDataStack.shared.save()
             } catch {
                 completion(.noDecode)
