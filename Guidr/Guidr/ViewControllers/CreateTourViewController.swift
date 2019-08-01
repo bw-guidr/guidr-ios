@@ -132,8 +132,10 @@ class CreateTourViewController: UIViewController {
         
         if let tour = tour {
             tourController.updateTour(tour: tour, title: title, description: description, miles: miles, imageURL: nil, date: date, tourType: tourType.rawValue)
+			self.dismiss(animated: true, completion: nil)
         } else {
             tourController.createTour(title: title, description: description, miles: miles, date: date, userID: user.identifier!, imageURL: nil, location: title, tourType: tourType.rawValue)
+			self.tabBarController?.selectedIndex = 0
         }
     }
 
