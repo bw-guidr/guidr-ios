@@ -21,7 +21,7 @@ class TourDetailViewController: UIViewController {
 
 
 	let generator = UIImpactFeedbackGenerator(style: .medium)
-    var tour: Tour?
+	var tour: Tour?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +51,7 @@ class TourDetailViewController: UIViewController {
         scrollView.contentInsetAdjustmentBehavior = .never
         detailImageView.layer.cornerRadius = 30
         detailImageView.clipsToBounds = true
-		viewForMap.layer.cornerRadius = 20
+		viewForMap.layer.cornerRadius = 15
     }
     
     func updateViews() {
