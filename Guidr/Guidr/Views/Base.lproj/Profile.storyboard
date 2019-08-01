@@ -201,7 +201,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="107" height="103"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountainRedVector" translatesAutoresizingMaskIntoConstraints="NO" id="O7c-ti-EoV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="107" height="103.00000000000091"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="107" height="103"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -327,6 +327,6 @@
         <image name="account" width="24" height="24"/>
         <image name="add" width="24" height="24"/>
         <image name="explore" width="24" height="24"/>
-        <image name="profilePhoto" width="2286" height="3569"/>
+        <image name="profilePhoto" width="1500" height="1000"/>
     </resources>
 </document>
