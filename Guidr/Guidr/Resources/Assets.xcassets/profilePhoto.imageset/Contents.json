@@ -2,7 +2,6 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "david-billings-uPriA_EplhY-unsplash.jpg",
       "scale" : "1x"
     },
     {
@@ -11,6 +10,7 @@
     },
     {
       "idiom" : "universal",
+      "filename" : "AdobeStock_143811159.jpeg",
       "scale" : "3x"
     }
   ],
