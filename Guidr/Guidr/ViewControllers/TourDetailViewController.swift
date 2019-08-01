@@ -50,8 +50,14 @@ class TourDetailViewController: UIViewController {
     
     @IBAction func deleteButtonPressed(_ sender: Any) {
         guard let tour = tour else { return }
-        tourController.deleteTour(tour: tour)
-        dismiss(animated: true, completion: nil)
+		let alert = UIAlertController(title: "Are you sure you want to delete this tour?", message: "It cannot be recovered once this action is completed", preferredStyle: .alert)
+		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+		let deleteAction = UIAlertAction(title: "Delete Tour", style: .destructive) { (delete) in
+			self.tourController.deleteTour(tour: tour)
+			self.dismiss(animated: true, completion: nil)
+		}
+		[cancelAction, deleteAction].forEach { alert.addAction($0) }
+		present(alert, animated: true, completion: nil)
     }
     
     func designSetup() {
