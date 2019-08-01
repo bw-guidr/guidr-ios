@@ -67,8 +67,12 @@ class UserController {
                 let result = try jsonDecoder.decode(UserResult.self, from: data)
                 self.token = result.token
                 self.user = result.user
-
-                User(userRepresentation: self.user!)
+                let context = CoreDataStack.shared.mainContext
+                
+                context.performAndWait {
+                    User(userRepresentation: self.user!)
+                }
+                
                 try CoreDataStack.shared.save()
                 if let token = self.token {
                     KeychainWrapper.standard.set(token, forKey: "token")

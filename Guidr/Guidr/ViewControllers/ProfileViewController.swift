@@ -53,10 +53,6 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
     
 	var tourPhotos: [UIImage] = [UIImage(named: "bearVector")!, UIImage(named: "hikeVector")!, UIImage(named: "MountainRedVector")!, UIImage(named: "treeAndMoonVector")!, UIImage(named: "MountainVector")!]
 
-	let miles = "272"
-	let tours = "15"
-	let locations = "9"
-    
     let token: String? = KeychainWrapper.standard.string(forKey: "token")
 
     override func viewDidLoad() {
@@ -76,6 +72,7 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
         if let id = user.identifier {
             tourController.fetchToursFromServer(userID: id)
         }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -127,7 +124,6 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
 
 	private func guideInfoCell(from cell: UICollectionViewCell, atIndex index: Int) -> GuideInfoCollectionViewCell {
 		guard let cell = cell as? GuideInfoCollectionViewCell else { return GuideInfoCollectionViewCell() }
-		// TODO: Format miles count
         cell.tourCountLabel.text = "\(getLocationsCount())"
 		cell.milesCountLabel.text = String(format: "%.01f", getMilesCount())
 		cell.locationsCountLabel.text = "\(getLocationsCount())"
