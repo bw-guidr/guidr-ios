@@ -17,6 +17,8 @@ class TourDetailViewController: UIViewController {
     @IBOutlet weak var personalLabel: UILabel!
     @IBOutlet weak var tourDetailTextView: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
+	@IBOutlet weak var viewForMap: UIView!
+
 
 	let generator = UIImpactFeedbackGenerator(style: .medium)
     var tour: Tour?
@@ -44,6 +46,7 @@ class TourDetailViewController: UIViewController {
         scrollView.contentInsetAdjustmentBehavior = .never
         detailImageView.layer.cornerRadius = 30
         detailImageView.clipsToBounds = true
+		viewForMap.layer.cornerRadius = 20
     }
     
     func updateViews() {

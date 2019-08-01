@@ -76,10 +76,12 @@ class CreateTourViewController: UIViewController {
 			dateLabel.text?.isEmpty == false ||
 			imageView?.image != nil else { return }
 
-		let alert = UIAlertController(title: "Are you sure you want to clear all fields", message: nil, preferredStyle: .alert)
-		alert.addAction(UIAlertAction(title: "Clear All", style: .destructive, handler: { (clear) in
+		let alert = UIAlertController(title: "Are you sure you want to clear all fields?", message: nil, preferredStyle: .alert)
+		let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+		let clearAllAction = UIAlertAction(title: "Clear All", style: .destructive) { (clear) in
 			self.clearAll()
-		}))
+		}
+		[cancelAction, clearAllAction].forEach { alert.addAction($0) }
 		present(alert, animated: true, completion: nil)
 	}
 
@@ -150,9 +152,11 @@ class CreateTourViewController: UIViewController {
 		addTourButton.tintColor = .grey
 		chooseDateButton.layer.borderWidth = 2
 		chooseDateButton.layer.borderColor = UIColor.mainPeach.cgColor
+		chooseDateButton.backgroundColor = .offWhite
 		chooseDateButton.layer.cornerRadius = 12
 		choosePhotoButton.layer.borderWidth = 2
 		choosePhotoButton.layer.borderColor = UIColor.mainPeach.cgColor
+		choosePhotoButton.backgroundColor = .offWhite
 		choosePhotoButton.layer.cornerRadius = 12
 		summaryTextView.layer.cornerRadius = 8
 		summaryTextView.layer.borderWidth = 1
