@@ -239,6 +239,11 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout {
         switch indexPath.section {
         case 0:
             return CGSize(width: view.bounds.width - 80, height: 600)
+		case 1:
+			let sectionInsets = self.collectionView(collectionView, layout: collectionViewLayout, insetForSectionAt: indexPath.section)
+			let viewSpacing = sectionInsets.left + sectionInsets.right
+			let cellSize = (view.bounds.width - viewSpacing)
+			return CGSize(width: cellSize, height: cellSize / 3)
         default:
             let cellSpacing = self.collectionView(collectionView, layout: collectionViewLayout, minimumInteritemSpacingForSectionAt: indexPath.section)
             let sectionInsets = self.collectionView(collectionView, layout: collectionViewLayout, insetForSectionAt: indexPath.section)
