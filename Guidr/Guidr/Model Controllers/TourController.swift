@@ -59,7 +59,7 @@ class TourController {
         
         
         deleteTourFromServer(tour: tour)
-//        moc.delete(tour)
+        moc.delete(tour)
         
         do {
             try CoreDataStack.shared.save()
