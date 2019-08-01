@@ -109,12 +109,19 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="i9u-Us-Ef6">
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="txo-Xi-28s">
                                                 <rect key="frame" x="30" y="857" width="354" height="163"/>
+                                                <subviews>
+                                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="i9u-Us-Ef6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="163"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </mapView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="163" id="xUK-FK-Hjp"/>
+                                                    <constraint firstAttribute="height" constant="163" id="OgQ-qe-Ubg"/>
                                                 </constraints>
-                                            </mapView>
+                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5c-7w-mIy">
                                                 <rect key="frame" x="187" y="45" width="40" height="13.5"/>
                                                 <constraints>
@@ -126,27 +133,36 @@
                                                     <action selector="arrowTapped:" destination="h2B-EP-d3w" eventType="touchUpInside" id="zHU-2u-ZlO"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYN-6S-ML2">
+                                                <rect key="frame" x="364" y="451" width="30" height="30"/>
+                                                <state key="normal" image="editButton"/>
+                                                <connections>
+                                                    <segue destination="Dsg-Ka-tw7" kind="show" identifier="EditTourSegue" id="ZD6-P9-W9T"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="txo-Xi-28s" firstAttribute="leading" secondItem="Zki-UJ-Pb5" secondAttribute="leading" constant="30" id="01n-sf-lRS"/>
                                             <constraint firstItem="mMd-2D-b8Q" firstAttribute="bottom" secondItem="kvq-qv-wCD" secondAttribute="bottom" constant="16" id="2bH-lD-SlY"/>
                                             <constraint firstItem="Kjg-9C-tKn" firstAttribute="leading" secondItem="Zki-UJ-Pb5" secondAttribute="leading" constant="30" id="2bI-qQ-tdB"/>
+                                            <constraint firstItem="QYN-6S-ML2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kvq-qv-wCD" secondAttribute="trailing" constant="16" id="7zu-Nw-J0h"/>
+                                            <constraint firstAttribute="trailing" secondItem="txo-Xi-28s" secondAttribute="trailing" constant="30" id="BOK-u8-6a6"/>
                                             <constraint firstItem="c5c-7w-mIy" firstAttribute="centerX" secondItem="Zki-UJ-Pb5" secondAttribute="centerX" id="BXS-47-6V2"/>
                                             <constraint firstAttribute="trailing" secondItem="G9m-JM-GxZ" secondAttribute="trailing" constant="30" id="O68-7B-ZNL"/>
                                             <constraint firstItem="mMd-2D-b8Q" firstAttribute="top" secondItem="Zki-UJ-Pb5" secondAttribute="top" id="Obj-oi-NIn"/>
+                                            <constraint firstAttribute="trailing" secondItem="QYN-6S-ML2" secondAttribute="trailing" constant="20" id="Pkj-3k-6Sa"/>
                                             <constraint firstItem="kvq-qv-wCD" firstAttribute="leading" secondItem="Zki-UJ-Pb5" secondAttribute="leading" constant="33" id="QTC-gC-KVu"/>
-                                            <constraint firstAttribute="leading" secondItem="kvq-qv-wCD" secondAttribute="trailing" constant="16" id="R96-Mx-8N1"/>
                                             <constraint firstItem="Kjg-9C-tKn" firstAttribute="top" secondItem="G9m-JM-GxZ" secondAttribute="bottom" constant="35" id="Tps-S3-X6k"/>
-                                            <constraint firstItem="i9u-Us-Ef6" firstAttribute="top" secondItem="Kjg-9C-tKn" secondAttribute="bottom" constant="35" id="VVt-0M-QrP"/>
+                                            <constraint firstItem="G9m-JM-GxZ" firstAttribute="top" secondItem="QYN-6S-ML2" secondAttribute="bottom" constant="39" id="TwN-pJ-tHK"/>
                                             <constraint firstAttribute="trailing" secondItem="Kjg-9C-tKn" secondAttribute="trailing" constant="30" id="XXi-Sv-QDG"/>
                                             <constraint firstAttribute="trailing" secondItem="mMd-2D-b8Q" secondAttribute="trailing" id="YRc-rE-dl3"/>
                                             <constraint firstItem="c5c-7w-mIy" firstAttribute="top" secondItem="Zki-UJ-Pb5" secondAttribute="top" constant="45" id="bIu-JI-TgU"/>
-                                            <constraint firstAttribute="trailing" secondItem="i9u-Us-Ef6" secondAttribute="trailing" constant="30" id="bSi-Qr-XNd"/>
                                             <constraint firstItem="G9m-JM-GxZ" firstAttribute="top" secondItem="mMd-2D-b8Q" secondAttribute="bottom" constant="20" id="cDm-Gq-C06"/>
                                             <constraint firstAttribute="width" constant="414" id="erU-5P-hP4"/>
+                                            <constraint firstItem="txo-Xi-28s" firstAttribute="top" secondItem="Kjg-9C-tKn" secondAttribute="bottom" constant="35" id="n99-17-4EP"/>
                                             <constraint firstItem="mMd-2D-b8Q" firstAttribute="leading" secondItem="Zki-UJ-Pb5" secondAttribute="leading" id="ox2-ms-243"/>
                                             <constraint firstAttribute="height" priority="250" constant="1200" id="u6c-Zm-PRJ"/>
-                                            <constraint firstItem="i9u-Us-Ef6" firstAttribute="leading" secondItem="Zki-UJ-Pb5" secondAttribute="leading" constant="30" id="vPW-rH-cDv"/>
                                             <constraint firstItem="G9m-JM-GxZ" firstAttribute="leading" secondItem="Zki-UJ-Pb5" secondAttribute="leading" constant="30" id="y0S-tJ-7Rd"/>
                                         </constraints>
                                     </view>
@@ -182,6 +198,7 @@
                         <outlet property="tourMilesLabel" destination="rH0-GP-dbg" id="23r-ae-kQA"/>
                         <outlet property="tourNameLabel" destination="kvq-qv-wCD" id="lLC-fp-QNG"/>
                         <outlet property="view" destination="foB-Mx-Ggg" id="0xD-F9-bDJ"/>
+                        <outlet property="viewForMap" destination="txo-Xi-28s" id="G4U-fT-4Bi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBh-bk-Cbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -200,5 +217,6 @@
     <resources>
         <image name="Arrow" width="66" height="10"/>
         <image name="MountainRedVector" width="5000" height="3542"/>
+        <image name="editButton" width="30" height="30"/>
     </resources>
 </document>
