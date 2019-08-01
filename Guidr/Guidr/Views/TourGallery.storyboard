@@ -38,13 +38,13 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="350" height="200"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountainRedVector" translatesAutoresizingMaskIntoConstraints="NO" id="LDV-Jw-ALT" userLabel="Tour Image">
-                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="200.00000000000091"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="350" height="200"/>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="umu-CV-ic9">
                                                             <rect key="frame" x="0.0" y="155" width="350" height="45"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7M-kA-KxI">
-                                                                    <rect key="frame" x="8" y="12.5" width="334" height="20"/>
+                                                                    <rect key="frame" x="8" y="11" width="334" height="23.5"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Label">
                                                                             <attributes>

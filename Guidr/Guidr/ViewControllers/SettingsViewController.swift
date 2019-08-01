@@ -10,21 +10,13 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    override func viewDidLoad() {
+	@IBOutlet weak var appInfoLabel: UILabel!
+	override func viewDidLoad() {
         super.viewDidLoad()
+		guard let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] else { return }
+		guard let buildNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") else { return }
 
-        // Do any additional setup after loading the view.
+		appInfoLabel.text = "Version: \(version) ⌇ Build: \(buildNumber)"
+
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

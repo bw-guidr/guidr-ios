@@ -18,7 +18,7 @@
         <!--Settings-->
         <scene sceneID="Txx-yX-Myt">
             <objects>
-                <viewController id="iSU-72-y9b" sceneMemberID="viewController">
+                <viewController id="iSU-72-y9b" customClass="SettingsViewController" customModule="Guidr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="byQ-Bc-rPL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,18 +124,30 @@
                                     <color key="titleColor" red="0.2470588235" green="0.2470588235" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version &amp; Build" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vw-nG-6bz">
+                                <rect key="frame" x="40" y="796" width="334" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="jm2-s5-u61" firstAttribute="top" secondItem="L7n-rS-gKN" secondAttribute="top" constant="100" id="67s-7x-mgv"/>
+                            <constraint firstItem="1vw-nG-6bz" firstAttribute="leading" secondItem="L7n-rS-gKN" secondAttribute="leading" constant="40" id="BWf-B7-Vz3"/>
                             <constraint firstItem="L7n-rS-gKN" firstAttribute="trailing" secondItem="jm2-s5-u61" secondAttribute="trailing" constant="30" id="DTH-do-IYT"/>
+                            <constraint firstItem="L7n-rS-gKN" firstAttribute="trailing" secondItem="1vw-nG-6bz" secondAttribute="trailing" constant="40" id="LgU-94-X4U"/>
                             <constraint firstItem="jm2-s5-u61" firstAttribute="leading" secondItem="L7n-rS-gKN" secondAttribute="leading" constant="30" id="VEj-lM-AmE"/>
                             <constraint firstItem="PLP-kK-zDl" firstAttribute="centerX" secondItem="byQ-Bc-rPL" secondAttribute="centerX" id="Z59-uI-Cdr"/>
                             <constraint firstItem="L7n-rS-gKN" firstAttribute="bottom" secondItem="PLP-kK-zDl" secondAttribute="bottom" constant="40" id="g4K-8W-vhb"/>
+                            <constraint firstItem="L7n-rS-gKN" firstAttribute="bottom" secondItem="1vw-nG-6bz" secondAttribute="bottom" constant="5" id="yzX-PA-zMb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L7n-rS-gKN"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="rTz-sy-yOE"/>
+                    <connections>
+                        <outlet property="appInfoLabel" destination="1vw-nG-6bz" id="LFQ-sc-k34"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aaP-bq-f8y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
