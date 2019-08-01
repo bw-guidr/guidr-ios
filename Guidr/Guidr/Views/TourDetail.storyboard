@@ -29,13 +29,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountainRedVector" translatesAutoresizingMaskIntoConstraints="NO" id="mMd-2D-b8Q">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="500.00000000000091"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="499.99999999999909" id="pYh-0T-LED"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvq-qv-wCD">
-                                                <rect key="frame" x="33" y="454" width="124" height="30"/>
+                                                <rect key="frame" x="33" y="449" width="156.5" height="35"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Orange trail">
                                                         <attributes>
@@ -48,13 +48,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="G9m-JM-GxZ">
-                                                <rect key="frame" x="30" y="520" width="354" height="17"/>
+                                                <rect key="frame" x="30" y="520" width="354" height="20"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="d2s-ca-zUE">
-                                                        <rect key="frame" x="0.0" y="0.0" width="183" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="183" height="20"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVo-Jk-dgk">
-                                                                <rect key="frame" x="0.0" y="0.0" width="57.5" height="17"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="20"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="jul 15 2019">
                                                                         <attributes>
@@ -66,7 +66,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rH0-GP-dbg">
-                                                                <rect key="frame" x="87.5" y="0.0" width="95.5" height="17"/>
+                                                                <rect key="frame" x="113.5" y="0.0" width="69.5" height="20"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="4.5 Miles">
                                                                         <attributes>
@@ -80,7 +80,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNU-LH-FiR" userLabel="Personal Label">
-                                                        <rect key="frame" x="213" y="0.0" width="141" height="17"/>
+                                                        <rect key="frame" x="213" y="0.0" width="141" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="141" id="B2f-lp-fq3"/>
                                                         </constraints>
@@ -100,7 +100,7 @@
                                                 </constraints>
                                             </stackView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjg-9C-tKn">
-                                                <rect key="frame" x="30" y="572" width="354" height="250"/>
+                                                <rect key="frame" x="30" y="575" width="354" height="250"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="jur-C4-sgb"/>
@@ -110,7 +110,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="txo-Xi-28s">
-                                                <rect key="frame" x="30" y="857" width="354" height="163"/>
+                                                <rect key="frame" x="30" y="860" width="354" height="163"/>
                                                 <subviews>
                                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="i9u-Us-Ef6">
                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="163"/>
@@ -134,7 +134,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYN-6S-ML2">
-                                                <rect key="frame" x="364" y="451" width="30" height="30"/>
+                                                <rect key="frame" x="378" y="459" width="16" height="22"/>
                                                 <state key="normal" image="editButton"/>
                                                 <connections>
                                                     <segue destination="Dsg-Ka-tw7" kind="show" identifier="EditTourSegue" id="ZD6-P9-W9T"/>
