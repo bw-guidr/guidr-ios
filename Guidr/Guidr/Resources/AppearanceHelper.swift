@@ -15,8 +15,6 @@ enum AppearanceHelper {
         return UIFontMetrics(forTextStyle: textStyle).scaledFont(for: font)
     }
     
-    
-    
     static func setAppearance() {
         let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.offBlack, NSAttributedString.Key.font: bebasFont(with: .largeTitle, pointSize: 40)]
         
@@ -26,7 +24,7 @@ enum AppearanceHelper {
         UINavigationBar.appearance().largeTitleTextAttributes = textAttributes
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        UITabBar.appearance().shadowImage = UIImage()
-        UITabBar.appearance().backgroundImage = UIImage()
+//        UITabBar.appearance().shadowImage = UIImage()
+//        UITabBar.appearance().backgroundImage = UIImage()
     }
 }
