@@ -31,6 +31,11 @@ class TourDetailViewController: UIViewController {
 		generator.prepare()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         updateViews()
     }
