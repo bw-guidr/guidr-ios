@@ -167,27 +167,44 @@
                                     <rect key="frame" x="0.0" y="0.0" width="314" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add First Tour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fea-Ux-QtV">
-                                            <rect key="frame" x="103.66666666666669" y="12.000000000000002" width="107" height="20.666666666666671"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMf-E0-S7i">
-                                            <rect key="frame" x="145" y="40.666666666666664" width="24" height="23.999999999999993"/>
-                                            <state key="normal" image="add"/>
-                                        </button>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXT-ka-Ndo">
+                                            <rect key="frame" x="0.0" y="0.0" width="314" height="89"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kgz-ta-R9X">
+                                                    <rect key="frame" x="0.0" y="0.0" width="314" height="89"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have any tours yet. Go ahead and add one!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fea-Ux-QtV">
+                                                            <rect key="frame" x="17" y="0.0" width="280.33333333333331" height="89"/>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="314" id="8sQ-fB-zeN"/>
+                                                <constraint firstItem="Kgz-ta-R9X" firstAttribute="leading" secondItem="wXT-ka-Ndo" secondAttribute="leading" id="OVd-HT-gEZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="Kgz-ta-R9X" secondAttribute="bottom" id="dcj-1v-uvf"/>
+                                                <constraint firstItem="Kgz-ta-R9X" firstAttribute="centerY" secondItem="wXT-ka-Ndo" secondAttribute="centerY" id="iIH-6O-n7c"/>
+                                                <constraint firstAttribute="trailing" secondItem="Kgz-ta-R9X" secondAttribute="trailing" id="l5K-x6-OdU"/>
+                                                <constraint firstItem="Kgz-ta-R9X" firstAttribute="top" secondItem="wXT-ka-Ndo" secondAttribute="top" id="uOE-wT-fkK"/>
+                                                <constraint firstItem="Kgz-ta-R9X" firstAttribute="centerX" secondItem="wXT-ka-Ndo" secondAttribute="centerX" id="vku-Ky-3vJ"/>
+                                                <constraint firstAttribute="height" constant="89" id="xse-UB-djX"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="fea-Ux-QtV" firstAttribute="centerX" secondItem="xy7-Lc-hFQ" secondAttribute="centerX" id="21G-T3-CAn"/>
-                                    <constraint firstItem="XMf-E0-S7i" firstAttribute="top" secondItem="fea-Ux-QtV" secondAttribute="bottom" constant="8" id="U4c-Bt-EZP"/>
-                                    <constraint firstItem="fea-Ux-QtV" firstAttribute="top" secondItem="xy7-Lc-hFQ" secondAttribute="topMargin" constant="-40" id="tYf-36-f2H"/>
-                                    <constraint firstItem="XMf-E0-S7i" firstAttribute="centerX" secondItem="xy7-Lc-hFQ" secondAttribute="centerX" id="w16-m5-kOW"/>
+                                    <constraint firstItem="wXT-ka-Ndo" firstAttribute="leading" secondItem="xy7-Lc-hFQ" secondAttribute="leading" id="R5z-NJ-ha6"/>
+                                    <constraint firstAttribute="trailing" secondItem="wXT-ka-Ndo" secondAttribute="trailing" id="cfy-79-2dP"/>
+                                    <constraint firstItem="wXT-ka-Ndo" firstAttribute="top" secondItem="xy7-Lc-hFQ" secondAttribute="top" id="ggG-9f-Vc0"/>
+                                    <constraint firstAttribute="bottom" secondItem="wXT-ka-Ndo" secondAttribute="bottom" id="m56-ge-6mh"/>
                                 </constraints>
                                 <size key="customSize" width="314" height="89"/>
                                 <connections>
-                                    <outlet property="addTourButton" destination="XMf-E0-S7i" id="MO2-SO-WZH"/>
+                                    <outlet property="noToursLabel" destination="fea-Ux-QtV" id="utQ-Iv-UmS"/>
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TourPhotoCell" id="Llc-Ki-aUA" customClass="TourPhotoCollectionViewCell" customModule="Guidr" customModuleProvider="target">
