@@ -76,6 +76,7 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
         if let id = user.identifier {
             tourController.fetchToursFromServer(userID: id)
         }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -94,10 +94,9 @@ class TourController {
             
             do {
                 let tourRepresentations = try JSONDecoder().decode([TourRepresentation].self, from: data)
-                let backgroundContext = CoreDataStack.shared.container.newBackgroundContext()
                 
-                self.updateTours(with: tourRepresentations, context: backgroundContext)
-                try CoreDataStack.shared.save(context: backgroundContext)
+                self.updateTours(with: tourRepresentations)
+                try CoreDataStack.shared.save()
             } catch {
                 NSLog("Error decoding entry representations \(error)")
                 completion()
@@ -231,7 +230,7 @@ class TourController {
         tour.imageURL = representation.imageURL
     }
     
-    private func updateTours(with representations: [TourRepresentation], context: NSManagedObjectContext) {
+    private func updateTours(with representations: [TourRepresentation], context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         context.performAndWait {
             for representation in representations {
                 guard let identifier = representation.identifier else { return }
