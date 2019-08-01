@@ -9,9 +9,15 @@
 import UIKit
 import CoreData
 
+protocol CreateTourViewControllerDelegate: AnyObject {
+	func createTourViewController(_ createTourViewController: CreateTourViewController, didEditTour tour: Tour)
+}
+
 class CreateTourViewController: UIViewController {
 
 	let imagePickerController = UIImagePickerController()
+
+	weak var delegate: CreateTourViewControllerDelegate?
 
 	var dateFormatter: DateFormatter {
 		let formatter = DateFormatter()
@@ -132,6 +138,7 @@ class CreateTourViewController: UIViewController {
         
         if let tour = tour {
             tourController.updateTour(tour: tour, title: title, description: description, miles: miles, imageURL: nil, date: date, tourType: tourType.rawValue)
+			delegate?.createTourViewController(self, didEditTour: tour)
 			self.dismiss(animated: true, completion: nil)
         } else {
             tourController.createTour(title: title, description: description, miles: miles, date: date, userID: user.identifier!, imageURL: nil, location: title, tourType: tourType.rawValue)
