@@ -125,7 +125,7 @@ class LoginViewController: UIViewController {
         if let name = nameTextField.text,
             let email = emailTextField.text,
             let password = passwordTextField.text {
-            if name.isEmpty {
+            if name.isEmpty && isLogin == false {
                 message = "Please enter your name."
             } else if email.isEmpty || email.contains("@") == false {
                 message = "Please enter a valid email."

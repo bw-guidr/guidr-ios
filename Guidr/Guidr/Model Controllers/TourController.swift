@@ -135,10 +135,13 @@ class TourController {
             guard let data = data else { return }
             do {
                 let tourID = try JSONDecoder().decode([Int].self, from: data)
-                let tour = Tour(tourRepresentation: tour)
+                let moc = CoreDataStack.shared.mainContext
+                moc.performAndWait {
+                    let tour = Tour(tourRepresentation: tour)
+                    guard let identifier = tourID.first else { return }
+                    tour?.identifier = Int32(identifier)
+                }
                 
-                guard let identifier = tourID.first else { return }
-                tour?.identifier = Int32(identifier)
                 try CoreDataStack.shared.save()
             } catch {
                 NSLog("Error decoding tourID and saving tour: \(error)")
