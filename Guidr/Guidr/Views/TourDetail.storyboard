@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Tour Detail View Controller-->
         <scene sceneID="WG2-JC-lfy">
@@ -140,6 +145,16 @@
                                                     <segue destination="Dsg-Ka-tw7" kind="show" identifier="EditTourSegue" id="ZD6-P9-W9T"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCu-Qf-5JN">
+                                                <rect key="frame" x="160" y="1041" width="94" height="29"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
+                                                <state key="normal" title="DELETE TOUR">
+                                                    <color key="titleColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="deleteButtonPressed:" destination="h2B-EP-d3w" eventType="touchUpInside" id="jQg-TK-HYb"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -153,6 +168,7 @@
                                             <constraint firstItem="mMd-2D-b8Q" firstAttribute="top" secondItem="Zki-UJ-Pb5" secondAttribute="top" id="Obj-oi-NIn"/>
                                             <constraint firstAttribute="trailing" secondItem="QYN-6S-ML2" secondAttribute="trailing" constant="20" id="Pkj-3k-6Sa"/>
                                             <constraint firstItem="kvq-qv-wCD" firstAttribute="leading" secondItem="Zki-UJ-Pb5" secondAttribute="leading" constant="33" id="QTC-gC-KVu"/>
+                                            <constraint firstItem="CCu-Qf-5JN" firstAttribute="top" secondItem="txo-Xi-28s" secondAttribute="bottom" constant="18" id="ThT-Vq-dG3"/>
                                             <constraint firstItem="Kjg-9C-tKn" firstAttribute="top" secondItem="G9m-JM-GxZ" secondAttribute="bottom" constant="35" id="Tps-S3-X6k"/>
                                             <constraint firstItem="G9m-JM-GxZ" firstAttribute="top" secondItem="QYN-6S-ML2" secondAttribute="bottom" constant="39" id="TwN-pJ-tHK"/>
                                             <constraint firstAttribute="trailing" secondItem="Kjg-9C-tKn" secondAttribute="trailing" constant="30" id="XXi-Sv-QDG"/>
@@ -161,6 +177,7 @@
                                             <constraint firstItem="G9m-JM-GxZ" firstAttribute="top" secondItem="mMd-2D-b8Q" secondAttribute="bottom" constant="20" id="cDm-Gq-C06"/>
                                             <constraint firstAttribute="width" constant="414" id="erU-5P-hP4"/>
                                             <constraint firstItem="txo-Xi-28s" firstAttribute="top" secondItem="Kjg-9C-tKn" secondAttribute="bottom" constant="35" id="n99-17-4EP"/>
+                                            <constraint firstItem="CCu-Qf-5JN" firstAttribute="centerX" secondItem="Zki-UJ-Pb5" secondAttribute="centerX" id="nPA-iM-Cxe"/>
                                             <constraint firstItem="mMd-2D-b8Q" firstAttribute="leading" secondItem="Zki-UJ-Pb5" secondAttribute="leading" id="ox2-ms-243"/>
                                             <constraint firstAttribute="height" priority="250" constant="1200" id="u6c-Zm-PRJ"/>
                                             <constraint firstItem="G9m-JM-GxZ" firstAttribute="leading" secondItem="Zki-UJ-Pb5" secondAttribute="leading" constant="30" id="y0S-tJ-7Rd"/>

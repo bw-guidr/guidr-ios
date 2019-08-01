@@ -21,6 +21,7 @@ class TourDetailViewController: UIViewController {
 
 
 	let generator = UIImpactFeedbackGenerator(style: .medium)
+    let tourController: TourController = TourController.shared
 	var tour: Tour?
     
     override func viewDidLoad() {
@@ -29,6 +30,11 @@ class TourDetailViewController: UIViewController {
 
 		scrollView.delegate = self
 		generator.prepare()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +46,12 @@ class TourDetailViewController: UIViewController {
     
     @IBAction func editButtonPressed(_ sender: Any) {
         
+    }
+    
+    @IBAction func deleteButtonPressed(_ sender: Any) {
+        guard let tour = tour else { return }
+        tourController.deleteTour(tour: tour)
+        dismiss(animated: true, completion: nil)
     }
     
     func designSetup() {

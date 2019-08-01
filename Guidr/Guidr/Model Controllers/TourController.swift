@@ -25,8 +25,8 @@ class TourController {
     
     static let shared = TourController()
     
-    let baseURL = URL(string: "https://guidr-backend-justin-chen.herokuapp.com/user")!
-//    let token: String? = KeychainWrapper.standard.string(forKey: "token")
+    let userURL = URL(string: "https://guidr-backend-justin-chen.herokuapp.com/user")!
+    let tripURL: URL = URL(string: "https://guidr-backend-justin-chen.herokuapp.com/trips")!
     
     func createTour(title: String, description: String?, miles: Float, date: String, userID: Int, imageURL: String?, location: String?, tourType: String?) {
         
@@ -57,8 +57,9 @@ class TourController {
     func deleteTour(tour: Tour) {
         let moc = CoreDataStack.shared.mainContext
         
-        moc.delete(tour)
+        
         deleteTourFromServer(tour: tour)
+        moc.delete(tour)
         
         do {
             try CoreDataStack.shared.save()
@@ -68,7 +69,7 @@ class TourController {
     }
     
     func fetchToursFromServer(userID: Int, completion: @escaping () -> Void = { }) {
-        let requestURL = baseURL.appendingPathComponent("\(userID)").appendingPathComponent("trips")
+        let requestURL = userURL.appendingPathComponent("\(userID)").appendingPathComponent("trips")
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.get.rawValue
         
@@ -106,7 +107,7 @@ class TourController {
     }
     
     func post(tour: TourRepresentation, completion: @escaping () -> Void = { }) {
-        let requestURL: URL = baseURL.appendingPathComponent("\(tour.userID)").appendingPathComponent("trips")
+        let requestURL: URL = userURL.appendingPathComponent("\(tour.userID)").appendingPathComponent("trips")
         print(requestURL)
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.post.rawValue
@@ -150,8 +151,8 @@ class TourController {
     
     func put(tour: TourRepresentation, completion: @escaping () -> Void = { }) {
         guard let identifier = tour.identifier else { return }
-        let tripURL: URL = URL(string: "https://guidr-backend-justin-chen.herokuapp.com/")!
-        let requestURL: URL = tripURL.appendingPathComponent("trips").appendingPathComponent("\(identifier)")
+        
+        let requestURL: URL = tripURL.appendingPathComponent("\(identifier)")
 
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.put.rawValue
@@ -183,9 +184,16 @@ class TourController {
     }
     
     func deleteTourFromServer(tour: Tour, completion: @escaping (Error?) -> Void = { _ in }) {
-        let requestURL = baseURL.appendingPathComponent("trips").appendingPathComponent("\(tour.identifier)")
+        let requestURL = tripURL.appendingPathComponent("\(tour.identifier)")
+
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.delete.rawValue
+        
+        let token: String? = KeychainWrapper.standard.string(forKey: "token")
+        
+        if let token = token {
+            request.setValue("\(token)", forHTTPHeaderField: "Authorization")
+        }
         
         URLSession.shared.dataTask(with: request) { (data, _, error) in
             if let error = error {
