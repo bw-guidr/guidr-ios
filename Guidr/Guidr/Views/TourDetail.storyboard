@@ -35,7 +35,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvq-qv-wCD">
-                                                <rect key="frame" x="33" y="454" width="124" height="30"/>
+                                                <rect key="frame" x="33" y="454" width="296" height="30"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Orange trail">
                                                         <attributes>
@@ -126,6 +126,13 @@
                                                     <action selector="arrowTapped:" destination="h2B-EP-d3w" eventType="touchUpInside" id="zHU-2u-ZlO"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYN-6S-ML2">
+                                                <rect key="frame" x="345" y="451" width="30" height="30"/>
+                                                <state key="normal" image="editButton"/>
+                                                <connections>
+                                                    <segue destination="Dsg-Ka-tw7" kind="show" identifier="EditTourSegue" id="ZD6-P9-W9T"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -134,12 +141,14 @@
                                             <constraint firstItem="c5c-7w-mIy" firstAttribute="centerX" secondItem="Zki-UJ-Pb5" secondAttribute="centerX" id="BXS-47-6V2"/>
                                             <constraint firstAttribute="trailing" secondItem="G9m-JM-GxZ" secondAttribute="trailing" constant="30" id="O68-7B-ZNL"/>
                                             <constraint firstItem="mMd-2D-b8Q" firstAttribute="top" secondItem="Zki-UJ-Pb5" secondAttribute="top" id="Obj-oi-NIn"/>
+                                            <constraint firstAttribute="trailing" secondItem="QYN-6S-ML2" secondAttribute="trailing" constant="39" id="Pkj-3k-6Sa"/>
                                             <constraint firstItem="kvq-qv-wCD" firstAttribute="leading" secondItem="Zki-UJ-Pb5" secondAttribute="leading" constant="33" id="QTC-gC-KVu"/>
                                             <constraint firstAttribute="leading" secondItem="kvq-qv-wCD" secondAttribute="trailing" constant="16" id="R96-Mx-8N1"/>
                                             <constraint firstItem="Kjg-9C-tKn" firstAttribute="top" secondItem="G9m-JM-GxZ" secondAttribute="bottom" constant="35" id="Tps-S3-X6k"/>
                                             <constraint firstItem="i9u-Us-Ef6" firstAttribute="top" secondItem="Kjg-9C-tKn" secondAttribute="bottom" constant="35" id="VVt-0M-QrP"/>
                                             <constraint firstAttribute="trailing" secondItem="Kjg-9C-tKn" secondAttribute="trailing" constant="30" id="XXi-Sv-QDG"/>
                                             <constraint firstAttribute="trailing" secondItem="mMd-2D-b8Q" secondAttribute="trailing" id="YRc-rE-dl3"/>
+                                            <constraint firstItem="QYN-6S-ML2" firstAttribute="leading" secondItem="kvq-qv-wCD" secondAttribute="trailing" constant="16" id="aE6-bU-ZzE"/>
                                             <constraint firstItem="c5c-7w-mIy" firstAttribute="top" secondItem="Zki-UJ-Pb5" secondAttribute="top" constant="45" id="bIu-JI-TgU"/>
                                             <constraint firstAttribute="trailing" secondItem="i9u-Us-Ef6" secondAttribute="trailing" constant="30" id="bSi-Qr-XNd"/>
                                             <constraint firstItem="G9m-JM-GxZ" firstAttribute="top" secondItem="mMd-2D-b8Q" secondAttribute="bottom" constant="20" id="cDm-Gq-C06"/>
@@ -200,5 +209,6 @@
     <resources>
         <image name="Arrow" width="66" height="10"/>
         <image name="MountainRedVector" width="5000" height="3542"/>
+        <image name="editButton" width="30" height="30"/>
     </resources>
 </document>
