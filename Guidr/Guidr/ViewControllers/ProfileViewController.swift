@@ -127,8 +127,9 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
 
 	private func guideInfoCell(from cell: UICollectionViewCell, atIndex index: Int) -> GuideInfoCollectionViewCell {
 		guard let cell = cell as? GuideInfoCollectionViewCell else { return GuideInfoCollectionViewCell() }
+		// TODO: Format miles count
         cell.tourCountLabel.text = "\(getLocationsCount())"
-		cell.milesCountLabel.text = "\(getMilesCount())"
+		cell.milesCountLabel.text = String(format: "%.01f", getMilesCount())
 		cell.locationsCountLabel.text = "\(getLocationsCount())"
 		cell.nameLabel.text = user.name
 		cell.profileImageView.image = UIImage(named: "profilePhoto")
