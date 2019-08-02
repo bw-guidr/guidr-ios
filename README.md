@@ -1,4 +1,4 @@
-# guidr-ios
+# Guidr
 
 **Technologies Used:**
 - Swift
