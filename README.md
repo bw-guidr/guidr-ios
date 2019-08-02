@@ -2,9 +2,7 @@
 
 **Technologies Used:**
 - Swift
-- Xcode
 - CoreData
-- 
 
 
 <p align="center">
