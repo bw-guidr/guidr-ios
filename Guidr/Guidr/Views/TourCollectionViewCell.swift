@@ -23,6 +23,14 @@ class TourCollectionViewCell: UICollectionViewCell {
             updateViews()
         }
     }
+
+	override var isHighlighted: Bool {
+		didSet {
+			UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 5.0, options: [.allowUserInteraction], animations: {
+				self.transform = self.isHighlighted ? .init(scaleX: 0.95, y: 0.95) : .identity
+			}, completion: nil)
+		}
+	}
     
     private func updateViews() {
         updateStyle()
@@ -36,7 +44,7 @@ class TourCollectionViewCell: UICollectionViewCell {
 		tourNameLabel.textColor = .offWhite
 		labelView.backgroundColor = .offBlack
 //        labelView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        cellView.layer.shadowOpacity = 0.2
+        cellView.layer.shadowOpacity = 0.4
 		cellView.layer.shadowColor = #colorLiteral(red: 0.2124917535, green: 0.271030252, blue: 0.3560721495, alpha: 1)
         cellView.layer.shadowRadius = 10
         cellView.layer.shadowOffset = .zero

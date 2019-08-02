@@ -10,7 +10,7 @@
 		3259886022F0969700D1A8BE /* TourDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3259885F22F0969700D1A8BE /* TourDetail.storyboard */; };
 		3259886222F09DD200D1A8BE /* TourDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3259886122F09DD200D1A8BE /* TourDetailViewController.swift */; };
 		327EDEEA22F1F1BF00B2E132 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327EDEE922F1F1BF00B2E132 /* SettingsViewController.swift */; };
-		327EDEEC22F1F61800B2E132 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327EDEEB22F1F61800B2E132 /* CustomButton.swift */; };
+		327EDEEC22F1F61800B2E132 /* BigCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327EDEEB22F1F61800B2E132 /* BigCustomButton.swift */; };
 		327EDEEE22F1FDF600B2E132 /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327EDEED22F1FDF600B2E132 /* CustomSwitch.swift */; };
 		3737ED8222EF62BA0038001E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8122EF62BA0038001E /* Login.storyboard */; };
 		3737ED8422EF62F60038001E /* WalkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3737ED8322EF62F60038001E /* WalkThrough.storyboard */; };
@@ -29,6 +29,7 @@
 		376EF2BB22F0BFFC0005F985 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 376EF2BA22F0BFFC0005F985 /* BebasNeue-Regular.ttf */; };
 		376EF2BD22F1137A0005F985 /* CreateTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376EF2BC22F1137A0005F985 /* CreateTourViewController.swift */; };
 		376EF2BF22F119070005F985 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376EF2BE22F119070005F985 /* DatePickerViewController.swift */; };
+		37B9A36922F4908D00BB774B /* SmallCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B9A36822F4908D00BB774B /* SmallCustomButton.swift */; };
 		660018DB22F375BA00F3BC35 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660018DA22F375BA00F3BC35 /* AppearanceHelper.swift */; };
 		66F4211722EF3D7600B78375 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F4211622EF3D7600B78375 /* AppDelegate.swift */; };
 		66F4211C22EF3D7600B78375 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F4211A22EF3D7600B78375 /* Profile.storyboard */; };
@@ -56,7 +57,7 @@
 		3259885F22F0969700D1A8BE /* TourDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TourDetail.storyboard; sourceTree = "<group>"; };
 		3259886122F09DD200D1A8BE /* TourDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourDetailViewController.swift; sourceTree = "<group>"; };
 		327EDEE922F1F1BF00B2E132 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		327EDEEB22F1F61800B2E132 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		327EDEEB22F1F61800B2E132 /* BigCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigCustomButton.swift; sourceTree = "<group>"; };
 		327EDEED22F1FDF600B2E132 /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 		3737ED8122EF62BA0038001E /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3737ED8322EF62F60038001E /* WalkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkThrough.storyboard; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		376EF2BA22F0BFFC0005F985 /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
 		376EF2BC22F1137A0005F985 /* CreateTourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTourViewController.swift; sourceTree = "<group>"; };
 		376EF2BE22F119070005F985 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		37B9A36822F4908D00BB774B /* SmallCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCustomButton.swift; sourceTree = "<group>"; };
 		660018DA22F375BA00F3BC35 /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
 		66F4211322EF3D7600B78375 /* Guidr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guidr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F4211622EF3D7600B78375 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,7 +122,8 @@
 				3737ED8D22EF69120038001E /* Fonts */,
 				3737ED8B22EF65E50038001E /* ProjectColors.swift */,
 				66F4585822F0DDA400756BC9 /* UserDefaultsHelper.swift */,
-				327EDEEB22F1F61800B2E132 /* CustomButton.swift */,
+				327EDEEB22F1F61800B2E132 /* BigCustomButton.swift */,
+				37B9A36822F4908D00BB774B /* SmallCustomButton.swift */,
 				327EDEED22F1FDF600B2E132 /* CustomSwitch.swift */,
 				660018DA22F375BA00F3BC35 /* AppearanceHelper.swift */,
 			);
@@ -318,7 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				327EDEEC22F1F61800B2E132 /* CustomButton.swift in Sources */,
+				327EDEEC22F1F61800B2E132 /* BigCustomButton.swift in Sources */,
 				66F4214422EF8C8600B78375 /* LoginViewController.swift in Sources */,
 				376EF2B722F005700005F985 /* AddFirstTourCollectionViewCell.swift in Sources */,
 				66F4213922EF622F00B78375 /* UserController.swift in Sources */,
@@ -344,6 +347,7 @@
 				376EF2B522F0054D0005F985 /* GuideInfoCollectionViewCell.swift in Sources */,
 				376EF2BF22F119070005F985 /* DatePickerViewController.swift in Sources */,
 				66F4212D22EF592D00B78375 /* CoreDataStack.swift in Sources */,
+				37B9A36922F4908D00BB774B /* SmallCustomButton.swift in Sources */,
 				66F4214022EF747F00B78375 /* KeychainItemAccessibility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
