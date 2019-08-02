@@ -26,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountainVector" translatesAutoresizingMaskIntoConstraints="NO" id="IFb-d0-YO7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="registerBackground" translatesAutoresizingMaskIntoConstraints="NO" id="IFb-d0-YO7">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j3a-8B-XaJ">
@@ -123,7 +123,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" adjustsFontSizeToFit="NO" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="B3c-zd-BRr">
-                                                        <rect key="frame" x="38" y="0.0" width="229" height="20"/>
+                                                        <rect key="frame" x="38" y="0.0" width="232" height="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="new-password"/>
@@ -134,7 +134,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6L-hX-KLD">
-                                                        <rect key="frame" x="285" y="0.0" width="49" height="20"/>
+                                                        <rect key="frame" x="288" y="0.0" width="46" height="20"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="11"/>
                                                         <state key="normal" title="FORGOT">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -180,10 +180,10 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="registerLogo" translatesAutoresizingMaskIntoConstraints="NO" id="bpc-iN-gTW">
-                                <rect key="frame" x="72" y="124" width="270" height="75"/>
+                                <rect key="frame" x="72" y="124" width="270" height="16"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWv-QG-NgB">
-                                <rect key="frame" x="351" y="47" width="45" height="30"/>
+                                <rect key="frame" x="356" y="47" width="40" height="29"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -214,12 +214,12 @@
                     <connections>
                         <outlet property="emailTextField" destination="0Kb-6k-680" id="6QH-lH-pQx"/>
                         <outlet property="forgotPasswordButton" destination="b6L-hX-KLD" id="FSK-GH-ssv"/>
-                        <outlet property="loginButton" destination="LWv-QG-NgB" id="Epw-CZ-3fv"/>
+                        <outlet property="loginRegisterButton" destination="xEh-uC-Pnf" id="A5s-7h-T2J"/>
                         <outlet property="nameIcon" destination="jdd-do-GsV" id="lZA-Fh-sbM"/>
                         <outlet property="nameLabel" destination="R2t-Ls-yX5" id="Eq2-yU-Z8q"/>
                         <outlet property="nameTextField" destination="A6l-hB-aKj" id="bsz-Of-VMW"/>
                         <outlet property="passwordTextField" destination="B3c-zd-BRr" id="yDx-bY-lG6"/>
-                        <outlet property="registerButton" destination="xEh-uC-Pnf" id="A5s-7h-T2J"/>
+                        <outlet property="switchTypeButton" destination="LWv-QG-NgB" id="Epw-CZ-3fv"/>
                         <segue destination="HKK-EZ-Pqp" kind="show" identifier="ShowProfileSegue" id="hm3-11-3b0"/>
                     </connections>
                 </viewController>
@@ -361,10 +361,10 @@
     </scenes>
     <resources>
         <image name="MountainRedVector" width="5000" height="3542"/>
-        <image name="MountainVector" width="1550" height="1102"/>
         <image name="email" width="20" height="20"/>
         <image name="name" width="20" height="20"/>
         <image name="password" width="20" height="20"/>
+        <image name="registerBackground" width="1466.6666259765625" height="987.33331298828125"/>
         <image name="registerLogo" width="600" height="75"/>
     </resources>
 </document>
