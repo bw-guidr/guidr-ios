@@ -26,7 +26,13 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         forgotPasswordButton.isHidden = true
         self.tabBarController?.tabBar.isHidden = true
-
+        loginButton.isEnabled = false
+        loginButton.alpha = 0.25
+        registerButton.isEnabled = false
+        registerButton.alpha = 0.25
+        passwordTextField.delegate = self
+        emailTextField.delegate = self
+        nameTextField.delegate = self
     }
     
 
@@ -68,6 +74,8 @@ class LoginViewController: UIViewController {
     func login() {
         let check = completeFieldsChecker()
         if check == true {
+            loginButton.isEnabled = true
+            loginButton.alpha = 1
             guard let email = emailTextField.text,
                 !email.isEmpty,
                 let password = passwordTextField.text,
@@ -91,6 +99,7 @@ class LoginViewController: UIViewController {
     func register() {
         let check = completeFieldsChecker()
         if check == true {
+
             guard let email = emailTextField.text,
                 !email.isEmpty,
                 let password = passwordTextField.text,
@@ -146,8 +155,40 @@ class LoginViewController: UIViewController {
         
         return checker
     }
+    
+
 
 }
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let name = nameTextField.text,
+            let email = emailTextField.text else { return }
+        if textField == passwordTextField && !name.isEmpty && !email.isEmpty {
+            registerButton.isEnabled = true
+            registerButton.alpha = 1
+            
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        switch textField {
+        case nameTextField:
+            emailTextField.becomeFirstResponder()
+        case emailTextField:
+            passwordTextField.becomeFirstResponder()
+            
+        case passwordTextField:
+            textField.resignFirstResponder()
+        default:
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+}
+
+
 
 //nameTextField: UITextField!
 //emailTextField: UITextField!
