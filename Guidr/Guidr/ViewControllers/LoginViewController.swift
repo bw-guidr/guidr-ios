@@ -14,10 +14,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var forgotPasswordButton: UIButton!
-    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var loginRegisterButton: UIButton!
     @IBOutlet weak var nameIcon: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var switchTypeButton: UIButton!
     
     let userController = UserController.shared
     var isLogin: Bool = false
@@ -26,10 +26,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         forgotPasswordButton.isHidden = true
         self.tabBarController?.tabBar.isHidden = true
-        loginButton.isEnabled = false
-        loginButton.alpha = 0.25
-        registerButton.isEnabled = false
-        registerButton.alpha = 0.25
+        loginRegisterButton.isEnabled = false
+        loginRegisterButton.alpha = 0.25
         passwordTextField.delegate = self
         emailTextField.delegate = self
         nameTextField.delegate = self
@@ -37,6 +35,7 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func registerButtonTapped(_ sender: Any) {
+        loginRegisterButton.isEnabled = false
         if isLogin {
             login()
         } else {
@@ -51,8 +50,8 @@ class LoginViewController: UIViewController {
                 self.nameLabel.alpha = 1
                 self.nameTextField.alpha = 1
                 self.forgotPasswordButton.isHidden = true
-                self.registerButton.setTitle("Register", for: .normal)
-                self.loginButton.setTitle("Login", for: .normal)
+                self.loginRegisterButton.setTitle("Register", for: .normal)
+                self.switchTypeButton.setTitle("Login", for: .normal)
             }
             
             isLogin = false
@@ -62,8 +61,8 @@ class LoginViewController: UIViewController {
                 self.nameLabel.alpha = 0
                 self.nameTextField.alpha = 0
                 self.forgotPasswordButton.isHidden = false
-                self.registerButton.setTitle("Log In", for: .normal)
-                self.loginButton.setTitle("Register", for: .normal)
+                self.loginRegisterButton.setTitle("Log In", for: .normal)
+                self.switchTypeButton.setTitle("Register", for: .normal)
             }
             
             isLogin = true
@@ -74,8 +73,8 @@ class LoginViewController: UIViewController {
     func login() {
         let check = completeFieldsChecker()
         if check == true {
-            loginButton.isEnabled = true
-            loginButton.alpha = 1
+//            loginRegisterButton.isEnabled = true
+//            loginRegisterButton.alpha = 1
             guard let email = emailTextField.text,
                 !email.isEmpty,
                 let password = passwordTextField.text,
@@ -164,11 +163,19 @@ extension LoginViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let name = nameTextField.text,
             let email = emailTextField.text else { return }
-        if textField == passwordTextField && !name.isEmpty && !email.isEmpty {
-            registerButton.isEnabled = true
-            registerButton.alpha = 1
-            
+        
+        if isLogin {
+            if textField == passwordTextField && !email.isEmpty {
+                loginRegisterButton.isEnabled = true
+                loginRegisterButton.alpha = 1
+            }
+        } else {
+            if textField == passwordTextField && !name.isEmpty && !email.isEmpty {
+                loginRegisterButton.isEnabled = true
+                loginRegisterButton.alpha = 1
+            }
         }
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
