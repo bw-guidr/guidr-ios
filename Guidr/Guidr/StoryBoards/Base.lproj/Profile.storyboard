@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AQf-UR-vZm">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="yPP-Bd-izI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="IJ5-9L-MrF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SM7-0U-bAe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5121" y="-259"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="szq-xz-w7c">
+            <objects>
+                <collectionViewController id="Zi8-oD-yds" customClass="ProfileViewController" customModule="Guidr" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="YcR-K8-REZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="1" id="hd3-OZ-7a4">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="GuideInfoCell" id="4DO-eY-TOf" customClass="GuideInfoCollectionViewCell" customModule="Guidr" customModuleProvider="target">
+                                <rect key="frame" x="50" y="0.0" width="314" height="600"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="314" height="600"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUS-ZJ-a6C">
+                                            <rect key="frame" x="0.0" y="-75" width="384" height="499"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePhoto" translatesAutoresizingMaskIntoConstraints="NO" id="iml-jC-UMV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="384" height="499"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="iml-jC-UMV" firstAttribute="top" secondItem="LUS-ZJ-a6C" secondAttribute="top" id="44m-tQ-Jqh"/>
+                                                <constraint firstAttribute="bottom" secondItem="iml-jC-UMV" secondAttribute="bottom" id="4gQ-mi-LHk"/>
+                                                <constraint firstItem="iml-jC-UMV" firstAttribute="leading" secondItem="LUS-ZJ-a6C" secondAttribute="leading" id="hCW-z3-J8j"/>
+                                                <constraint firstAttribute="trailing" secondItem="iml-jC-UMV" secondAttribute="trailing" id="zhK-v5-A6R"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sc-0Q-Oxy">
+                                            <rect key="frame" x="0.0" y="459" width="155.66666666666666" height="33.333333333333314"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Guide Name Label">
+                                                    <attributes>
+                                                        <font key="NSFont" size="28" name="BebasNeue-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ub7-1P-Fzs">
+                                            <rect key="frame" x="0.0" y="527.33333333333337" width="184" height="44.666666666666629"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="MEA-B2-7bo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="33.333333333333336" height="44.666666666666664"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iH-hm-F9P">
+                                                            <rect key="frame" x="0.0" y="0.0" width="33.333333333333336" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="Qd7-GX-Ty9"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypZ-fj-NwB">
+                                                            <rect key="frame" x="0.0" y="30.000000000000004" width="33.333333333333336" height="14.666666666666668"/>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="12"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="pub-9k-qzy">
+                                                    <rect key="frame" x="63.333333333333336" y="0.0" width="31.666666666666664" height="44.666666666666664"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="272" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmZ-Vl-JrJ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="31.666666666666668" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="Qm7-di-Cv8"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34Y-zf-JMW">
+                                                            <rect key="frame" x="0.0" y="30.000000000000004" width="31.666666666666668" height="14.666666666666668"/>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="12"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="ngz-if-YHC">
+                                                    <rect key="frame" x="125" y="0.0" width="59" height="44.666666666666664"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibm-mC-qfi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="59" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="Ezz-jU-dbN"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sB-fF-Hka">
+                                                            <rect key="frame" x="0.0" y="30.000000000000004" width="59" height="14.666666666666668"/>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="12"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="LUS-ZJ-a6C" secondAttribute="trailing" constant="-70" id="4eC-hx-GjP"/>
+                                    <constraint firstAttribute="bottom" secondItem="LUS-ZJ-a6C" secondAttribute="bottom" constant="176" id="5vx-Oz-nOF"/>
+                                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Ub7-1P-Fzs" secondAttribute="trailing" constant="8" id="7Vd-ys-ehG"/>
+                                    <constraint firstItem="LUS-ZJ-a6C" firstAttribute="leading" secondItem="4DO-eY-TOf" secondAttribute="leading" id="BsF-i4-i3B"/>
+                                    <constraint firstItem="9sc-0Q-Oxy" firstAttribute="top" secondItem="LUS-ZJ-a6C" secondAttribute="bottom" constant="35" id="FCN-d3-Y21"/>
+                                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="9sc-0Q-Oxy" secondAttribute="trailing" constant="8" id="Yfd-d0-XJG"/>
+                                    <constraint firstItem="9sc-0Q-Oxy" firstAttribute="leading" secondItem="LUS-ZJ-a6C" secondAttribute="leading" id="ieB-m8-DsC"/>
+                                    <constraint firstItem="Ub7-1P-Fzs" firstAttribute="leading" secondItem="9sc-0Q-Oxy" secondAttribute="leading" id="sjO-rq-hcE"/>
+                                    <constraint firstItem="Ub7-1P-Fzs" firstAttribute="top" secondItem="9sc-0Q-Oxy" secondAttribute="bottom" constant="35" id="tVZ-RV-Hlc"/>
+                                    <constraint firstItem="LUS-ZJ-a6C" firstAttribute="top" secondItem="4DO-eY-TOf" secondAttribute="top" constant="-75" id="xf3-J1-Eey"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="Ub7-1P-Fzs" secondAttribute="bottom" constant="20" id="yjN-XS-feN"/>
+                                </constraints>
+                                <size key="customSize" width="314" height="600"/>
+                                <connections>
+                                    <outlet property="locationsCountLabel" destination="ibm-mC-qfi" id="fgi-Hd-l6a"/>
+                                    <outlet property="milesCountLabel" destination="WmZ-Vl-JrJ" id="jX3-pZ-RPX"/>
+                                    <outlet property="nameLabel" destination="9sc-0Q-Oxy" id="7Ko-Wa-Aoa"/>
+                                    <outlet property="profileImageView" destination="iml-jC-UMV" id="DNW-aB-di8"/>
+                                    <outlet property="tourCountLabel" destination="6iH-hm-F9P" id="QKD-dw-MsB"/>
+                                    <outlet property="viewForPhoto" destination="LUS-ZJ-a6C" id="2mK-hc-8LF"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddFirstTourCell" id="xy7-Lc-hFQ" customClass="AddFirstTourCollectionViewCell" customModule="Guidr" customModuleProvider="target">
+                                <rect key="frame" x="50" y="603" width="314" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="314" height="89"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXT-ka-Ndo">
+                                            <rect key="frame" x="0.0" y="0.0" width="314" height="89"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Kgz-ta-R9X">
+                                                    <rect key="frame" x="0.0" y="0.0" width="314" height="89"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have any tours yet. Go ahead and add one!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fea-Ux-QtV">
+                                                            <rect key="frame" x="17" y="0.0" width="280.33333333333331" height="89"/>
+                                                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="314" id="8sQ-fB-zeN"/>
+                                                <constraint firstItem="Kgz-ta-R9X" firstAttribute="leading" secondItem="wXT-ka-Ndo" secondAttribute="leading" id="OVd-HT-gEZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="Kgz-ta-R9X" secondAttribute="bottom" id="dcj-1v-uvf"/>
+                                                <constraint firstItem="Kgz-ta-R9X" firstAttribute="centerY" secondItem="wXT-ka-Ndo" secondAttribute="centerY" id="iIH-6O-n7c"/>
+                                                <constraint firstAttribute="trailing" secondItem="Kgz-ta-R9X" secondAttribute="trailing" id="l5K-x6-OdU"/>
+                                                <constraint firstItem="Kgz-ta-R9X" firstAttribute="top" secondItem="wXT-ka-Ndo" secondAttribute="top" id="uOE-wT-fkK"/>
+                                                <constraint firstItem="Kgz-ta-R9X" firstAttribute="centerX" secondItem="wXT-ka-Ndo" secondAttribute="centerX" id="vku-Ky-3vJ"/>
+                                                <constraint firstAttribute="height" constant="89" id="xse-UB-djX"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="wXT-ka-Ndo" firstAttribute="leading" secondItem="xy7-Lc-hFQ" secondAttribute="leading" id="R5z-NJ-ha6"/>
+                                    <constraint firstAttribute="trailing" secondItem="wXT-ka-Ndo" secondAttribute="trailing" id="cfy-79-2dP"/>
+                                    <constraint firstItem="wXT-ka-Ndo" firstAttribute="top" secondItem="xy7-Lc-hFQ" secondAttribute="top" id="ggG-9f-Vc0"/>
+                                    <constraint firstAttribute="bottom" secondItem="wXT-ka-Ndo" secondAttribute="bottom" id="m56-ge-6mh"/>
+                                </constraints>
+                                <size key="customSize" width="314" height="89"/>
+                                <connections>
+                                    <outlet property="noToursLabel" destination="fea-Ux-QtV" id="utQ-Iv-UmS"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TourPhotoCell" id="Llc-Ki-aUA" customClass="TourPhotoCollectionViewCell" customModule="Guidr" customModuleProvider="target">
+                                <rect key="frame" x="153.66666666666666" y="695" width="107" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="107" height="103"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iI2-0x-Cse">
+                                            <rect key="frame" x="0.0" y="0.0" width="107" height="103"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountainRedVector" translatesAutoresizingMaskIntoConstraints="NO" id="O7c-ti-EoV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="107" height="103"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="O7c-ti-EoV" firstAttribute="leading" secondItem="iI2-0x-Cse" secondAttribute="leading" id="ULz-xg-w9I"/>
+                                                <constraint firstAttribute="trailing" secondItem="O7c-ti-EoV" secondAttribute="trailing" id="vZT-9X-BT6"/>
+                                                <constraint firstAttribute="bottom" secondItem="O7c-ti-EoV" secondAttribute="bottom" id="xAH-nv-qPN"/>
+                                                <constraint firstItem="O7c-ti-EoV" firstAttribute="top" secondItem="iI2-0x-Cse" secondAttribute="top" id="yJi-O2-zqw"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="iI2-0x-Cse" firstAttribute="top" secondItem="Llc-Ki-aUA" secondAttribute="top" id="3GL-eC-9nn"/>
+                                    <constraint firstAttribute="trailing" secondItem="iI2-0x-Cse" secondAttribute="trailing" id="cz1-Vd-Set"/>
+                                    <constraint firstItem="iI2-0x-Cse" firstAttribute="leading" secondItem="Llc-Ki-aUA" secondAttribute="leading" id="r39-Aa-vMY"/>
+                                    <constraint firstAttribute="bottom" secondItem="iI2-0x-Cse" secondAttribute="bottom" id="xgJ-x3-6Zn"/>
+                                </constraints>
+                                <size key="customSize" width="107" height="103"/>
+                                <connections>
+                                    <outlet property="tourImageView" destination="O7c-ti-EoV" id="vDT-aU-FkE"/>
+                                    <segue destination="mfb-3I-qNt" kind="presentation" identifier="ShowDetailSegue" modalPresentationStyle="overCurrentContext" id="qZC-U7-0m1"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Zi8-oD-yds" id="oSg-P2-xTT"/>
+                            <outlet property="delegate" destination="Zi8-oD-yds" id="BEj-1O-kjq"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="urY-fB-pek"/>
+                    <connections>
+                        <segue destination="IJ5-9L-MrF" kind="show" identifier="LoginViewModalSegue" animates="NO" id="7GU-Uz-pfN"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="opZ-2O-CJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4597.1014492753629" y="139.95535714285714"/>
+        </scene>
+        <!--TourDetail-->
+        <scene sceneID="EE4-G1-IBn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TourDetail" id="mfb-3I-qNt" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dA8-gr-vSN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5236" y="73"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="o17-cN-PEl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="hSY-jz-ida" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="account" id="mk4-A7-Kdt"/>
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y8r-mU-REE">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zi8-oD-yds" kind="relationship" relationship="rootViewController" id="fzT-Ts-piJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UBI-3f-IuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3686.9565217391305" y="139.95535714285714"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="RWQ-aG-0xW">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AQf-UR-vZm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fEb-bh-BC5">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="hSY-jz-ida" kind="relationship" relationship="viewControllers" id="zjZ-CC-MYH"/>
+                        <segue destination="P1k-oC-2vL" kind="relationship" relationship="viewControllers" id="y0u-pI-LK6"/>
+                        <segue destination="0p2-H6-TrH" kind="relationship" relationship="viewControllers" id="iA1-WH-yao"/>
+                        <segue destination="8NE-eX-e9o" kind="relationship" relationship="viewControllers" id="0QW-cO-Per"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dKL-mz-Bhz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2776.811594202899" y="139.95535714285714"/>
+        </scene>
+        <!--CreateTour-->
+        <scene sceneID="78p-BR-aTN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateTour" id="P1k-oC-2vL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Add Tour" image="add" id="NeQ-BX-xTj"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wqJ-xR-Anh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2570" y="556"/>
+        </scene>
+        <!--TourGallery-->
+        <scene sceneID="kZ5-lS-lHv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TourGallery" id="0p2-H6-TrH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tour Gallery" image="explore" id="6ep-EJ-NjY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f5L-k9-mmb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2777" y="556"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="qQa-sY-SpD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="8NE-eX-e9o" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="Setting" id="wjR-xK-MNc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hiu-PG-01s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2973" y="556"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MountainRedVector" width="5000" height="3542"/>
+        <image name="Setting" width="24" height="24"/>
+        <image name="account" width="24" height="24"/>
+        <image name="add" width="24" height="24"/>
+        <image name="explore" width="24" height="24"/>
+        <image name="profilePhoto" width="1500" height="1000"/>
+    </resources>
+</document>
