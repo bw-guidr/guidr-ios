@@ -6,4 +6,4 @@ Welcome to Guidr!  We are here to solve the problem Professional Guides have wit
 
 With a simple login screen, Guides will be able to access their trips regaurless of where they are.
 
-![](loginGIF.gif)
+![](loginGIF.gif =200X400)
