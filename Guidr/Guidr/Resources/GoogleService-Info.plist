@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>553333421669-g4h8927ujj7r3crdc74vqj8a0m0a61oa.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.553333421669-g4h8927ujj7r3crdc74vqj8a0m0a61oa</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBWLTrX9G1QEH62W3GZd_wVMSZhlCxXOf4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>553333421669</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.shakers.Guidr</string>
+	<key>PROJECT_ID</key>
+	<string>guidr-ffa7c</string>
+	<key>STORAGE_BUCKET</key>
+	<string>guidr-ffa7c.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:553333421669:ios:b744ac4fbc5f6c34</string>
+	<key>DATABASE_URL</key>
+	<string>https://guidr-ffa7c.firebaseio.com</string>
+</dict>
+</plist>
