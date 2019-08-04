@@ -30,13 +30,13 @@ class TourController {
     
     func createTour(title: String, description: String?, miles: Float, date: String, userID: Int, imageURL: String?, location: String?, tourType: String?) {
         
-        let tourRepresentation = TourRepresentation(title: title, description: description, miles: miles, date: date, imageURL: nil, userID: Int32(userID), identifier: nil, tourType: tourType ?? "", location: location ?? "")
+        let tourRepresentation = TourRepresentation(title: title, description: description, miles: miles, date: date, imageURL: imageURL, userID: Int32(userID), identifier: nil, tourType: tourType ?? "", location: location ?? "")
         
         post(tour: tourRepresentation)
     }
     
     func updateTour(tour: Tour, title: String, description: String?, miles: Float, imageURL: String?, date: String, tourType: String) {
-        let tourRepresentation = TourRepresentation(title: title, description: description, miles: miles, date: date, imageURL: nil, userID: tour.userID, identifier: tour.identifier, tourType: tourType, location: title)
+        let tourRepresentation = TourRepresentation(title: title, description: description, miles: miles, date: date, imageURL: imageURL, userID: tour.userID, identifier: tour.identifier, tourType: tourType, location: title)
         put(tour: tourRepresentation)
         
         tour.title = title
@@ -112,13 +112,14 @@ class TourController {
         request.httpMethod = HTTPMethod.post.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let token: String? = KeychainWrapper.standard.string(forKey: "token")
-        
+        print(tour.imageURL)
         if let token = token {
             request.setValue("\(token)", forHTTPHeaderField: "Authorization")
         }
         
         do {
             request.httpBody = try JSONEncoder().encode(tour)
+            request.httpBody?.printJSON()
         } catch {
             NSLog("Error encoding tour \(tour): \(error)")
             completion()

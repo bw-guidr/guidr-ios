@@ -76,9 +76,8 @@ class TourDetailViewController: UIViewController {
         tourDataLabel.text = tour.date?.uppercased()
         tourMilesLabel.text = "\(tour.miles) MILES"
         personalLabel.text = tour.tourType?.uppercased()
-        
         guard let imageURL = tour.imageURL else { return }
-        let imageRef = Storage.storage().reference(forURL: imageURL)
+        let imageRef = Storage.storage().reference().child("images/\(imageURL)")
         detailImageView.sd_setImage(with: imageRef)
     }
     

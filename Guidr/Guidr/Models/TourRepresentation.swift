@@ -23,7 +23,7 @@ struct TourRepresentation: Codable {
         case title
         case description
         case miles
-        case imageURL
+        case imageURL = "trip_url"
         case date
         case userID = "user_id"
         case identifier = "id"

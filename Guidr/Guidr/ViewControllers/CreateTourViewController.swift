@@ -34,6 +34,7 @@ class CreateTourViewController: UIViewController {
     var tourController = TourController.shared
     let imageController = ImageController.shared
     var tour: Tour?
+    var imageData: Data?
     
     var user: UserRepresentation {
         let moc = CoreDataStack.shared.mainContext
@@ -144,15 +145,17 @@ class CreateTourViewController: UIViewController {
             clearAll()
         } else {
             var imageURL: String = ""
-            if let imageData = imageView.image?.pngData() {
+            if let imageData = imageData {
                 imageController.uploadImage(from: imageData) { (result) in
-                    if let url = try? result.get() {
-                        imageURL = url.absoluteString
+                    if let imageID = try? result.get() {
+                        imageURL = "\(imageID).jpg"
+                        self.tourController.createTour(title: title, description: description, miles: miles, date: date, userID: self.user.identifier!, imageURL: imageURL, location: title, tourType: self.tourType.rawValue)
                     }
                 }
+            } else {
+                tourController.createTour(title: title, description: description, miles: miles, date: date, userID: user.identifier!, imageURL: imageURL, location: title, tourType: tourType.rawValue)
             }
             
-            tourController.createTour(title: title, description: description, miles: miles, date: date, userID: user.identifier!, imageURL: imageURL, location: title, tourType: tourType.rawValue)
 			self.tabBarController?.selectedIndex = 0
             clearAll()
         }
@@ -216,6 +219,7 @@ class CreateTourViewController: UIViewController {
 extension CreateTourViewController: UIImagePickerControllerDelegate {
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
 		guard let image = info[.originalImage] as? UIImage else { return }
+        imageData = image.jpegData(compressionQuality: 0.5)
 		imageView.image = image
 		imageView.contentMode = .scaleAspectFill
 		dismiss(animated: true, completion: nil)

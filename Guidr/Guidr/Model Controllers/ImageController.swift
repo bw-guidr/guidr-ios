@@ -45,7 +45,7 @@ class ImageController {
         }.resume()
     }
     
-    func uploadImage(from data: Data, completion: @escaping (Result<URL, Error>) -> Void) {
+    func uploadImage(from data: Data, completion: @escaping (Result<String, Error>) -> Void) {
         let imageID = UUID()
         let uploadRef = imagesRef.child("\(imageID).jpg")
         
@@ -65,7 +65,7 @@ class ImageController {
                 
                 guard let downloadURL = url else { return }
                 
-                completion(.success(downloadURL))
+                completion(.success(imageID.uuidString))
             })
         }
     }
