@@ -45,7 +45,8 @@ class ImageController {
         }.resume()
     }
     
-    func uploadImage(from data: Data, imageID: UUID, completion: @escaping (Result<URL, Error>) -> Void) {
+    func uploadImage(from data: Data, completion: @escaping (Result<URL, Error>) -> Void) {
+        let imageID = UUID()
         let uploadRef = imagesRef.child("\(imageID).jpg")
         
         uploadRef.putData(data, metadata: nil) { (metadata, error) in

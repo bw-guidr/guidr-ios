@@ -32,6 +32,7 @@ class CreateTourViewController: UIViewController {
     
     var tourType: TourType = .professional
     var tourController = TourController.shared
+    let imageController = ImageController.shared
     var tour: Tour?
     
     var user: UserRepresentation {
@@ -142,7 +143,16 @@ class CreateTourViewController: UIViewController {
 			self.dismiss(animated: true, completion: nil)
             clearAll()
         } else {
-            tourController.createTour(title: title, description: description, miles: miles, date: date, userID: user.identifier!, imageURL: nil, location: title, tourType: tourType.rawValue)
+            var imageURL: String = ""
+            if let imageData = imageView.image?.pngData() {
+                imageController.uploadImage(from: imageData) { (result) in
+                    if let url = try? result.get() {
+                        imageURL = url.absoluteString
+                    }
+                }
+            }
+            
+            tourController.createTour(title: title, description: description, miles: miles, date: date, userID: user.identifier!, imageURL: imageURL, location: title, tourType: tourType.rawValue)
 			self.tabBarController?.selectedIndex = 0
             clearAll()
         }
