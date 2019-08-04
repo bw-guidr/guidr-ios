@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import FirebaseUI
 
 class TourGalleryCollectionViewController: UICollectionViewController, NSFetchedResultsControllerDelegate {
     
@@ -76,7 +77,12 @@ class TourGalleryCollectionViewController: UICollectionViewController, NSFetched
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TourCell", for: indexPath) as? TourCollectionViewCell else { return UICollectionViewCell() }
     
-        cell.tour = fetchedResultsController.object(at: indexPath)
+        let tour = fetchedResultsController.object(at: indexPath)
+        cell.tour = tour
+        if let imageURL = tour.imageURL {
+            let imageRef = Storage.storage().reference().child("images/\(imageURL)")
+            cell.tourImageView.sd_setImage(with: imageRef)
+        }
     
         return cell
     }

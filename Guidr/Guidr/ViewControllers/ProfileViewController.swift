@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import FirebaseUI
 
 class ProfileViewController: UICollectionViewController, NSFetchedResultsControllerDelegate {
 
@@ -138,10 +139,16 @@ class ProfileViewController: UICollectionViewController, NSFetchedResultsControl
 
     private func tourPhotoCell(from cell: UICollectionViewCell, indexPath: IndexPath, atIndex index: Int) -> TourPhotoCollectionViewCell {
 		guard let cell = cell as? TourPhotoCollectionViewCell else { return TourPhotoCollectionViewCell() }
-		cell.tourImageView.image = tourPhotos.randomElement()
-        
+		
         let tour = fetchedResultsController.object(at: IndexPath(item: index, section: 0))
         cell.tour = tour
+        
+        if let imageURL = tour.imageURL {
+            let imageRef = Storage.storage().reference().child("images/\(imageURL)")
+            cell.tourImageView.sd_setImage(with: imageRef)
+        } else {
+            cell.tourImageView.image = tourPhotos.randomElement()
+        }
         
 		return cell
 	}
