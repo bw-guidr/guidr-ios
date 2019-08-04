@@ -16,35 +16,6 @@ class ImageController {
     static let shared = ImageController()
     let imagesRef = Storage.storage().reference().child("images")
     
-    func fetchImage(at urlString: String, completion: @escaping (Result<UIImage, NetworkError>) -> Void) {
-        guard let imageURL = URL(string: urlString) else  {
-            completion(.failure(.otherError))
-            return
-        }
-        
-        var request = URLRequest(url: imageURL)
-        request.httpMethod = HTTPMethod.get.rawValue
-        
-        URLSession.shared.dataTask(with: request) { (data, _, error) in
-            if let error = error {
-                NSLog("Error fetching image data: \(error)")
-                completion(.failure(.otherError))
-            }
-            
-            guard let data = data else {
-                completion(.failure(.badData))
-                return
-            }
-            
-            guard let image = UIImage(data: data) else {
-                completion(.failure(.badData))
-                return
-            }
-            
-            completion(.success(image))
-        }.resume()
-    }
-    
     func uploadImage(from data: Data, completion: @escaping (Result<String, Error>) -> Void) {
         let imageID = UUID()
         let uploadRef = imagesRef.child("\(imageID).jpg")
@@ -63,7 +34,7 @@ class ImageController {
                     return
                 }
                 
-                guard let downloadURL = url else { return }
+                guard url != nil else { return }
                 
                 completion(.success(imageID.uuidString))
             })
