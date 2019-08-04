@@ -151,15 +151,9 @@
 		3737ED8022EF62390038001E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				66F4214922EF981F00B78375 /* Launch Screen.storyboard */,
-				3737ED8122EF62BA0038001E /* Login.storyboard */,
-				3737ED8322EF62F60038001E /* WalkThrough.storyboard */,
-				3737ED8522EF63170038001E /* CreateTour.storyboard */,
-				3737ED8722EF63DD0038001E /* TourGallery.storyboard */,
-				3737ED8922EF63EB0038001E /* Settings.storyboard */,
-				66F4211A22EF3D7600B78375 /* Profile.storyboard */,
-				3259885F22F0969700D1A8BE /* TourDetail.storyboard */,
 				66F4585422F0B0AC00756BC9 /* TourCollectionViewCell.swift */,
+				376EF2B422F0054D0005F985 /* GuideInfoCollectionViewCell.swift */,
+				376EF2B622F005700005F985 /* AddFirstTourCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,6 +172,21 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		37B9A36A22F49C1C00BB774B /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				66F4214922EF981F00B78375 /* Launch Screen.storyboard */,
+				3737ED8122EF62BA0038001E /* Login.storyboard */,
+				3737ED8322EF62F60038001E /* WalkThrough.storyboard */,
+				3737ED8522EF63170038001E /* CreateTour.storyboard */,
+				3737ED8722EF63DD0038001E /* TourGallery.storyboard */,
+				3737ED8922EF63EB0038001E /* Settings.storyboard */,
+				66F4211A22EF3D7600B78375 /* Profile.storyboard */,
+				3259885F22F0969700D1A8BE /* TourDetail.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
 		37C851CD22EF872B00406985 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,8 +194,6 @@
 				376EF2BE22F119070005F985 /* DatePickerViewController.swift */,
 				66F4585622F0B0B500756BC9 /* TourGalleryCollectionViewController.swift */,
 				376EF2B222F003AF0005F985 /* ProfileViewController.swift */,
-				376EF2B422F0054D0005F985 /* GuideInfoCollectionViewCell.swift */,
-				376EF2B622F005700005F985 /* AddFirstTourCollectionViewCell.swift */,
 				376EF2B822F005840005F985 /* TourPhotoCollectionViewCell.swift */,
 				66F4214322EF8C8600B78375 /* LoginViewController.swift */,
 				327EDEE922F1F1BF00B2E132 /* SettingsViewController.swift */,
@@ -216,12 +223,13 @@
 		66F4211522EF3D7600B78375 /* Guidr */ = {
 			isa = PBXGroup;
 			children = (
+				37B9A36A22F49C1C00BB774B /* StoryBoards */,
 				3737ED8022EF62390038001E /* Views */,
 				37C851CD22EF872B00406985 /* ViewControllers */,
-				3737ED7F22EF62280038001E /* Resources */,
 				66F4212B22EF584500B78375 /* Models */,
 				66F4213C22EF623F00B78375 /* Model Controllers */,
 				66F4214222EF748500B78375 /* Libraries */,
+				3737ED7F22EF62280038001E /* Resources */,
 			);
 			path = Guidr;
 			sourceTree = "<group>";
